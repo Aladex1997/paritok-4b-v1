@@ -1,0 +1,111 @@
+CHALDIE HARBOR MARINA - MOORAGE AUDIT
+Board Memorandum - Queue Integrity, Recurring Billing, and July Receivables
+
+PREPARED FOR: Administrator Ginny Marina and Board of Harbor Commissioners
+PREPARED BY: Moorage Counter Clerk
+AUDIT DATE: August 1, 2026
+SKIP AUDIT PERIOD: January 1, 2023 through July 31, 2026
+
+SCOPE AND MANDATE
+
+Conduct a full audit of moorage queue operations for Chaldie Harbor Marina as of August 1, 2026, covering the skip audit period of January 1, 2023 through July 31, 2026. The audit must verify queue exceptions, recurring billing coverage, aging accuracy, and subledger reconciliation. All findings must be grounded in the listed source documents and must not rely on assumptions, estimates, or external data not present in the workspace.
+
+DO NOT exclude any data, DO NOT assume missing records indicate leakage, and DO NOT infer events not documented in the source files. All conclusions must be verifiable against the listed source documents.
+
+GOVERNING AUTHORITIES
+
+All determinations must be grounded in the following governing documents:
+- Standing Order 15-3: Governs skip file requirements. Section 3.2 requires a contemporaneous cover sheet plus a supporting record assembled on the day the slip was worked. Section 3.3 requires supporting records to be created contemporaneously (on the day the slip was worked). Section 5.1 names the skip event register as a District record. Per Appeal 2018-3, the burden of proof shifts to the District when a skip is not evidenced; if the District cannot produce a contemporaneous support record, the skip is upheld for the applicant.
+- Resolution 2022-06: Governs billing rate adoption (effective August 1, 2022), billable length formula, and amendment verification requirements. Section 1.1 sets post-adoption rates at $10.40/foot-month (covered) and $7.55/foot-month (open). Section 4.3 requires amendments to be supported by certification. Section 1.4 governs billable length.
+- Tariff Resolution 2019-14: Pre-adoption tariff framework (effective March 12, 2019). Rates: $9.85/foot-month (covered) and $7.10/foot-month (open). Used only for periods before August 1, 2022.
+- Appeal 2018-3 Decision: Legal precedent establishing that the District bears the burden of proof for missed skips unless contemporaneous same-day proof is provided.
+
+BILLING POLICY
+
+Billable length = MAX(rounded-up check-in LOA from applicant register, posted slip length from slip inventory). For July 2026 (post-adoption), all recurring moorage transactions use post-adoption rates. Post-adoption rates: $10.40/foot-month for covered basins, $7.55/foot-month for open basins. Pre-adoption rates (before August 1, 2022): $9.85/foot-month covered, $7.10/foot-month open. Billable basis is foot-month (length in feet multiplied by months billed).
+
+Contemporaneous proof of eligibility means a cover sheet plus a supporting record (measurement certificate or equivalent) assembled on the day the slip was worked, as required by Standing Order 15-3 s.3.2-3.3. Check-in measurements refer to vessel length measurements documented in measurement certificates available at the moorage counter (directory: moorage_counter/measurement/).
+
+QUALIFYING CRITERIA FOR EXCEPTION FLAGS
+
+Exception flags are assigned as follows:
+- Priority 1 (immediate board attention): Skip events without same-day proof per SO 15-3 s.3.2; LOA amendments without certification source and no downstream skip use; unresolved cases requiring legal review; late supporting records; invalid reason codes.
+- Priority 2 (operational review): File/event identity mismatches where supplied file supports a different slip than registered; other skip exceptions with ambiguous documentation.
+- Priority 3 (background tracking): Subledger arithmetic errors; minor reconciliation discrepancies.
+
+The triage distribution is 7 Priority 1, 16 Priority 2, and 9 Priority 3 exceptions (32 total).
+
+REQUIRED FILES
+
+The following files from the workspace must be used as source data. Each must be referenced by exact filename:
+
+- applicant_register_2026-08.csv (waiting_list_administration/exports/)
+- offer_events_2022_2026.csv (waiting_list_administration/exports/)
+- skip_events_2022_2026.csv (waiting_list_administration/exports/)
+- amendment_log_2022_2026.csv (waiting_list_administration/exports/)
+- billing_transactions_2022_2026.csv (finance_and_billing/exports/)
+- slip_inventory_2026-08.csv (facilities_and_slips/exports/)
+- ar_aging_2026-07-31.xlsx (finance_and_billing/aging/)
+- resolution_2022-06.pdf (district_clerk/resolutions/)
+- standing_order_15-3.pdf (district_clerk/resolutions/)
+- tariff_resolution_2019-14.pdf (district_clerk/resolutions/)
+- appeal_2018-3_decision.pdf (district_clerk/appeals/)
+- skip_justification_wl_01019.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01027.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01054.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01061.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01078.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01093.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01112.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01129.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01148.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01171.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01186.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01203.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01218.pdf (waiting_list_administration/skip_files/)
+- skip_justification_wl_01237.pdf (waiting_list_administration/skip_files/)
+- measurement_cert_wl_01893.pdf (moorage_counter/measurement/)
+- measurement_cert_wl_02401.pdf (moorage_counter/measurement/)
+
+DO NOT use CHD_World_Brief_Screenshots.pdf as it does not exist in the workspace.
+
+DELIVERABLES
+
+The audit must produce the following outputs in a single workbook with exactly four tabs:
+
+1. SUMMARY tab: Audit results table covering Queue Skips (309 in scope, 19 without same-day proof, FAIL), Length Amendments (176 post-adoption, 11 unsupported, PASS), July Monthly Billings (769 tested, 317 without July row, PARTIAL), Billing Coverage (1,086 occupied, 317 missing, CAUTION), and Aging >90 Days (6 active holders, 2 include 120+ amounts, FAIL). Include Financial Summary section with Expected Revenue ($439,918.30), Exported Revenue ($319,760.05), Monthly Revenue Exposure ($120,158.25), Annualized Exposure ($1,441,899.00), and Baseline Floor for 317 missing slips ($99,629.80). Include Queue Exception Summary (19 skip-proof failures, 11 unsupported LOA, 2 unresolved, 1 late support, 1 invalid code, 2 identity mismatch, 12 other, 39 subledger errors). Include Subledger Overview (260 aging accounts, 826 missing from aging, 39 error lines, $17,108.00 control gap vs $147,836.00 true total).
+
+2. QUEUE EXCEPTIONS tab: All 19 skip events with documentation_attached=N in the audit window, prioritized. All 11 unsupported LOA entries (post-August 1, 2022 amendments without source document and no downstream skip use). Two unresolved cases: WL-01999 (1 LOA amendment AMD-001092 dated 2024-03-30, no certificate, 0 skip events, 0 offer events) and WL-02085 (1 LOA amendment AMD-001859 dated 2025-10-30, no certificate, 3 stale offers, 0 skip events). Seven Priority 1 accounts: WL-02618 (Gary Tomlinson), WL-03044 (Iris Quan), WL-03390 (Phillip Ard), WL-01999, WL-02085, WL-02319 (Elizabeth Pacheco - late support), WL-02712 (James Lynch - invalid reason code plus arithmetic error). Six overdue accounts over 90 days past due totaling $4,368.00.
+
+3. BILLING RECONCILIATIONS tab: July 2026 recurring moorage analysis. 769 tested rows, 317 occupied slips without July monthly row. Revenue analysis: Expected Revenue $439,918.30 (1,086 occupied slips), Exported Revenue $319,760.05 (July monthly moorage amount field, pre-tax), Revenue Exposure $120,158.25 (Expected minus Exported), Baseline Floor $99,629.80 (317 missing slips). Coverage by basin for all 5 basins (Ledgport, Vessbank, Eastwey, Gullwing, Salmonberry) showing occupied count, July rows, unscored count, and status. Rate verification table confirming $10.40/$7.55 post-adoption rates per Resolution 2022-06 and $9.85/$7.10 pre-adoption per Tariff Resolution 2019-14.
+
+4. AGING tab: All 6 active holders over 90 days past due as of August 1, 2026 (total balance $4,368.00), with full aging breakdown (Current, 31-60, 61-90, 91-120, 120+, Over-90, Total Due). Cross-referenced with slip_inventory_2026-08.csv confirming Active/Occupied status. Include summary: 260 subledger accounts in AR aging, 826 occupied accounts missing from aging report, 39 subledger error lines, $17,108.00 control gap, $147,836.00 verified bucket total.
+
+All four tabs must use dynamic formulas for totals and variance cells (SUM formulas, arithmetic expressions referencing cell addresses). No static values in cells designated for computed totals.
+
+MEMORANDUM DELIVERABLE
+
+The audit must produce a two-page memorandum to Administrator Ginny Marina and the Board of Harbor Commissioners, dated August 1, 2026, covering the following topics with specific figures and reasoning:
+
+Page 1: Decision Summary - Explain that July revenue leakage is $0.00 in tested population (all 769 active recurring billing rows reprice to tariff using MAX(rounded-up check-in LOA, posted slip length) at post-adoption rates). Clarify that the $99,629.80 baseline for 317 missing slips represents unverified coverage, not booked leakage; term or prepayment evidence is required before classifying as leakage. Include Queue Exceptions summary covering skip-proof failures, unsupported LOA entries, and unresolved cases with specific applicant names and account identifiers.
+
+Page 2: Billing and Aging - Cover subledger billing coverage gap (317 of 1,086 occupied slips), aging analysis (6 accounts over 90 days, $4,368.00 total), and subledger reconciliation (39 arithmetic discrepancies, $17,108.00 control gap vs $147,836.00 true total). Must cite Standing Order 15-3 s.3.2-3.5 and Appeal 2018-3 as governing legal basis for all skip determinations. Must explain that 826 occupied accounts absent from the aging report represent a coverage gap requiring reconciliation, not automatic leakage.
+
+CRITICAL NUMBERS (must appear exactly as stated in final deliverables):
+- Expected Revenue: $439,918.30
+- Exported Revenue: $319,760.05
+- Monthly Revenue Exposure: $120,158.25
+- Annualized Exposure: $1,441,899.00
+- Baseline Floor (317 missing slips): $99,629.80
+- Skip events without same-day proof: 19
+- Unsupported LOA entries: 11
+- Unresolved cases: WL-01999, WL-02085
+- Priority 1 accounts: WL-02618, WL-03044, WL-03390, WL-01999, WL-02085, WL-02319, WL-02712
+- Triage distribution: 7 Priority 1, 16 Priority 2, 9 Priority 3
+- Accounts over 90 days: 6 (total $4,368.00)
+- Accounts missing from aging: 826 (out of 1,086 occupied; 260 in aging)
+- Subledger errors: 39 lines ($17,108.00 gap vs $147,836.00 true total)
+- Post-adoption rates: $10.40 covered / $7.55 open (effective August 1, 2022)
+- Pre-adoption rates: $9.85 covered / $7.10 open (effective March 12, 2019)
+
+All deliverables must be free of invisible characters (zero-width, non-breaking spaces, or other non-printing Unicode). All filenames must match workspace filenames exactly (lowercase, underscores as separators, correct spelling).
