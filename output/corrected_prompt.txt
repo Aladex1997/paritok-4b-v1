@@ -1,4 +1,4 @@
-CHALDIE HARBOR MARINA - MOORAGE AUDIT
+CHALDALE HARBOR MARINA - MOORAGE AUDIT
 Board Memorandum - Queue Integrity, Recurring Billing, and July Receivables
 
 PREPARED FOR: Administrator Ginny Marina and Board of Harbor Commissioners
@@ -8,7 +8,7 @@ SKIP AUDIT PERIOD: January 1, 2023 through July 31, 2026
 
 SCOPE AND MANDATE
 
-Conduct a full audit of moorage queue operations for Chaldie Harbor Marina as of August 1, 2026, covering the skip audit period of January 1, 2023 through July 31, 2026. The audit must verify queue exceptions, recurring billing coverage, aging accuracy, and subledger reconciliation. All findings must be grounded in the listed source documents and must not rely on assumptions, estimates, or external data not present in the workspace.
+Conduct a full audit of moorage queue operations for Chaldale Harbor Marina as of August 1, 2026, covering the skip audit period of January 1, 2023 through July 31, 2026. The audit must verify queue exceptions, recurring billing coverage, aging accuracy, and subledger reconciliation. All findings must be grounded in the listed source documents and must not rely on assumptions, estimates, or external data not present in the workspace.
 
 DO NOT exclude any data, DO NOT assume missing records indicate leakage, and DO NOT infer events not documented in the source files. All conclusions must be verifiable against the listed source documents.
 
