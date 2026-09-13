@@ -1,0 +1,371 @@
+{
+  "criteria": [
+    [
+      "R-01",
+      "Expected Revenue",
+      "$439,918.30",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-02",
+      "Exported Revenue",
+      "$319,760.05",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-03",
+      "Monthly Exposure",
+      "$120,158.25",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-04",
+      "Annualized Exposure",
+      "$1,441,899.00",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-05",
+      "Baseline Floor",
+      "$99,629.80",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-06",
+      "Missing Export Slips",
+      "317 slips",
+      "Numeric",
+      "No"
+    ],
+    [
+      "R-07",
+      "Skip Failures",
+      "19 skips",
+      "Numeric",
+      "No"
+    ],
+    [
+      "R-08",
+      "Unsupported LOA",
+      "11 items",
+      "Numeric",
+      "No"
+    ],
+    [
+      "R-09",
+      "Overdue Accounts",
+      "6 accounts / $4,368.00",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-10",
+      "Missing from Aging",
+      "826 slips",
+      "Numeric",
+      "No"
+    ],
+    [
+      "R-11",
+      "Subledger Errors",
+      "39 errors",
+      "Numeric",
+      "No"
+    ],
+    [
+      "R-12",
+      "Control Gap",
+      "$17,108.00",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-13",
+      "True Total",
+      "$147,836.00",
+      "Numeric",
+      "Yes"
+    ],
+    [
+      "R-14",
+      "Billing Rates",
+      "$10.40/$7.55",
+      "Text",
+      "Yes"
+    ],
+    [
+      "R-15",
+      "Unresolved Cases",
+      "WL-02085 present",
+      "Text",
+      "Yes"
+    ]
+  ],
+  "performance": {
+    "Rsponse 1": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL"
+    ],
+    "Response 2": [
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL"
+    ],
+    "Response 3": [
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL"
+    ],
+    "Response 4": [
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL"
+    ],
+    "Response 5": [
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL"
+    ],
+    "Response 6": [
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL"
+    ],
+    "Response 7": [
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL"
+    ],
+    "Response 8": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "FAIL",
+      "FAIL",
+      "PASS",
+      "FAIL"
+    ]
+  },
+  "justifications": {
+    "Rsponse 1": {
+      "R-04": "Annualized Exposure ($1,441,899.00) not computed; monthly exposure not annualized by 12",
+      "R-05": "Baseline Floor ($99,629.80) omitted; no minimum threshold established",
+      "R-12": "Control Gap ($17,108.00) not identified; variance between aging total and ledger balance not computed",
+      "R-13": "True Total ($147,836.00) not calculated; net receivable position after adjustments missing",
+      "R-14": "Open rate ($7.55) cited but covered rate ($10.40) present only as raw data without explicit label",
+      "R-15": "WL-02085 unresolved case not flagged; only WL-01999 identified"
+    },
+    "Response 2": {
+      "R-01": "Expected Revenue ($439,918.30) not computed; no aggregate revenue figure",
+      "R-02": "Exported Revenue ($319,760.05) not computed; billing reconciliation lacks revenue totals",
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted; no 12-month projection",
+      "R-05": "Baseline Floor ($99,629.80) omitted; no minimum threshold established",
+      "R-12": "Control Gap ($17,108.00) not identified; no variance computed",
+      "R-13": "True Total ($147,836.00) not calculated; net receivable position missing",
+      "R-15": "WL-02085 unresolved case not flagged; only WL-01999 identified"
+    },
+    "Response 3": {
+      "R-01": "Expected Revenue ($439,918.30) not computed",
+      "R-02": "Exported Revenue ($319,760.05) not computed",
+      "R-03": "Monthly Exposure ($120,158.25) not computed",
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted",
+      "R-05": "Baseline Floor ($99,629.80) omitted",
+      "R-06": "Missing Export Slips (317) not identified",
+      "R-09": "Overdue Accounts (6/$4,368.00) not identified",
+      "R-10": "Missing from Aging (826) not identified",
+      "R-12": "Control Gap ($17,108.00) not identified",
+      "R-13": "True Total ($147,836.00) not calculated",
+      "R-14": "Billing Rates ($10.40/$7.55) not cited",
+      "R-15": "WL-02085 unresolved case not flagged"
+    },
+    "Response 4": {
+      "R-01": "Expected Revenue ($439,918.30) not computed",
+      "R-02": "Exported Revenue ($319,760.05) not computed",
+      "R-03": "Monthly Exposure ($120,158.25) not computed",
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted",
+      "R-05": "Baseline Floor ($99,629.80) omitted",
+      "R-09": "Overdue Accounts (6/$4,368.00) not identified",
+      "R-10": "Missing from Aging (826) not identified",
+      "R-12": "Control Gap ($17,108.00) not identified",
+      "R-13": "True Total ($147,836.00) not calculated",
+      "R-15": "WL-02085 unresolved case not flagged"
+    },
+    "Response 5": {
+      "R-01": "Expected Revenue ($439,918.30) not computed",
+      "R-02": "Exported Revenue ($319,760.05) not computed",
+      "R-03": "Monthly Exposure ($120,158.25) not computed",
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted",
+      "R-05": "Baseline Floor ($99,629.80) omitted",
+      "R-09": "Overdue Accounts (6/$4,368.00) not identified",
+      "R-10": "Missing from Aging (826) not identified",
+      "R-12": "Control Gap ($17,108.00) not identified",
+      "R-13": "True Total ($147,836.00) not calculated",
+      "R-15": "WL-02085 unresolved case not flagged"
+    },
+    "Response 6": {
+      "R-01": "Expected Revenue ($439,918.30) not computed",
+      "R-02": "Exported Revenue ($319,760.05) not computed",
+      "R-03": "Monthly Exposure ($120,158.25) not computed",
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted",
+      "R-05": "Baseline Floor ($99,629.80) omitted",
+      "R-09": "Overdue Accounts (6/$4,368.00) not identified",
+      "R-10": "Missing from Aging (826) not identified",
+      "R-12": "Control Gap ($17,108.00) not identified",
+      "R-13": "True Total ($147,836.00) not calculated",
+      "R-15": "WL-02085 unresolved case not flagged"
+    },
+    "Response 7": {
+      "R-01": "Expected Revenue ($439,918.30) not computed",
+      "R-02": "Exported Revenue ($319,760.05) not computed",
+      "R-03": "Monthly Exposure ($120,158.25) not computed",
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted",
+      "R-05": "Baseline Floor ($99,629.80) omitted",
+      "R-09": "Overdue Accounts (6/$4,368.00) not identified",
+      "R-10": "Missing from Aging (826) not identified",
+      "R-12": "Control Gap ($17,108.00) not identified",
+      "R-13": "True Total ($147,836.00) not calculated",
+      "R-15": "WL-02085 unresolved case not flagged"
+    },
+    "Response 8": {
+      "R-04": "Annualized Exposure ($1,441,899.00) omitted; monthly exposure not annualized",
+      "R-05": "Baseline Floor ($99,629.80) omitted; no minimum threshold established",
+      "R-12": "Control Gap ($17,108.00) not identified",
+      "R-13": "True Total ($147,836.00) not calculated",
+      "R-15": "WL-02085 unresolved case not flagged; only WL-01999 identified"
+    }
+  },
+  "golden_workbook": {
+    "Expected Revenue": {
+      "value": 439918.3,
+      "formula": "Direct input"
+    },
+    "Exported Revenue": {
+      "value": 319760.05,
+      "formula": "Direct input"
+    },
+    "Monthly Exposure": {
+      "value": 120158.25,
+      "formula": "=B13-B14"
+    },
+    "Annualized Exposure": {
+      "value": 1441899.0,
+      "formula": "=B15*12"
+    },
+    "Baseline Floor": {
+      "value": 99629.8,
+      "formula": "Direct input"
+    },
+    "True Total": {
+      "value": 147836.0,
+      "formula": "Direct input"
+    }
+  },
+  "analysis_notes": {
+    "strongest": "Response 3 (weakest - 80% fail rate)",
+    "weakest": "Response 3 (80% fail rate, 12/15 failures)",
+    "label_discrepancy": "Response 3 is actually weakest (80% fail), not Response 8 (33% fail). Response 8 is among strongest (33% fail). User labels may not reflect actual performance.",
+    "threshold_check": {
+      "Rsponse 1": "6/15 fail (40%) - does NOT meet \u226550% threshold",
+      "Response 8": "5/15 fail (33%) - does NOT meet \u226580% threshold",
+      "Response 3": "12/15 fail (80%) - MEETS \u226580% threshold"
+    }
+  }
+}
