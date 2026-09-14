@@ -1,101 +1,19 @@
-CHALDALE HARBOR MARINA - MOORAGE AUDIT
-Board Memorandum - Queue Integrity, Recurring Billing, and Receivables
+It is August 1, 2026, you are a counter clerk at the Chaldale Harbor District, and you are compiling a moorage audit for administrator Ginny Marina. Get out your files: applicant_register_2026-08.csv; offer_events_2022_2026.csv; skip_events_2022_2026.csv; amendment_log_2022_2026.csv; billing_transactions_2022_2026.csv; WL-02211_skip_justification.pdf; WL-02618_skip_justification.pdf; WL-02877_skip_justification.pdf; WL-03044_skip_justification.pdf; WL-03102_skip_justification.pdf; WL-03390_skip_justification.pdf; slip_inventory_2026-08.csv; resolution_2022-06.pdf; standing_order_15-3.pdf; tariff_resolution_2019-14.pdf; appeal_2018-3_decision.pdf; 2024-06-03_measurement_certificate_WL-01893.pdf; 2024-09-03_measurement_certificate_WL-02401.pdf; and ar_aging_2026-07-31.xlsx.
 
-PREPARED FOR: Administrator Ginny Marina and Board of Harbor Commissioners
-PREPARED BY: Moorage Counter Clerk
-AUDIT DATE: August 1, 2026
-SKIP AUDIT PERIOD: January 1, 2023 through July 31, 2026
+Prepare chaldale_moorage_audit_2026-08.xlsx for the administrator's review using the Board's priority, and attach a two-page memo, moorage_board_memo.docx, for the Board's consideration.
 
-SCOPE AND MANDATE
+Audit all applicants on skips for the period of January 1, 2023 – July 31, 2026. For each skip event found in skip_events_2022_2026.csv, determine whether there is contemporaneous proof of eligibility per Standing Order 15-3 s.3.2-3.3 (a cover sheet alone is not sufficient; the file must also include a supporting record assembled on the day the slip was worked). Cross-reference each skip justification PDF against the skip events and offer events to confirm whether supporting documentation exists and whether it was assembled contemporaneously.
 
-Conduct a full audit of moorage queue operations for Chaldale Harbor Marina as of August 1, 2026, covering the skip audit period of January 1, 2023 through July 31, 2026. The audit must determine: (1) how many skip events lack same-day proof of eligibility, (2) how many post-adoption length amendments are unsupported, (3) how many occupied slips were not included in the July 2026 billing export, (4) how many accounts are delinquent over 90 days, (5) how many occupied accounts are absent from the aging report, (6) what the subledger-to-ledger variance amounts to, and (7) what the verified bucket total should be. All findings must be computed from the listed source documents.
+For post-adoption length amendments after August 1, 2022, verify per Resolution 2022-06 s.4.3 that a signed measurement certificate or yard haul-out measurement sheet is on file. Check the amendment log for length changes after August 1, 2022, and cross-reference each amendment against measurement certificates and downstream skip events to determine whether the amendment is supported or unsupported.
 
-DO NOT exclude any data. DO NOT assume missing records indicate leakage. DO NOT infer events not documented in the source files. All conclusions must be verifiable against the listed source documents.
+Assign each exception to a Board priority tier. You must define your own priority criteria consistently across all exceptions and state them in your memo. Do not simply list exceptions — you must classify them and justify each classification. Exceptions requiring immediate Board attention should be Priority 1; operational review items Priority 2; background tracking items Priority 3.
 
-GOVERNING AUTHORITIES
+Check reconciliation of active slip billings to post-adoption rates using check-in measurements per the measurement certificates. Determine which slips are covered basins vs open basins from slip_inventory_2026-08.csv, apply the correct post-adoption rate to each, compute the expected monthly billings for all occupied slips, and compare against the actual billing transactions in billing_transactions_2022_2026.csv. Report the monthly variance in dollars for all discrepancies found.
 
-All determinations must be grounded in the following governing documents:
-- Standing Order 15-3: Governs skip file requirements. Section 3.2 requires a contemporaneous cover sheet plus a supporting record assembled on the day the slip was worked. Section 3.3 requires supporting records to be created contemporaneously (on the day the slip was worked). Section 5.1 names the skip event register as a District record. Per Appeal 2018-3, the burden of proof shifts to the District when a skip is not evidenced; if the District cannot produce a contemporaneous support record, the skip is upheld for the applicant.
-- Resolution 2022-06: Governs billing rate adoption (effective August 1, 2022), billable length formula, and amendment verification requirements. Section 1.1 sets post-adoption rates. Section 4.3 requires amendments to be supported by certification. Section 1.4 governs billable length.
-- Tariff Resolution 2019-14: Pre-adopted tariff framework (effective March 12, 2019). Rates differ from post-adoption rates. Used only for periods before August 1, 2022.
-- Appeal 2018-3 Decision: Legal precedent establishing that the District bears the burden of proof for missed skips unless contemporaneous same-day proof is provided.
+Report all active slips more than 90 days delinquent as of August 1, 2026, using ar_aging_2026-07-31.xlsx. You must determine from the aging ledger which accounts qualify as delinquent (balances in the 91-120 and 120+ buckets), identify each account by applicant name and ID, and compute the total delinquent balance. Cross-reference with slip_inventory_2026-08.csv to confirm Active/Occupied status.
 
-BILLING POLICY
+Structure the spreadsheet as a four-tabbed Excel workbook: Summary, Queue Exceptions, Billing Reconciliations, and Aging. All totals and variances must be computed using formulas (SUM, arithmetic expressions referencing cell addresses) — no static values in computed cells. If there are no exceptions for a particular category, note this explicitly in the relevant tab.
 
-Billable length = MAX(rounded-up check-in LOA from applicant register, posted slip length from slip inventory). Post-adoption rates apply to periods beginning August 1, 2022. Pre-adoption rates apply to periods before August 1, 2022. Billable basis is foot-month (length in feet multiplied by months billed).
+The two-page memo must cover: (1) the skip audit findings with priority classification and rationale for each tier, (2) billing reconciliation results with monthly variance figures for each discrepancy, and (3) aging analysis with delinquent account details and total balances. Cite Standing Order 15-3 s.3.2-3.3, Resolution 2022-06 s.4.3, and Appeal 2018-3 as governing legal basis. Explain the priority criteria you applied and how each exception was classified.
 
-Contemporaneous proof of eligibility means a cover sheet plus a supporting record (measurement certificate or equivalent) assembled on the day the slip was worked, as required by Standing Order 15-3 s.3.2-3.3.
-
-QUALIFYING CRITERIA FOR EXCEPTION FLAGS
-
-Exception flags must be assigned based on the following criteria - you must determine the correct category for each exception by analyzing the source data:
-- Priority 1 (immediate board attention): Skip events without same-day proof per SO 15-3 s.3.2; LOA amendments without certification source and no downstream skip use; unresolved cases requiring legal review; late supporting records; invalid reason codes; any other case requiring immediate determination.
-- Priority 2 (operational review): File/event identity mismatches where supplied file supports a different slip than registered; other skip exceptions with ambiguous documentation.
-- Priority 3 (background tracking): Subledger arithmetic errors; minor reconciliation discrepancies; low-risk items requiring monitoring only.
-
-You must classify each exception into the correct priority tier. The distribution is not predetermined - derive it from the data.
-
-REQUIRED FILES
-
-The following files from the workspace must be used as source data. Each must be referenced by exact filename:
-
-- applicant_register_2026-08.csv (waiting_list_administration/exports/)
-- offer_events_2022_2026.csv (waiting_list_administration/exports/)
-- skip_events_2022_2026.csv (waiting_list_administration/exports/)
-- amendment_log_2022_2026.csv (waiting_list_administration/exports/)
-- billing_transactions_2022_2026.csv (finance_and_billing/exports/)
-- slip_inventory_2026-08.csv (facilities_and_slips/exports/)
-- ar_aging_2026-07-31.xlsx (finance_and_billing/aging/)
-- resolution_2022-06.pdf (district_clerk/resolutions/)
-- standing_order_15-3.pdf (district_clerk/resolutions/)
-- tariff_resolution_2019-14.pdf (district_clerk/resolutions/)
-- appeal_2018-3_decision.pdf (district_clerk/appeals/)
-- skip_justification_wl_01019.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01027.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01054.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01061.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01078.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01093.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01112.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01129.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01148.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01171.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01186.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01203.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01218.pdf (waiting_list_administration/skip_files/)
-- skip_justification_wl_01237.pdf (waiting_list_administration/skip_files/)
-- measurement_cert_wl_01893.pdf (moorage_counter/measurement/)
-- measurement_cert_wl_02401.pdf (moorage_counter/measurement/)
-
-DO NOT use CHD_World_Brief_Screenshots.pdf as it does not exist in the workspace.
-
-DELIVERABLES
-
-The audit must produce the following outputs in a single workbook with exactly four tabs:
-
-1. SUMMARY tab: Audit results table covering Queue Skips (how many in scope, how many without same-day proof, status), Length Amendments (how many post-adoption, how many unsupported, status), July Monthly Billings (how many tested, how many without July row, status), Billing Coverage (total occupied, how many missing, status), and Aging >90 Days (how many active holders, how many include 120+ amounts, status). Include Financial Summary section with Expected Revenue, Exported Revenue, Monthly Revenue Exposure, Annualized Exposure, and Baseline Floor for missing slips - you must compute all figures from the data. Include Queue Exception Summary (count by each priority tier, unresolved cases with details, subledger overview with counts and variances).
-
-2. QUEUE EXCEPTIONS tab: All skip events with documentation_attached=N in the audit window, prioritized by your triage classification. All unsupported LOA entries (post-August 1, 2022 amendments without source document and no downstream skip use). Any unresolved cases you identify, with full details (LOA amendment ID, date, certificate status, skip events, offer events). Your Priority 1 accounts must be determined by applying the Priority 1 criteria to each exception - do not copy from this prompt. Six overdue accounts over 90 days past due - you must identify them and their total balance from the aging data.
-
-3. BILLING RECONCILIATIONS tab: July 2026 recurring moorage analysis. Count tested rows and rows without July monthly billing. Revenue analysis: compute Expected Revenue from all occupied slips, Exported Revenue from July monthly moorage amount field (pre-tax), Revenue Exposure as the difference, Baseline Floor for missing slips. Coverage by basin for all 5 basins (Ledgport, Vessbank, Eastwey, Gullwing, Salmonberry) showing occupied count, July rows, unscored count, and status. Rate verification table confirming post-adoption and pre-adoption rates with citations.
-
-4. AGING tab: All active holders over 90 days past due as of August 1, 2026 - you must identify them from ar_aging_2026-07-31.xlsx - with full aging breakdown (Current, 31-60, 61-90, 91-120, 120+, Over-90, Total Due). Cross-referenced with slip_inventory_2026-08.csv confirming Active/Occupied status. Include summary: total subledger accounts in AR aging, occupied accounts missing from aging report, subledger error lines, control gap vs verified bucket total - you must compute these.
-
-All four tabs must use dynamic formulas for totals and variance cells (SUM formulas, arithmetic expressions referencing cell addresses). No static values in cells designated for computed totals.
-
-MEMORANDUM DELIVERABLE
-
-The audit must produce a two-page memorandum to Administrator Ginny Marina and the Board of Harbor Commissioners, dated August 1, 2026, covering the following topics with specific figures and reasoning:
-
-Page 1: Decision Summary - Explain the July revenue position and whether leakage exists in the tested population, citing the specific computation method. Clarify that any baseline for missing slips represents unverified coverage, not booked leakage. Include Queue Exceptions summary covering skip-proof failures, unsupported LOA entries, and unresolved cases with specific applicant names and account identifiers. Explain the triage methodology you applied and the resulting distribution.
-
-Page 2: Billing and Aging - Cover subledger billing coverage gap (how many of total occupied slips are missing from July billing), aging analysis (how many accounts over 90 days, their total balance), and subledger reconciliation (how many arithmetic discrepancies, the control gap amount vs the verified total). Must cite Standing Order 15-3 and Appeal 2018-3 as governing legal basis for all skip determinations. Must explain that accounts absent from the aging report represent a coverage gap requiring reconciliation, not automatic leakage.
-
-CRITICAL REQUIREMENTS
-
-- All figures must be computed from source data, not stated in this prompt. The prompt intentionally does not provide the answer values.
-- Each exception must be classified into Priority 1, 2, or 3 based on the criteria above, not assigned by this prompt.
-- Unresolved cases must be identified by analyzing the amendment log and offer events data - do not assume all flagged cases are unresolved.
-- Some accounts may have partial payments, settlements, or other dispositions that affect whether they should be counted as delinquent - you must determine this from the aging data.
-- The triage distribution must be derived from your analysis, not copied from any source.
-- All deliverables must be free of invisible characters (zero-width, non-breaking spaces, or other non-printing Unicode). All filenames must match workspace filenames exactly (lowercase, underscores as separators, correct spelling).
+All deliverables must be free of invisible characters (zero-width, non-breaking spaces, or other non-printing Unicode). All filenames must match workspace filenames exactly (lowercase, underscores as separators, correct spelling).
