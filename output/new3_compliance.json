@@ -1,0 +1,786 @@
+{
+  "NEW 5": {
+    "passed": 7,
+    "total": 15,
+    "failed": 8,
+    "fail_pct": 53.3,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 4,
+        "pass": true
+      }
+    ]
+  },
+  "New 1": {
+    "passed": 10,
+    "total": 15,
+    "failed": 5,
+    "fail_pct": 33.3,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 4,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 4,
+        "pass": true
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 4,
+        "pass": true
+      }
+    ]
+  },
+  "New 2": {
+    "passed": 9,
+    "total": 15,
+    "failed": 6,
+    "fail_pct": 40.0,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 4,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 4,
+        "pass": true
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 3,
+        "pass": true
+      }
+    ]
+  },
+  "New 3": {
+    "passed": 8,
+    "total": 15,
+    "failed": 7,
+    "fail_pct": 46.7,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 1,
+        "pass": false
+      }
+    ]
+  },
+  "New 4": {
+    "passed": 7,
+    "total": 15,
+    "failed": 8,
+    "fail_pct": 53.3,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 4,
+        "pass": true
+      }
+    ]
+  },
+  "New 6": {
+    "passed": 6,
+    "total": 15,
+    "failed": 9,
+    "fail_pct": 60.0,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 4,
+        "pass": true
+      }
+    ]
+  },
+  "New 7": {
+    "passed": 5,
+    "total": 15,
+    "failed": 10,
+    "fail_pct": 66.7,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 0,
+        "pass": false
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 4,
+        "pass": true
+      }
+    ]
+  },
+  "New 8": {
+    "passed": 11,
+    "total": 15,
+    "failed": 4,
+    "fail_pct": 26.7,
+    "results": [
+      {
+        "id": "C01",
+        "name": "Skip audit performed",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C02",
+        "name": "Contemporaneous proof logic",
+        "matches": 4,
+        "pass": true
+      },
+      {
+        "id": "C03",
+        "name": "PDF reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C04",
+        "name": "Amendment verification (certificate)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C05",
+        "name": "Post-adoption cutoff (Aug 1, 2022)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C06",
+        "name": "Amendment reconciliation",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C07",
+        "name": "Covered vs open determination",
+        "matches": 3,
+        "pass": true
+      },
+      {
+        "id": "C08",
+        "name": "Expected monthly charges",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C09",
+        "name": "Rates from Resolution 2022-06",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C10",
+        "name": "Variance in dollars",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C11",
+        "name": "Aging buckets (91-120, 120+)",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C12",
+        "name": "Slip ID join (AC-LP-0122)",
+        "matches": 1,
+        "pass": false
+      },
+      {
+        "id": "C13",
+        "name": "OCCUPIED status confirmation",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C14",
+        "name": "Delinquent balance computed",
+        "matches": 2,
+        "pass": true
+      },
+      {
+        "id": "C15",
+        "name": "Priority classification",
+        "matches": 4,
+        "pass": true
+      }
+    ]
+  }
+}
