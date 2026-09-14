@@ -1,0 +1,22 @@
+2025-08-04  PC
+
+precedent note -- Appeal 2018-3 (Auldbrook)
+
+holding, as I use it in scoring: a skip stands or falls on the
+file as it existed when the slip was worked. bare reason code =
+conclusion, not record. register is the vessel of record; a
+broker's listing for a boat the applicant doesn't own can't
+supply a particular. remedy was prospective only because the
+slip had already been accepted in good faith.
+
+where it bites in our sample:
+- the four cover-sheet-only files fail under 2018-3 directly.
+  cover sheet = the bare code. no support = skip can't be
+  sustained ON THE FILE. (merits may still be right, see
+  WL-02211 ledger history, but the FILE fails.)
+- WL-02319: support dated 3 days late. 2018-3 says the day
+  worked controls. scored 0. JM argued for a grace period;
+  nothing in 2018-3 or SO 15-3 gives one.
+
+quote I keep using: 'the controlling moment is the working of
+the slip, because that is the moment rank order is disturbed.'

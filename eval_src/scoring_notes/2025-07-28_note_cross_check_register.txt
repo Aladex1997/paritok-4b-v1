@@ -1,0 +1,22 @@
+2025-07-28  PC
+
+cross-check notes, register vs files
+
+method: for each of the 40 files, walk the register segment for
+the week the slip was worked. looking for (a) amdmt rows for
+the applicant inside +/- 30 days, (b) whether the file's
+support matches the register's source-document field.
+
+found:
+- 6 of 40 files had an amdmt row inside the window. 4 of 6 had
+  the source field filled and matching. 2 of 6 blank source
+  field (both pre-adoption rows -- field not enforced then).
+- register dates and day-log dates agree on all 40. the day
+  log is the controlling record and it held up.
+- one transposed HIN in the register (WL-02988), corrected by
+  a later row keyed the same morning, both rows in export.
+  noted, not an exception.
+
+cross-check of the 604: random 12 came from the 604
+non-flagged assignments. all 12 files complete. says the
+flagged stratum really is where the exposure lives.

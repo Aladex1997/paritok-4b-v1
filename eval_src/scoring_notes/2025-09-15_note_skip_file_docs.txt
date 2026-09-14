@@ -1,0 +1,22 @@
+2025-09-15  PC
+
+skip file documentation -- what 'complete' means in practice
+
+412 skip events in the window, 412 files exist. the question is
+assembly-on-the-day. three grades I actually used:
+ complete: cover + support + (correspondence if any), support
+   dated on/before the work date.
+ thin: cover + support, support dated AFTER the work date
+   (WL-02319 pattern). fails 2018-3.
+ cover-only: WL-02211, WL-02618, WL-03044, WL-03390. fails
+   SO 15-3 s.3.2 outright.
+
+counts in the 40-file sample: complete 34, thin 2, cover-only
+4. extrapolating to 412 is NOT my job and I said so at the
+session -- the random 12 were all complete, which is the honest
+basis for any extrapolation.
+
+the four cover-only files: merits reconstructed OK for three
+(ledger, particulars, prefs all corroborate), one (WL-03390)
+the applicant never answered the letter. exposure is real but
+small and it is exactly four files.

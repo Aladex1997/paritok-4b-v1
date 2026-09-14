@@ -1,0 +1,21 @@
+2025-07-09  PC
+
+amendment window analysis (for the 28 flagged files)
+
+register export: 2244 rows, all HB-COUNTER-2. length-only rows:
+713. split at 2022-08-01 (Res 2022-06 effective):
+  pre-adoption  402
+  post           311
+post with cert/haul-out on file: 296. without: 15 -> all cured
+in the Oct file cleanup per JM, verify 3 of the 15 myself
+tomorrow against the actual folders, not the index.
+
+window check: how often does a length amdmt land within 14 days
+of the applicant's slip being worked? 58% per JM's review.
+expected -- people update particulars when the phone rings.
+not itself an exception. the 4.3 question is support AT ENTRY.
+
+key dates straight in my head:
+  Res 2022-06 adopted 2022-06-14, effective 2022-08-01.
+  audit window opens 2022-01-01, so 7 months of pre-adoption
+  window inside the audit window. dont mix these up again.

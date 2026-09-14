@@ -1,0 +1,21 @@
+2025-07-08  PC
+
+foot-month working, pre-session arithmetic
+
+basis: billed ft x months billed. covered 10.40/ft-mo, open 7.55.
+rounded up at check-in. greater of measured vs posted.
+
+check LP-0119 class: 32 ft posted, measured 30.9 -> 31. posted
+governs. 32 x 10.40 = 332.80/mo. agree w/ ledger.
+
+EW-0603: posted 36, amended loa 32.7 (pre-2022-06 amdmt, entered
+03/22). billed 36. 36 x 7.55 = 271.80. agree.
+
+so for scoring: when a file's arithmetic disagrees with the
+register by exactly 1 ft, look for round-up at check-in before
+calling it an error. 31.4 bills as 32. seen twice in sample
+already.
+
+note to self: pull rate history for anything pre-08/2022 --
+9.85/7.10 before Res 2022-06. 10.40/7.55 after. wrong rate for
+the date is a real error, not a scoring disagreement.

@@ -1,0 +1,20 @@
+2025-09-02  PC
+
+offer sequence check (spot, for the out-of-turn workpaper)
+
+took 10 offers from the export at random, walked each against
+the day log + register snapshot:
+ OFR-2022-0217 LP-0119 08/30/22 -- rank 1208 assigned, 1197
+   skipped vessel-fit (41.6 of record, covered limit 40). file
+   complete. sequence correct.
+ OFR-2023-0441 EW-0512 04/11/23 -- pref amdmt 03/29/23 ahead of
+   the work date. sequence correct.
+ OFR-2024-0588 VB-0144 10/08/24 -- declined-prior-offer, prior
+   OFR-2024-0402 cited in file. correct.
+ others (7) all correct, no anomalies.
+
+observation for the workpaper: the month-end rank snapshot vs
+the date-worked rank explains most apparent gaps. retainer
+moves and second-decline drops land between snapshot dates.
+recommend the test re-cut rank at date-worked before calling
+anything out-of-turn.

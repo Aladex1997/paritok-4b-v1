@@ -1,0 +1,21 @@
+2025-07-14  PC
+
+first pass, files 1-14. unanimous so far.
+
+f-01 WL-02440 / EW-0512 / pref-mismatch. pref sheet attached,
+amended 03/23 to covered-only. clean. 3/3/3.
+f-02 WL-02113 / LP-0307 / not-current. ledger extract shows fee
+61 days out. clean.
+f-03 WL-01980 / GW-0817 / not-current. insurance cert exp
+03/2023, extract attached. clean.
+f-04 WL-02518 / GW-0702 / vessel-fit. beam 9.4 of record vs 9.0
+posted. particulars printout attached. clean.
+f-05 WL-02401 / LP-0307... wait no, f-05 is the COHO RUN file,
+amdmt-supported. cert MC-2024-0091 on file, keyed 09/05/24,
+cert dated 09/03/24. support AT ENTRY +2 days. fine. clean.
+
+running tally after 14 files: 42 scores, all unanimous.
+if this holds, expect ~30+ unanimous of 40. the flagged stratum
+is supposed to be the hard one -- so far the flagged files are
+the documented ones. the problem files are the thin ones we
+already know about.

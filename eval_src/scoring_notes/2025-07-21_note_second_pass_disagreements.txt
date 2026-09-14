@@ -1,0 +1,31 @@
+2025-07-21  PC
+
+second pass -- the 9 disagreements
+
+rule we set: disagreement = any criterion where the three of us
+split. talk it through against the file, not against each
+other's priors. file as it stood when the slip was worked is
+the whole inquiry (Appeal 2018-3).
+
+d-1 WL-02211: split on completeness (2 said 0, 1 said 1 becuase
+cover sheet exists). resolved 0: cover sheet alone is not a
+file under SO 15-3. all three agreed on the resolution.
+d-2 WL-02618: same shape. resolved 0 on completeness.
+d-3 WL-03044: same. resolved 0.
+d-4 WL-03390: same. resolved 0.
+d-5 WL-02971: split on arithmetic (1 ft diff). turned out to be
+round-up at check-in, 33.4 -> 34. resolved not an error.
+d-6 WL-02712: split on reason-code validity -- coded vessel-fit
+but particulars show 27.9 for a 28 ft slip, fits. recoded as
+code-invalid for scoring. NOT cleared. flagged to JM.
+d-7 WL-02590: split on pref-mismatch; preference history had an
+amendment 11 days before the slip was worked that two of us
+missed. resolved valid, amended prefs rule.
+d-8 WL-03012: arithmetic again, rate for date wrong in MY
+working (used 10.40 for a 06/2022 line, should be 9.85). my
+error, corrected. file clean.
+d-9 WL-02319: split on completeness -- support attached but
+dated 3 days AFTER the slip worked. resolved: late support is
+not support at entry. scored 0 on completeness. flagged.
+
+9 resolved. final tally sheet tomorrow.
