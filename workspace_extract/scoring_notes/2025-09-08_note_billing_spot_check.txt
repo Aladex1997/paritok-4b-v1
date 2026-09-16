@@ -1,0 +1,19 @@
+2025-09-08  PC
+
+billing spot check, foot-month
+
+10 accounts from the 46,800-line export, re-priced by hand:
+ 3 covered, LP rows: 32 x 10.40 = 332.80 ok; 28 x 10.40 =
+   291.20 ok; 36 x 9.85 = 354.60 (pre-08/22 rate, correct for
+   the date) ok.
+ 4 open: 36 x 7.55 = 271.80 ok; 45 x 7.55 = 339.75 ok;
+   60 x 7.55 = 453.00 ok; 24 x 7.10 = 170.40 (pre-08/22) ok.
+ 2 guest: LOA basis not slip basis, right per tariff.
+ 1 liveaboard: surcharge 95.00 on top, ok.
+
+no variance over a nickel. one account billed a foot high for
+part of 2023 (pre-adoption amdmt timing) -- already credited,
+shows as CREDIT_ADJUSTMENT. matches what LB told the
+commission (4.1% >90 days aging, receivables fine).
+
+billing is not where this audit gets interesting.

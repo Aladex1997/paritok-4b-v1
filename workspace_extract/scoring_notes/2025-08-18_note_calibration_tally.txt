@@ -1,0 +1,24 @@
+2025-08-18  PC
+
+calibration tally, final
+
+files: 40 = 28 flagged + 12 random (from the 604 remaining).
+scorers: 3. criteria: 3 (code validity, completeness, arithmetic).
+scores: 40 x 3 x 3 = 360 criterion-scores; the session counts a
+'file score' per scorer per file = 120 individual scores. use
+the 120 figure, that's what the workpaper reports.
+
+first pass: 31 unanimous, 9 split.
+second pass: 9 resolved (see 07-21 note). none left open.
+
+score distribution (file-level, majority):
+ clean (3/3/3): 31
+ one criterion failed: 7  (incl. WL-02319 late support, WL-02712
+   wrong code)
+ cover-sheet-only, completeness 0: 4 (WL-02211, WL-02618,
+   WL-03044, WL-03390)
+ two-criteria failed: 2 (WL-02712 also failed arithmetic)
+
+for the response: the random 12 all scored clean. exposure is
+in the flagged stratum and is the four known files plus
+WL-02712 and WL-02319 on narrower grounds.

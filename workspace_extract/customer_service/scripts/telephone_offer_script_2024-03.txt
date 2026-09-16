@@ -1,0 +1,31 @@
+TELEPHONE OFFER CALL SCRIPT (counter, rev. March 2024)
+=========================================================
+
+Use when phoning an applicant about a new offer. The letter still
+governs — the call is a courtesy; the window runs from the LETTER
+date (10 days covered / 14 days open). Say so plainly.
+
+1. Identify yourself: "Chaldale Harbor District moorage counter,
+   this is [name]."
+2. Confirm you are speaking with the applicant of record. Never
+   discuss rank or offers with anyone else.
+3. "A slip has come up and we are mailing you an offer today:
+   slip [ID], [basin], [size] feet, [covered/open], at [rate]
+   per foot-month."
+4. "Your response window is [10/14] calendar days from the date
+   on the letter — not from today. We need your acceptance in
+   writing or in person at the counter."
+5. If they hesitate: "You can decline without losing your place.
+   A second decline moves you to the bottom of the list unless
+   you take the retainer option — I can explain that if useful."
+6. If they mention a new boat: "Before you accept, we should
+   update your particulars. If the length has changed, we will
+   need a measurement certificate or a haul-out measurement
+   sheet before the new length counts — that has been the rule
+   since Resolution 2022-06."
+7. Close: note the call in the day log with the time and your
+   initials, and drop the letter the same day.
+
+DO NOT: quote anyone else's position on the list, promise a
+date for the next offer, or agree to hold a slip past its
+window. Those are the three calls that come back to us.

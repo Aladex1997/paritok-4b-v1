@@ -1,0 +1,24 @@
+2025-08-11  PC
+
+precedent note -- Standing Order 15-3
+
+what SO 15-3 actually requires, para by para, for scoring:
+ s.1.1 day-log entry BEFORE the offer letter: date, slip id,
+ clerk initials. = the date the slip was 'worked'.
+ s.3.2 file assembled ON THE DAY: cover sheet + supporting
+ record + correspondence, in that order.
+ s.3.3 per-code support: vessel-fit -> particulars printout;
+ not-current -> ledger/register extract; declined-prior-offer
+ -> prior offer by date+id; preference-mismatch -> preference
+ sheet.
+ s.5.1 corrections by single line-through, initialed. (day logs
+ comply -- crossings-out everywhere, all initialed.)
+
+scoring rule I derive: completeness-0 if any of the three
+pieces is missing ON the day worked. correspondence can be
+absent legitimately (no contact), so completeness turns on
+cover + support in practice.
+
+note: SO 15-3 predates Res 2022-06 s.4.3. for length amdmts the
+certificate/haul-out rule is 4.3, not SO 15-3. keep the two
+standards seperate in the scoring sheet.
