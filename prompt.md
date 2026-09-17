@@ -1,3 +1,5 @@
+Subject: URGENT: Bureau Compliance Recall & Operations Audit (kvl_compliance_memo.docx)
+
 Team,
 
 As of our reporting cutoff on July 1, 2026, the Bureau of Youth Camp Licensing hit us with a formal compliance query regarding swim assessment sign-offs across all six of our camp locations. We have to deliver a single, comprehensive response directly to the Board and the Licensing Bureau: kvl_compliance_memo.docx.
