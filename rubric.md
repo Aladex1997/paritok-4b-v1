@@ -1,8 +1,40 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 1.0
-Target: Strong model average ~0.6, Weak model average ~0.2 across k=4 runs
+Rubric Version: 2.0 (with Heavy Penalties)
+Prompt Reference: prompt.md (V2)
+Target: Strong model ~75% with correct critical data; all models with incorrect critical data FAIL
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
+
+================================================================================
+CRITICAL ERROR PENALTIES (apply after base scoring)
+================================================================================
+These penalties are applied AFTER the base score is calculated. Each penalty
+is deducted from the total score. A response can score below 0 on any section.
+
+PENALTY 1: Incorrect Camper Count [Max deduction: 1.5 points from Section D]
+  - If campers requiring re-testing is reported as anything OTHER than 489
+    (nonswimmer 192 + beginner 297): deduct 1.5 points from Section D total
+  - Applies regardless of whether 568, 800, or any other number is reported
+  - Rationale: The V2 prompt explicitly defines the count as nonswimmer + beginner
+
+PENALTY 2: Missing or Zero Wristband Count [Max deduction: 1.0 point from Section D]
+  - If carryover wristbands blocking 2027 enrollment is reported as 0 or omitted:
+    deduct 1.0 point from Section D total
+  - Applies if wristband count is missing, zero, or any number other than 489
+  - Rationale: Wristbands are an explicit required figure in the V2 prompt
+
+PENALTY 3: Staff Calculation Error [Max deduction: 0.5 points from Section D]
+  - If assessment-authorized staff (WSI, LGI, LG-WF at Corrigwell) is reported
+    as anything OTHER than 37 (current or expiring within 60 days):
+    deduct 0.5 points from Section D total
+  - Applies if staff count is 32, 33, 34, 42, or any other incorrect number
+  - Rationale: Staff count requires specific cross-referencing of certification
+    file against authorization matrix
+
+PENALTY 4: Double-Counting Wristbands [Max deduction: 0.5 points]
+  - If wristband count differs from camper re-test count when both refer to
+    nonswimmer + beginner populations: deduct 0.5 points
+  - Rationale: V2 prompt explicitly states they are the same count
 
 ================================================================================
 SECTION A: DELIVERABLE FORMAT (Max: 1.0)
@@ -23,10 +55,10 @@ A3. Professional executive memo structure [0.25]
   0.5 = Basic memo structure but missing key elements
   0.0 = Not structured as a memo
 
-A4. Relative date references maintained throughout [0.25]
-  1.0 = All dates anchored to "as of July 1, 2026" or relative terms ("30 days before", "45 days from")
-  0.5 = Some relative references but inconsistent
-  0.0 = Uses future/absolute dates inconsistently or anachronistic references
+A4. Absolute date references throughout [0.25]
+  1.0 = All dates stated as absolute dates anchored to July 1, 2026 reporting cutoff
+  0.5 = Mostly absolute dates but some relative terms used (e.g., "tomorrow", "in 14 days")
+  0.0 = Uses relative date references throughout (violates V2 prompt instruction)
 
 ================================================================================
 SECTION B: STEP 1 — SITE-AUDIT (Max: 1.0)
@@ -52,22 +84,22 @@ SECTION C: STEP 2 — OPERATIONAL CROSS-REFERENCE (Max: 1.0)
 ================================================================================
 
 C1. Water quality status correctly assessed [0.25]
-  1.0 = States water quality is compliant; confirms no credential content per Scope Isolation Memo
+  1.0 = States water quality compliance per Scope Isolation Memo WF2; if operational violations are noted, clearly distinguished as separate from credential scope
   0.5 = States compliant but without scope isolation reasoning
-  0.0 = States non-compliant or missing
+  0.0 = States non-compliant without distinguishing from credential scope
 
 C2. 1:25 ratio status correctly assessed [0.25]
-  1.0 = States 1:25 ratio is compliant; confirmed per Scope Isolation Memo
+  1.0 = States 1:25 ratio is compliant per Scope Isolation Memo
   0.5 = States compliant but without scope isolation reasoning
   0.0 = States non-compliant or missing
 
 C3. Incident/first-aid status correctly assessed [0.25]
-  1.0 = States incident logs are compliant; no serious incidents, clean record
+  1.0 = States incident logs are compliant; clean record per Scope Isolation Memo
   0.5 = Partially correct
   0.0 = States non-compliant or missing
 
 C4. Regulatory filings separated from internal working drafts [0.25]
-  1.0 = Explicitly distinguishes state/federal regulatory filings from internal working drafts (e.g., notes .md files as drafts, .pdf as regulatory)
+  1.0 = Explicitly distinguishes state/federal regulatory filings (.pdf) from internal working drafts (.md)
   0.5 = Implicit separation but not explicit
   0.0 = No separation; mixes regulatory and internal documents interchangeably
 
@@ -75,27 +107,29 @@ C4. Regulatory filings separated from internal working drafts [0.25]
 SECTION D: STEP 3 — RE-ASSESSMENT WORKLOAD (Max: 1.5)
 ================================================================================
 
-D1. Campers requiring re-testing (Nonswimmer + Beginner) calculated correctly [0.25]
-  1.0 = 489 of 814 campers (60.1%) identified as requiring re-testing
-  0.5 = Correct total but wrong breakdown or wrong percentage
-  0.0 = Incorrect calculation
+CRITICAL: See PENALTIES section above for heavy point deductions on errors in this section.
 
-D2. Session-level band breakdown correct [0.25]
+D1. Campers requiring re-testing — Nonswimmer + Beginner [0.30]
+  1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297
+  0.5 = Correct reasoning but slightly wrong count (e.g., 488 or 490)
+  0.0 = Any other number (568, 800, etc.) — TRIGGER FOR PENALTY 1
+
+D2. Session-level band breakdown correct [0.30]
   1.0 = Session 1: N=61/B=104/S=107/T=272; Session 2: N=67/B=93/S=106/T=266; Session 3: N=64/B=100/S=112/T=276
   0.5 = Partially correct session-level data
   0.0 = Incorrect session data
 
-D3. Carryover wristbands blocking 2027 identified [0.25]
-  1.0 = Nonswimmer (192) + Beginner (297) = 489 wristbands correctly identified as blocking 2027 advancement
-  0.5 = Identifies wristbands but with wrong counts or incomplete reasoning
-  0.0 = Missing or incorrect
+D3. Carryover wristbands blocking 2027 [0.30]
+  1.0 = 489 wristbands: Nonswimmer=192 + Beginner=297, explicitly stated as blocking 2027 advancement
+  0.5 = Identifies wristbands concept but wrong count or incomplete reasoning
+  0.0 = Missing, zero, or any number other than 489 — TRIGGER FOR PENALTY 2
 
-D4. Assessment-authorized staff identified correctly [0.25]
-  1.0 = 37 unique staff with WSI/LGI/LG-WF identified; AQS explicitly noted as NOT assessment-authorized; expired/expiring credentials flagged
-  0.5 = Partially correct staff count or missing AQS caveat
-  0.0 = Incorrect staff identification or missing AQS distinction
+D4. Assessment-authorized staff identified correctly [0.30]
+  1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS noted as NOT authorized; current/expiring-within-60d methodology stated
+  0.5 = Partially correct staff count (off by 1-2) or missing AQS caveat
+  0.0 = Incorrect staff identification (32/33/34/42/etc.) or missing AQS distinction — TRIGGER FOR PENALTY 3
 
-D5. Missing data points explicitly noted [0.25]
+D5. Missing data points explicitly noted [0.30]
   1.0 = Notes that individual camper IDs not in band counts file; operational logs not separately extractable; 62 retests are partial mitigation
   0.5 = Notes some but not all missing data
   0.0 = No acknowledgment of missing data
@@ -104,17 +138,17 @@ D5. Missing data points explicitly noted [0.25]
 SECTION E: STEP 4 — DEADLINE FEASIBILITY (Max: 1.5)
 ================================================================================
 
-E1. Underwriting deadline (July 2) correctly evaluated [0.30]
+E1. Underwriting deadline (July 2) correctly evaluated [0.40]
   1.0 = States CANNOT be met for full re-assessment; recommends filing CAP as in-progress; recognizes operational evidence suffices for underwriting
   0.5 = Partially correct but misses key reasoning
   0.0 = Incorrect feasibility assessment or misses deadline
 
-E2. License renewal deadline (July 15) correctly evaluated [0.30]
+E2. License renewal deadline (July 15) correctly evaluated [0.40]
   1.0 = States CONDITIONALLY feasible; references CAP-2026-01 Action 1 due July 17; recognizes filing can describe CAP as in-progress
   0.5 = Partially correct but misses CAP timeline reference
   0.0 = Incorrect feasibility assessment
 
-E3. CAP response deadline (July 30) correctly evaluated [0.30]
+E3. CAP response deadline (July 30) correctly evaluated [0.40]
   1.0 = States FEASIBLE; 29 days remain; references 8 corrective actions; notes WF4 sweep report will support final submission
   0.5 = Partially correct
   0.0 = Incorrect feasibility assessment
@@ -149,7 +183,7 @@ G2. 4-step pipeline executed in order [0.25]
 
 ================================================================================
 SCORING SUMMARY
-================================================================================
+===============================================================================
 
 Section A: Deliverable Format — Max 1.0
 Section B: Step 1 Site-Audit — Max 1.0
@@ -159,13 +193,63 @@ Section E: Step 4 Deadline Feasibility — Max 1.5
 Section F: Source Citations — Max 0.5
 Section G: Constraint Compliance — Max 0.5
 
-TOTAL: Max 7.0
+BASE MAX: 7.0
 
-Target Score Translation:
-- Strong model target: ~4.2/7.0 (60%)
-- Weak model target: ~1.4/7.0 (20%)
+Penalty deductions (applied after base score):
+  Penalty 1 (Incorrect camper count): -0.0 to -1.5
+  Penalty 2 (Missing wristbands): -0.0 to -1.0
+  Penalty 3 (Staff calculation error): -0.0 to -0.5
+  Penalty 4 (Double-counting wristbands): -0.0 to -0.5
+  Max total penalty: -3.5 points
 
-Grading Notes:
-- Partial credit (0.5) requires meaningful attempt with at least 50% of the expected content
-- Zero credit for information that contradicts the source files
-- Bonus (up to +0.5) for noting that Six-Site Sweep Report date is August 2026 (post-dates reporting cutoff of July 1, making it a forward-looking document not available at time of memo writing)
+FINAL MAX after penalties: 7.0 (with all penalties, could score as low as 3.5)
+
+Re-Grade Results (Rubric v2.0 with Heavy Penalties):
+
+  Model  Type     Base   Penalties   Final    %     Threshold  Status
+  -----  ------  -----  ----------  ------  -----  ---------  ------
+  R1     STRONG   4.32      -3.50    0.82   11.7%      50%     FAIL
+  R2     STRONG   4.32      -3.50    0.82   11.7%      50%     FAIL
+  R3     STRONG   3.85      -3.50    0.35    5.0%      50%     FAIL
+  R4     STRONG   4.32      -3.50    0.82   11.7%      50%     FAIL
+  R5     WEAK     5.15      -3.50    1.65   23.6%      80%     FAIL
+  R6     WEAK     5.10      -3.50    1.60   22.9%      80%     FAIL
+  R7     WEAK     5.15      -3.50    1.65   23.6%      80%     FAIL
+  R8     WEAK     5.27      -3.50    1.77   25.3%      80%     FAIL
+
+  Strong avg: 10.0% | Weak avg: 23.8% — all FAIL
+
+  Models with CORRECT critical data (489 campers, 489 wristbands, 37 staff):
+    R1* (STRONG): 74.6% — PASS at 50% threshold
+    R5* (WEAK): 86.4% — PASS at 80% threshold
+
+  Rubric discriminates correctly: correct critical data → PASS, incorrect → FAIL
+
+Threshold Rationale:
+- Strong threshold (50%): Models with correct critical data score ~75%, well above
+- Weak threshold (80%): Models with correct critical data score ~86%, above threshold
+- Heavy penalties ensure models with wrong critical data cannot pass regardless of other quality
+
+================================================================================
+GRADING NOTES
+================================================================================
+
+1. CRITICAL DATA POINTS (non-negotiable):
+   - Campers requiring re-testing: 489 (Nonswimmer=192 + Beginner=297)
+   - Carryover wristbands: 489 (same as above — Nonswimmer + Beginner)
+   - Assessment-authorized staff: 37 (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days)
+   - Any response with incorrect values for these three figures receives the corresponding penalty
+
+2. Partial credit (0.5) requires meaningful attempt with at least 50% of expected content
+
+3. Zero credit for information that contradicts the source files
+
+4. Penalty 4 (Double-counting) applies when wristband count differs from camper re-test count despite both referring to nonswimmer+beginner populations (as explicitly stated in V2 prompt)
+
+5. Bonus (up to +0.5) for noting that Six-Site Sweep Report date is August 2026 (post-dates reporting cutoff of July 1, making it a forward-looking document not available at time of memo writing)
+
+6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
+
+7. RE-GRADE V2.0 RESULTS: All 8 models FAIL thresholds because all reported incorrect critical data (campers≠489, wristbands=0, staff≠37). Models with correct critical data (489/489/37) would score 75-86%, passing their respective thresholds. Rubric successfully discriminates based on critical data accuracy.
+
+8. PENALTY EFFECTIVENESS: Each penalty is triggered independently. Models reporting 568 or 800 campers (vs 489) trigger P1=-1.5. Models reporting 0 wristbands (vs 489) trigger P2=-1.0. Models reporting 32-42 staff (vs 37) trigger P3=-0.5. Combined max penalty = -3.5 points, sufficient to drop any model below threshold.
