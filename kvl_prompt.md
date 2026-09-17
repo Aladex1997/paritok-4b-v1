@@ -2,7 +2,7 @@ KVL Camps — Recreation Workers
 
 Hi,
 
-I need you to put together a Compliance Response Memo for the Bureau of Youth Camp Licensing findings unit. I'll give you the background below but the documents are the main thing — the full environment is in the attached zip. The season closes August 20 and we are not in a great position to miss anything.
+I need you to put together a Compliance Response Memo for the Bureau of Youth Camp Licensing findings unit. We are preparing this during the 2026 season, in the weeks before our August 20 season close — all timelines should be understood relative to that window. I'll give you the background below but the documents are the main thing — the full environment is in the attached zip. The season is not in a great position to miss anything.
 
 Background
 
@@ -26,7 +26,7 @@ Third, we have three deadlines in July that all hit at different times from diff
 
 Fourth, there is the question of the operational record. The water quality logs, ratio schedules, and incident logs at Corrigwell from 2022 through 2026 do not contain any credential or authorization fields. The scope isolation exercise confirmed this — it is in Corporate Risk and Compliance under Scope Isolation Memo 2026. I need you to explicitly state in the memo that these records are clean and carry no finding, that they answer a different question than the credential record (the operational record asks whether the water was safe and watched; the credential record asks who was authorized to certify the swim classifications), and that we are not using the clean operational record to either inflate the finding or argue it away. Both need to be kept separate and stated as such.
 
-Fifth, we did a six-site credential sweep after the Corrigwell finding came in — the report is in Corporate Risk and Compliance (Six-Site Credential Sweep Report 2026). Summarize what it found across all six camps. Corrigwell was the one site fully examined and it came back unauthorized-and-examined. Loon Hollow was also funded for re-examination and came back cleared — their Waterfront Director holds a WSI credential which the matrix lists as assessment-authorized. The other four sites — Tamarack Ridge, Bluegill Point, Heron Landing, and Otter Run — were never examined; the 2026 risk budget only funded two full re-examinations and Corrigwell and Loon Hollow used those slots. I need you to be precise about this distinction: never-examined is not a clearance and it is not a finding, it is a gap in knowledge. Do not describe those four sites as cleared or as problematic. They are scheduled for the 2027 pre-season sweep.
+Fifth, we did a six-site credential sweep after the Corrigwell finding came in — the report is in Corporate Risk and Compliance (Six-Site Credential Sweep Report 2026). Summarize what it found across all six camps. Corrigwell was the one site fully examined and it came back unauthorized-and-examined. Loon Hollow was also funded for re-examination and came back cleared — their Waterfront Director holds a WSI credential which the matrix lists as assessment-authorized. The other four sites — Tamarack Ridge, Bluegill Point, Heron Landing, and Otter Run — were never-examined. The 2026 risk budget only funded two full re-examinations and Corrigwell and Loon Hollow used those slots. It is important to be precise here: a site that was never-examined is in a different position from one that was examined and found clear — the absence of examination is not evidence of anything, good or bad. Those four sites are scheduled for the 2027 pre-season sweep.
 
 Things to be careful about
 
@@ -36,11 +36,10 @@ There are also some documents in the environment that reference dates and number
 
 Formatting and constraints
 
-- One memo, addressed to the Bureau of Youth Camp Licensing findings unit
-- Dates should be relative to the 2026 season and anchored to the August 20 close — do not write as though you are writing on a specific today
+- One memo, addressed to the Bureau of Youth Camp Licensing findings unit — this is a single document with a single throughline, not a collection of separate deliverables, and no separate calculation files or spreadsheets should be produced
+- Dates should be relative to the 2026 season and anchored to the August 20 close — do not write as though you are writing on a specific calendar date
 - Every factual claim needs a citation in the format (source: folder/filename) — do not cite the scratch notes as sources
-- Where the documents do not contain the answer, write [CORPUS GAP — not answerable from available documents] and move on. Do not guess, do not infer, do not construct a plausible answer from related information. For example, the specific identity of any individual camper, or the details of the hiring authority process that brought the 2022 signer on staff, are not in these documents.
-- The memo needs to clearly separate three categories throughout: what the data confirms, what the operational record shows, and what needs action — do not blend them
-- I am not asking for a multi-part deliverable. One memo that flows. Sections are fine but this is a single document with a single throughline.
+- Where the documents do not contain the answer, note clearly that the information is not available in the files we have rather than estimating or inferring a plausible answer — for example, the specific identity of any individual camper, or the details of the hiring authority process that brought the 2022 signer on staff, are not in these documents
+- Keep the memo clearly organized so a reader can tell apart what the data directly supports, what the operational record shows, and what action is needed — do not blend these three things together
 
 The difficulty here is real: the answer requires pulling from files across at least seven folders, matching rosters against certification files against the authorization matrix against session calendars, reconciling deadlines that use different precision (relative versus fixed dates from different authorities), and being honest about what the corpus does and does not contain. If you skim this environment you will end up citing the wrong files and missing the actual problem.
