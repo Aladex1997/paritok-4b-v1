@@ -2,9 +2,9 @@
 
 ## Rubric Metadata
 - **Environment**: Kvl Camps - Recreation Workers
-- **Prompt version**: v1
-- **Number of criteria**: 36
-- **Negative/penalty criteria**: 4
+- **Prompt version**: v2 (humanized, hardened)
+- **Number of criteria**: 37 positive + 7 negative
+- **Negative/penalty criteria**: 7
 - **Rubric properties**: binary, observable, self-contained, atomic, objective, verifiable, aligned
 
 ---
@@ -16,7 +16,7 @@
 | 1.1 | Output is addressed to Bureau of Youth Camp Licensing (findings unit) | 5 | Memo header contains addressee |
 | 1.2 | Memo has date line anchored to 2026 season (relative dating, not fixed date) | 5 | Date uses relative or season-anchored language |
 | 1.3 | Memo has structured sections matching the 5 task areas | 10 | Section headers present for scope, re-assessment, deadlines, isolation, sweep |
-| 1.4 | Professional tone throughout — no informal language | 5 | Tone check: no contractions, no slang, consistent formal register |
+| 1.4 | Professional tone in the memo — formal register appropriate for a regulatory filing to the Bureau | 5 | Tone check: formal, no contractions or slang in the memo itself |
 
 **Section 1 max**: 25 pts
 
@@ -45,8 +45,8 @@
 | 10.2 | Identifies 2025 swimmers whose bands gate 2027 enrollment | 8 | Count provided; explains gating logic |
 | 10.3 | References WSI/LGI as required assessor credentials per matrix | 5 | Names correct credential codes; contrasts with unauthorized AQS |
 | 10.4 | Provides re-assessment timeline within season close (2026-08-20) | 8 | Timeline accounts for Session 1-3; uses authorized staff availability |
-| 10.5 | Explicitly flags [CORPUS GAP] for any question the documents cannot answer (e.g., specific camper identities, hiring authority process) | 10 | Gap markers present; not invented |
-| 10.6 | References Authorized Assessor List / staffing plan to confirm who can reassess | 10 | Staff names/credentials from authorization-eligible pool |
+| 10.5 | Explicitly flags [CORPUS GAP — not answerable from available documents] for questions the documents cannot answer (specific camper identities, hiring authority process) using exact label | 10 | Gap markers present with exact label; not invented |
+| 10.6 | Does NOT cite working papers/scratch notes (buddy board scratch, camper-days recompute, deadline reconciliation) as formal sources; cites formal records | 8 | Working papers not cited; formal records cited |
 
 **Section 3 max**: 49 pts
 
@@ -109,15 +109,17 @@
 
 ---
 
-## NEGATIVE/PENALTY CRITERIA (Criteria 31-34)
+## NEGATIVE/PENALTY CRITERIA (Criteria 31-37)
 
-| ID | Criterion | Weight | Trigger |
-|---|-----------|--------|---------|
+| ID | Criterion | Weight | Evidence Rule |
+|---|-----------|--------|--------------|
 | 31.1 | **[PENALTY]** Invents camper identities not in the corpus | -50 | Any fabricated camper name/ID |
 | 31.2 | **[PENALTY]** Confuses AQS as assessment-authorized (misreads matrix) | -40 | States AQS authorizes assessment |
-| 31.3 | **[PENALTY]** Uses public/ Federal Register documents as relevant to the finding | -20 | Cites FR documents as camp-specific evidence |
+| 31.3 | **[PENALTY]** Uses Federal Register documents as relevant to the finding | -20 | Cites FR documents as camp-specific evidence |
 | 31.4 | **[PENALTY]** States operational record can impeach the finding or uses it to inflate the clean record | -30 | Misuse of operational record in compliance context |
 | 31.5 | **[PENALTY]** Misses the conflicting deadline precision (treats all as same type) | -25 | Treats relative and fixed dates as equivalent |
+| 31.6 | **[PENALTY]** Cites working papers/scratch notes (buddy board scratch, camper-days recompute, deadline reconciliation) as formal sources | -25 | Citations from scratch/working papers instead of formal records |
+| 31.7 | **[PENALTY]** Cites NYC/Chicago park data or public folder files as camp-specific evidence | -20 | Any reference to these as relevant to KVL finding |
 
 ---
 
@@ -127,18 +129,25 @@
 |---------|-----------|
 | 1. Memo Structure & Professionalism | 25 |
 | 2. Defect Scope Identification | 55 |
-| 3. Re-Assessment Feasibility | 49 |
+| 3. Re-Assessment Feasibility | 47 |
 | 4. Deadline Reconciliation | 50 |
 | 5. Operational Record Isolation | 25 |
 | 6. Six-Site Sweep Summary | 20 |
 | 7. Citations & Format | 20 |
-| **Positive criteria total** | **244** |
-| Negative penalties (up to) | -165 |
-| **Maximum achievable** | **244** |
-| **Minimum possible** | **-165** |
-| **Suggested passing threshold** | **~146 (60% of positive max)** |
+| **Positive criteria total** | **242** |
+| Negative penalties (up to) | -210 |
+| **Maximum achievable** | **242** |
+| **Minimum possible** | **-210** |
+| **Suggested passing threshold** | **~145 (60% of positive max)** |
 
 ---
+
+## Rubric Metadata (updated)
+
+- **Criteria**: 37 positive + 7 negative (Buckeye range: 30-45)
+- **Negative/penalty criteria**: 7
+- **Max points**: 242
+- **Passing threshold**: ~145
 
 ## Rubric Property Compliance Check
 
