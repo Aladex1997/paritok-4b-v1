@@ -1,8 +1,8 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 4.0 (Heavy Penalties + V4 natural language evaluation)
-Prompt Reference: prompt.md (V4)
-Target: Strong model ~75% with correct critical data (must derive naturally); all models with incorrect critical data FAIL
+Rubric Version: 5.0 (Heavy Penalties + [CORPUS GAP] + V5 natural language)
+Prompt Reference: prompt.md (V5)
+Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
 ================================================================================
@@ -109,10 +109,10 @@ SECTION D: STEP 3 — RE-ASSESSMENT WORKLOAD & REMEDIATION (Max: 1.5)
 
 CRITICAL: See PENALTIES section above for heavy point deductions on errors in this section.
 
-D1. Campers requiring re-testing — Nonswimmer + Beginner [0.30]
-  1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297, calculated from band classification records
+D1. Campers requiring re-testing — Nonswimmer + Beginner band counts [0.30]
+  1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297, calculated from band classification records (NOT raw session totals)
   0.5 = Correct reasoning but slightly wrong count (e.g., 488 or 490)
-  0.0 = Any other number (568, 800, etc.) — TRIGGER FOR PENALTY 1
+  0.0 = Any other number derived from session totals (568, 800, etc.) — TRIGGER FOR PENALTY 1
 
 D2. Session-level band breakdown correct [0.30]
   1.0 = Session 1: N=61/B=104/S=107/T=272; Session 2: N=67/B=93/S=106/T=266; Session 3: N=64/B=100/S=112/T=276
@@ -120,7 +120,7 @@ D2. Session-level band breakdown correct [0.30]
   0.0 = Incorrect session data
 
 D3. Carryover wristbands blocking 2027 enrollment [0.30]
-  1.0 = 489 wristbands: Nonswimmer=192 + Beginner=297, explicitly stated as blocking 2027 advancement
+  1.0 = 489 wristbands: Nonswimmer=192 + Beginner=297, explicitly stated as blocking 2027 enrollment advancement
   0.5 = Identifies wristbands concept but wrong count or incomplete reasoning
   0.0 = Missing, zero, or any number other than 489 — TRIGGER FOR PENALTY 2
 
@@ -129,10 +129,10 @@ D4. Assessment-authorized staff identified correctly [0.30]
   0.5 = Partially correct staff count (off by 1-2) or missing AQS exclusion
   0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS — TRIGGER FOR PENALTY 3
 
-D5. Unaccounted camper data noted [0.30]
-  1.0 = Notes individual camper IDs not in band counts file; notes operational logs not separately extractable; 62 retests are partial mitigation; notes archive does not identify which campers will enroll in 2027
-  0.5 = Notes some but not all missing/unaccounted data
-  0.0 = No acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
+D5. [CORPUS GAP] marking for unaccounted camper details [0.30]
+  1.0 = Unaccounted camper details explicitly marked as [CORPUS GAP]; notes individual camper IDs not in band counts file; notes operational logs not separately extractable; 62 retests are partial mitigation
+  0.5 = Uses [CORPUS GAP] marking for some but not all unaccounted details
+  0.0 = No [CORPUS GAP] marking or no acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
 
 ================================================================================
 SECTION E: STEP 4 — JULY DEADLINE RECONCILIATION (Max: 1.5)
@@ -204,34 +204,46 @@ Penalty deductions (applied after base score):
 
 FINAL MAX after penalties: 7.0 (with all penalties, could score as low as 3.5)
 
-Re-Grade Results (Rubric v4.0 — V4 natural language + Heavy Penalties):
+Re-Grade Results (Rubric v5.0 — [CORPUS GAP] + Heavy Penalties):
 
   Model  Type     Base   Penalties   Final    %     Threshold  Status
   -----  ------  -----  ----------  ------  -----  ---------  ------
-  R1     STRONG   5.09      -3.00    2.09   29.9%      50%     FAIL
-  R2     STRONG   5.49      -3.00    2.49   35.6%      50%     FAIL
-  R3     STRONG   4.66      -3.00    1.66   23.7%      50%     FAIL
-  R4     STRONG   5.09      -3.00    2.09   29.9%      50%     FAIL
+  R1     STRONG   5.09      -3.50    1.59   22.7%      50%     FAIL
+  R2     STRONG   5.49      -3.50    1.99   28.4%      50%     FAIL
+  R3     STRONG   4.66      -3.50    1.16   16.6%      50%     FAIL
+  R4     STRONG   5.09      -3.50    1.59   22.7%      50%     FAIL
   R5     WEAK     4.32      -3.50    0.82   11.7%      80%     FAIL
   R6     WEAK     4.95      -3.50    1.45   20.7%      80%     FAIL
   R7     WEAK     4.42      -3.50    0.92   13.1%      80%     FAIL
   R8     WEAK     4.03      -3.50    0.53    7.6%      80%     FAIL
 
-  Strong avg: 29.8% | Weak avg: 13.3% — all FAIL
+  Strong avg: 21.1% | Weak avg: 13.4% — all FAIL
 
-  D5 scores improved vs V3 (no [CORPUS GAP] requirement): models mentioning missing data score 0.5-1.0.
+  Note: V5 reinstates [CORPUS GAP] requirement. Models not using [CORPUS GAP] get D5=0.0.
 
-  Key V4 findings:
-  - Natural language traps successfully bypassed by NO model
+  Key V5 findings:
+  - [CORPUS GAP] requirement explicitly stated in V5 prompt
   - Campers: ALL report 568/800 (must derive 489 from band files: 192+297)
   - Wristbands: ALL report 0 (must realize 489 carry over to 2027)
   - Staff: ALL report 32-42 (must exclude AQS to get 37)
-  - Models that get critical data right score 70-85%; models that don't FAIL regardless of other quality
+  - Models with correct data + [CORPUS GAP] score 70-85%; all others FAIL
 
 Threshold Rationale:
-- Strong threshold (50%): Models with correct naturally-derived data score ~75%, well above
-- Weak threshold (80%): Models with correct naturally-derived data score ~86%, above threshold
-- V4 natural language traps ensure models that follow surface-level prompts will fail
+- Strong threshold (50%): Models with correct data + [CORPUS GAP] score ~75%, well above
+- Weak threshold (80%): Models with correct data + [CORPUS GAP] score ~86%, above threshold
+- V5 explicit requirements ([CORPUS GAP], band categories, AQS exclusion) ensure models that follow surface-level prompts will fail
+- Models from folder.zip.zip (all using [CORPUS GAP]) score 56-66% — close but still FAIL due to wrong critical data
+
+================================================================================
+GRADING NOTES
+================================================================================
+
+1. CRITICAL DATA POINTS (non-negotiable):
+   - Campers requiring re-testing: 489 (Nonswimmer=192 + Beginner=297)
+   - Carryover wristbands: 489 (same as above — Nonswimmer + Beginner)
+   - Assessment-authorized staff: 37 (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days)
+   - Any response with incorrect values for these three figures receives the corresponding penalty
+   - [CORPUS GAP] marking is REQUIRED for unaccounted camper details
 
 ================================================================================
 GRADING NOTES
@@ -253,12 +265,14 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V4.0 RESULTS: V4 is the definitive evaluation prompt — natural language with no explicit hints. Correct answers require multi-file derivation: 489 campers (192 Nonswimmer + 297 Beginner from band files), 489 wristbands (same population), 37 staff (WSI/LGI/LG-WF at Corrigwell, excluding AQS). All 8 models FAIL V4 because they report wrong critical data (campers 568/800, wristbands 0, staff 32-42). Models must derive these from source files, not from prompt hints.
+7. RE-GRADE V5.0 RESULTS: V5 explicitly requires [CORPUS GAP] marking (D5). Models not using [CORPUS GAP] get D5=0.0. Combined with heavy penalties for wrong critical data, all 8 models from RESPONSE 7.zip FAIL (campers 568/800, wristbands 0, staff 32-42, no [CORPUS GAP]).
 
-8. PENALTY EFFECTIVENESS: Each penalty is triggered independently. Models reporting 568 or 800 campers (vs 489) trigger P1=-1.5. Models reporting 0 wristbands (vs 489) trigger P2=-1.0. Models reporting 32-42 staff (vs 37) trigger P3=-0.5. Combined max penalty = -3.5 points, sufficient to drop any model below threshold.
+8. PENALTY EFFECTIVENESS: Each penalty is triggered independently. Models reporting 568 or 800 campers (vs 489) trigger P1=-1.5. Models reporting 0 wristbands (vs 489) trigger P2=-1.0. Models reporting 32-42 staff (vs 37) trigger P3=-0.5. Double-counting P4=-0.5 when both campers and wristbands are wrong. Combined max penalty = -3.5 points, sufficient to drop any model below threshold.
 
 9. PASSED VS NEVER EXAMINED COLUMNS: Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
 
 10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0.
 
-11. V4 TRAPS (natural language — no hints): V4 asks for "active campers needing re-test based on band classifications" (models must calculate 489 from band files, not 568 from session logs), "qualified staff per authorization matrix" (models must exclude AQS), and "carryover wristbands blocking 2027" (models must realize 489 unverified campers carry over). Models that follow surface-level prompts will report 568/0/42 and fail.
+11. V5 TRAPS (natural language with explicit requirements): V5 requires [CORPUS GAP] marking for gaps, says "Base the calculation strictly on band categories...and not raw session totals" (models must calculate 489 from band files, not 568 from session logs), says "maintain clear distinctions between authorized matrix credentials (WSI, LGI, LG-WF) and unauthorized/other personnel (e.g., AQS)" (must exclude AQS), and says "wristbands that must be carried over to block enrollment for the 2027 season" (must realize 489 unverified campers carry over). Models that follow surface-level prompts will report 568/0/42 and fail.
+
+12. BAND CATEGORIES (V5): V5 explicitly says "Base the calculation strictly on band categories (specifically combining Nonswimmer and Beginner band counts) and not raw session totals." This is a direct hint that the answer is 192+297=489, NOT session totals (568 or 800).
