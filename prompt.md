@@ -1,27 +1,32 @@
 Team,
 
-As of the reporting cutoff of July 1, 2026, the Bureau of Youth Camp Licensing has flagged a credential compliance issue regarding swim assessment sign-offs across our six camp locations.
+As of our reporting cutoff on July 1, 2026, the Bureau of Youth Camp Licensing flagged a compliance issue regarding swim assessment sign-offs across our six camp locations.
 
-Please prepare a single, self-contained executive memo, kvl_compliance_memo.docx, as our sole response deliverable for the Board and Licensing Bureau. Incorporate all supporting data tables, site classifications, and timeline reconciliations directly into the body of this document (do not attach separate spreadsheets), using absolute dates throughout (e.g., "July 15, 2026").
+Please assemble a single, self-contained executive memo—kvl_compliance_memo.docx—to serve as our official deliverable for both the Board and the Licensing Bureau. Embed all supporting data tables, site classifications, and timeline reconciliations directly into the body of the memo without attaching separate calculation spreadsheets. Please use fixed absolute dates throughout the document rather than relative date references.
 
-To determine our operational path forward, execute the following single-chain audit pipeline using our 2026 folder and credential archives:
+To build an accurate operational path forward, work through the following single-chain audit pipeline using our 2026 folder and credential archives:
 
-First, audit all swim test records and sweep reports across our six locations to establish the scope of unverified sign-offs. Deferred or uninspected sites cannot be classified as compliant. Official regulatory filings must be strictly separated from internal working drafts.
+First, audit swim test records and sweep reports across all six locations (Corrigwell, Loon Hollow, Tamarack Ridge, Bluegill Point, Heron Landing, and Otter Run) to map the full scope of unverified sign-offs. In your summary table, clearly separate site statuses into dedicated columns for Passed versus Never Examined (keep in mind that uninspected or deferred sites cannot be marked compliant). Keep official regulatory filings strictly separated from internal working drafts.
 
-Second, for the affected sites identified above, cross-reference their water quality logs, 1:25 lifeguard ratio records, and incident reports. Sites with active operational violations must be flagged for immediate suspension, while compliant sites qualify for our re-assessment workflow. Exclude any unrelated regional files such as NYC/Chicago.
+Second, cross-check water quality logs, 1:25 lifeguard ratio records, and incident reports for the affected sites. Per our Scope Isolation Memo, confirm that operational records remain fully compliant and that this defect is strictly limited to credential authorization (be sure to exclude unrelated regional files like NYC/Chicago or generic background documents).
 
-Third, using only the qualified sites from your operational filter, calculate the following three figures explicitly:
-(a) The number of nonswimmer and beginner campers requiring re-testing prior to our August 20, 2026 season close. Count only campers classified as Nonswimmer (Red band) or Beginner (Yellow band) in the 2026 Corrigwell Swim Classification Roster.
-(b) The number of nonswimmer (Red) and beginner (Yellow) wristbands blocking 2027 enrollment advancement. This equals the same count as (a) — nonswimmer and beginner campers whose current band restricts their water access area in 2027 if not upgraded.
-(c) The number of available staff holding valid assessment credentials per our matrix (WSI, LGI, or LG-WF) at Corrigwell, with credentials that are current or expiring within 60 days of the July 1, 2026 reporting cutoff, as documented in the Corrigwell Lifeguard Certification File 2026.xlsx.
-Explicitly note any unrecorded camper details as missing data points.
+Third, using the affected camper counts and locations from your defect scope, calculate the exact re-assessment workload required before our August 20, 2026 season close:
 
-Fourth, evaluate whether this calculated re-assessment workload can physically be completed prior to our July compliance deadlines. Reconcile your completion schedule against our three overlapping deadlines and their respective owners:
-- Underwriting: Great Pines Mutual offset (calculated as 30 days prior to our August 1 policy anniversary).
-- Licensing: Bureau License Renewal (fixed July 15 deadline requiring an active CAP).
-- Risk & Compliance: Bureau CAP Response window (July 30 deadline, referencing our July 14 filing).
+Calculate the total active campers needing re-testing prior to season close directly from band records (specifically evaluating nonswimmer and beginner band counts). Explicitly mark any unaccounted camper details as [CORPUS GAP].
 
-Finally, include direct source citations (folder/filename) for every figure, calculation, and site classification presented in your memo tables.
+Report the carryover wristbands that will block 2027 enrollment if re-testing is left uncompleted.
+
+Filter available staff strictly by active WSI, LGI, or LG-WF credentials per our authorization matrix to determine the true number of assessment-authorized personnel (excluding non-authorized Aquatic Safety Specialists / AQS).
+
+Fourth, reconcile your re-assessment completion schedule against our three overlapping July compliance deadlines and assign each to its proper operational owner:
+
+Underwriting (July 2): Great Pines Mutual offset (calculated 30 days prior to our August 1 policy anniversary).
+
+Licensing (July 15): Bureau License Renewal (requires an active Corrective Action Plan).
+
+Risk & Compliance (July 30): Bureau CAP Response window (referencing our July 14 filing marked In-Process).
+
+Finally, provide direct source citations in (folder/filename) format for every figure, calculation, and site classification included in your memo tables.
 
 Thanks,
 

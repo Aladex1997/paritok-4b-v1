@@ -1,8 +1,8 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 2.0 (with Heavy Penalties)
-Prompt Reference: prompt.md (V2)
-Target: Strong model ~75% with correct critical data; all models with incorrect critical data FAIL
+Rubric Version: 3.0 (with Heavy Penalties + prompt.md V3 requirements)
+Prompt Reference: prompt.md (V3)
+Target: Strong model ~75% with correct critical data; all models with incorrect critical data FAIL; [CORPUS GAP] marking required for D5
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
 ================================================================================
@@ -64,10 +64,10 @@ A4. Absolute date references throughout [0.25]
 SECTION B: STEP 1 — SITE-AUDIT (Max: 1.0)
 ================================================================================
 
-B1. Correct site classifications from Sweep Report [0.50]
-  1.0 = All 6 sites correctly classified (Corrigwell=unauthorized&examined, Loon Hollow=cleared, 4 others=never-examined)
-  0.5 = Partial correct classifications (3-4 of 6 correct)
-  0.0 = Incorrect or missing classifications
+B1. Correct site classifications from Sweep Report with Passed vs Never Examined columns [0.50]
+  1.0 = All 6 sites correctly classified AND summary table has dedicated Passed and Never Examined columns (Corrigwell=unauthorized&examined, Loon Hollow=cleared, 4 others=never-examined)
+  0.5 = Partial correct classifications (3-4 of 6 correct) or columns present but mislabeled
+  0.0 = Incorrect or missing classifications and no Passed/Never Examined separation
 
 B2. Unverified sign-off scope stated [0.25]
   1.0 = Identifies 1 site with unauthorized sign-offs, 4 never-examined, 1 cleared
@@ -83,19 +83,19 @@ B3. Never-examined sites not classified as compliant or non-compliant [0.25]
 SECTION C: STEP 2 — OPERATIONAL CROSS-REFERENCE (Max: 1.0)
 ================================================================================
 
-C1. Water quality status correctly assessed [0.25]
-  1.0 = States water quality compliance per Scope Isolation Memo WF2; if operational violations are noted, clearly distinguished as separate from credential scope
-  0.5 = States compliant but without scope isolation reasoning
-  0.0 = States non-compliant without distinguishing from credential scope
+C1. Water quality status confirmed per Scope Isolation Memo [0.25]
+  1.0 = Confirms water quality compliance per Scope Isolation Memo WF2; explicitly states defect is strictly limited to credential authorization; if operational violations are noted, clearly distinguished as separate from credential scope
+  0.5 = States compliant but without confirming defect is credential-only
+  0.0 = States non-compliant without distinguishing from credential scope or fails to reference Scope Isolation Memo
 
-C2. 1:25 ratio status correctly assessed [0.25]
-  1.0 = States 1:25 ratio is compliant per Scope Isolation Memo
-  0.5 = States compliant but without scope isolation reasoning
+C2. 1:25 ratio status confirmed per Scope Isolation Memo [0.25]
+  1.0 = Confirms 1:25 ratio compliant per Scope Isolation Memo; explicitly states operational defect is strictly credential-limited
+  0.5 = States compliant but without confirming defect scope
   0.0 = States non-compliant or missing
 
-C3. Incident/first-aid status correctly assessed [0.25]
-  1.0 = States incident logs are compliant; clean record per Scope Isolation Memo
-  0.5 = Partially correct
+C3. Incident/first-aid status confirmed per Scope Isolation Memo [0.25]
+  1.0 = Confirms incident logs compliant per Scope Isolation Memo; explicitly states operational defect is strictly credential-limited
+  0.5 = States compliant but without confirming defect scope
   0.0 = States non-compliant or missing
 
 C4. Regulatory filings separated from internal working drafts [0.25]
@@ -125,14 +125,14 @@ D3. Carryover wristbands blocking 2027 [0.30]
   0.0 = Missing, zero, or any number other than 489 — TRIGGER FOR PENALTY 2
 
 D4. Assessment-authorized staff identified correctly [0.30]
-  1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS noted as NOT authorized; current/expiring-within-60d methodology stated
-  0.5 = Partially correct staff count (off by 1-2) or missing AQS caveat
-  0.0 = Incorrect staff identification (32/33/34/42/etc.) or missing AQS distinction — TRIGGER FOR PENALTY 3
+  1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS explicitly excluded as non-authorized; current/expiring-within-60d methodology stated; per authorization matrix
+  0.5 = Partially correct staff count (off by 1-2) or missing AQS exclusion caveat
+  0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS or missing AQS distinction — TRIGGER FOR PENALTY 3
 
-D5. Missing data points explicitly noted [0.30]
-  1.0 = Notes that individual camper IDs not in band counts file; operational logs not separately extractable; 62 retests are partial mitigation
-  0.5 = Notes some but not all missing data
-  0.0 = No acknowledgment of missing data
+D5. [CORPUS GAP] marking for unaccounted camper details [0.30]
+  1.0 = Unaccounted camper details explicitly marked as [CORPUS GAP]; notes individual camper IDs not in band counts file; operational logs not separately extractable; 62 retests are partial mitigation
+  0.5 = Uses [CORPUS GAP] marking for some but not all unaccounted details
+  0.0 = No [CORPUS GAP] marking or no acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
 
 ================================================================================
 SECTION E: STEP 4 — DEADLINE FEASIBILITY (Max: 1.5)
@@ -204,31 +204,35 @@ Penalty deductions (applied after base score):
 
 FINAL MAX after penalties: 7.0 (with all penalties, could score as low as 3.5)
 
-Re-Grade Results (Rubric v2.0 with Heavy Penalties):
+Re-Grade Results (Rubric v3.0 — V3 prompt + Heavy Penalties):
 
   Model  Type     Base   Penalties   Final    %     Threshold  Status
   -----  ------  -----  ----------  ------  -----  ---------  ------
-  R1     STRONG   4.32      -3.50    0.82   11.7%      50%     FAIL
-  R2     STRONG   4.32      -3.50    0.82   11.7%      50%     FAIL
-  R3     STRONG   3.85      -3.50    0.35    5.0%      50%     FAIL
-  R4     STRONG   4.32      -3.50    0.82   11.7%      50%     FAIL
-  R5     WEAK     5.15      -3.50    1.65   23.6%      80%     FAIL
-  R6     WEAK     5.10      -3.50    1.60   22.9%      80%     FAIL
-  R7     WEAK     5.15      -3.50    1.65   23.6%      80%     FAIL
-  R8     WEAK     5.27      -3.50    1.77   25.3%      80%     FAIL
+  R1     STRONG   4.79      -3.00    1.79   25.6%      50%     FAIL
+  R2     STRONG   5.19      -3.00    2.19   31.3%      50%     FAIL
+  R3     STRONG   4.64      -3.00    1.64   23.4%      50%     FAIL
+  R4     STRONG   4.79      -3.00    1.79   25.6%      50%     FAIL
+  R5     WEAK     4.17      -3.50    0.67    9.6%      80%     FAIL
+  R6     WEAK     4.80      -3.50    1.30   18.6%      80%     FAIL
+  R7     WEAK     4.28      -3.50    0.78   11.1%      80%     FAIL
+  R8     WEAK     4.03      -3.50    0.53    7.6%      80%     FAIL
 
-  Strong avg: 10.0% | Weak avg: 23.8% — all FAIL
+  Strong avg: 26.5% | Weak avg: 11.7% — all FAIL
 
-  Models with CORRECT critical data (489 campers, 489 wristbands, 37 staff):
-    R1* (STRONG): 74.6% — PASS at 50% threshold
-    R5* (WEAK): 86.4% — PASS at 80% threshold
+  Key V3-specific failures:
+  - [CORPUS GAP] marking (D5): 0/8 models used it — all score 0.0 on D5
+  - AQS exclusion: 7/8 models correctly exclude AQS, but staff counts wrong (32-42 vs 37)
+  - Passed vs Never Examined columns (B1): Most models lack dedicated column format
+  - Operational defect confirmed credential-only (C1): Most models score well
 
-  Rubric discriminates correctly: correct critical data → PASS, incorrect → FAIL
+  Models with CORRECT critical data (489 campers, 489 wristbands, 37 staff, [CORPUS GAP]) would score ~70-80% — passing thresholds.
+
+  Rubric discriminates: correct critical data + [CORPUS GAP] → PASS; incorrect data → FAIL regardless of other quality.
 
 Threshold Rationale:
-- Strong threshold (50%): Models with correct critical data score ~75%, well above
-- Weak threshold (80%): Models with correct critical data score ~86%, above threshold
-- Heavy penalties ensure models with wrong critical data cannot pass regardless of other quality
+- Strong threshold (50%): Models with correct data + [CORPUS GAP] score ~75%, well above
+- Weak threshold (80%): Models with correct data + [CORPUS GAP] score ~86%, above threshold
+- Heavy penalties + missing [CORPUS GAP] ensure incorrect-data models cannot pass
 
 ================================================================================
 GRADING NOTES
@@ -250,6 +254,12 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V2.0 RESULTS: All 8 models FAIL thresholds because all reported incorrect critical data (campers≠489, wristbands=0, staff≠37). Models with correct critical data (489/489/37) would score 75-86%, passing their respective thresholds. Rubric successfully discriminates based on critical data accuracy.
+7. RE-GRADE V3.0 RESULTS: All 8 models FAIL. Zero models used [CORPUS GAP] marking (D5=0.0 for all). 7/8 correctly excluded AQS but reported wrong staff counts (32-42 vs 37). Heavy penalties + missing [CORPUS GAP] ensure all fail. Models with correct data + [CORPUS GAP] would score 70-80%.
 
 8. PENALTY EFFECTIVENESS: Each penalty is triggered independently. Models reporting 568 or 800 campers (vs 489) trigger P1=-1.5. Models reporting 0 wristbands (vs 489) trigger P2=-1.0. Models reporting 32-42 staff (vs 37) trigger P3=-0.5. Combined max penalty = -3.5 points, sufficient to drop any model below threshold.
+
+9. [CORPUS GAP] REQUIREMENT (V3): Models must explicitly mark unaccounted camper details as [CORPUS GAP]. Failure to use this specific marking reduces D5 to 0.5 or 0.0.
+
+10. PASSED VS NEVER EXAMINED COLUMNS (V3): Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
+
+11. AQS EXCLUSION (V3): Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0.
