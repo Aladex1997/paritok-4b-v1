@@ -1,0 +1,119 @@
+Date,Time,Site,Free Chlorine (ppm),pH,Combined Chlorine (ppm),Cyanuric Acid (ppm),Total Alkalinity (ppm),Water Temp (F),Air Temp (F),Weather,Tested By,Action Taken,Notes
+2026-06-08,7:00 AM,Otter Run,3.1,7.3,0.0,38.0,116.0,75.0,81.0,Clear,R.W.,,
+2026-06-08,12:30 PM,Otter Run,2.9,7.5,0.3,49.0,118.0,75.0,67.0,Clear,C.Y.,,Heavy bather load.
+2026-06-09,7:00 AM,Otter Run,3.5,7.6,0.1,45.0,91.0,76.0,83.0,Clear,D.L.,"High FC after shock; area held, retest within 2 hrs.",Rain overnight.
+2026-06-09,12:30 PM,Otter Run,1.7,7.4,0.1,41.0,107.0,74.0,74.0,Clear,J.K.,,
+2026-06-10,7:00 AM,Otter Run,1.5,7.6,0.3,47.0,107.0,83.0,79.0,Clear,D.L.,,
+2026-06-10,12:30 PM,Otter Run,3.0,7.7,0.3,48.0,104.0,80.0,89.0,Clear,R.W.,,
+2026-06-11,7:00 AM,Otter Run,2.9,7.3,0.0,46.0,101.0,76.0,83.0,Clear,D.L.,,Rain ovrenight.
+2026-06-11,12:30 PM,Otter Run,2.0,7.3,0.1,37.0,102.0,75.0,70.0,Overcast,M.D.,,Rain ovenright.
+2026-06-12,7:00 AM,Otter Run,3.1,7.4,0.0,50.0,85.0,82.0,80.0,Rain,J.K.,,
+2026-06-12,12:30 PM,Otter Run,3.2,7.7,0.2,41.0,89.0,81.0,91.0,Overcast,R.W.,,
+2026-06-13,7:00 AM,Otter Run,3.1,7.3,0.2,38.0,93.0,74.0,78.0,Clear,A.P.,,Rain overnight.
+2026-06-13,12:30 PM,Otter Run,1.3,7.4,0.2,34.0,117.0,82.0,71.0,Clear,A.P.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,
+2026-06-15,7:00 AM,Otter Run,2.6,7.7,0.2,35.0,92.0,83.0,86.0,Clear,D.L.,,
+2026-06-15,12:30 PM,Otter Run,2.3,7.6,0.1,46.0,91.0,80.0,75.0,Overcast,C.Y.,,Filter backwashed.
+2026-06-16,7:00 AM,Otter Run,2.5,7.8,0.3,42.0,97.0,78.0,80.0,Clear,C.Y.,,
+2026-06-16,12:30 PM,Otter Run,2.4,7.5,0.1,32.0,112.0,72.0,91.0,Rain,A.P.,,
+2026-06-17,7:00 AM,Otter Run,1.7,7.5,0.1,34.0,117.0,75.0,90.0,Overcast,C.Y.,,
+2026-06-17,12:30 PM,Otter Run,2.6,7.4,0.3,43.0,118.0,81.0,78.0,Clear,A.P.,,Rain overnight.
+2026-06-18,7:00 AM,Otter Run,3.1,7.3,0.2,36.0,95.0,81.0,73.0,Clear,A.P.,,Filter backwashed.
+2026-06-18,12:30 PM,Otter Run,3.2,7.5,0.2,35.0,82.0,81.0,91.0,Rain,A.P.,,Rain overnight.
+2026-06-19,7:00 AM,Otter Run,2.8,7.6,0.3,45.0,80.0,82.0,89.0,Clear,C.Y.,,
+2026-06-19,12:30 PM,Otter Run,3.5,7.4,0.0,37.0,81.0,78.0,83.0,Clear,M.D.,"High FC after shock; area held, retest within 2 hrs.",Filter backwashed.
+2026-06-20,7:00 AM,Otter Run,3.2,7.7,0.3,48.0,83.0,81.0,80.0,Clear,J.K.,,
+2026-06-20,12:30 PM,Otter Run,2.9,7.6,0.1,33.0,84.0,74.0,66.0,Rain,M.D.,,Heavy bather load.
+2026-06-22,7:00 AM,Otter Run,3.0,7.4,0.2,35.0,91.0,83.0,89.0,Clear,C.Y.,,
+2026-06-22,12:30 PM,Otter Run,1.6,7.5,0.0,30.0,84.0,75.0,90.0,Clear,J.K.,,Heavy bather load.
+2026-06-23,7:00 AM,Otter Run,1.4,7.6,0.3,50.0,83.0,79.0,85.0,Clear,D.L.,,
+2026-06-23,12:30 PM,Otter Run,3.3,7.3,0.3,32.0,83.0,75.0,93.0,Clear,A.P.,,Heavy bather load.
+2026-06-24,7:00 AM,Otter Run,2.8,7.3,0.1,40.0,87.0,78.0,66.0,Overcast,M.D.,,Rain overnight.
+2026-06-24,12:30 PM,Otter Run,1.5,7.6,0.2,33.0,104.0,77.0,66.0,Clear,A.P.,,
+2026-06-25,7:00 AM,Otter Run,3.5,7.3,0.1,48.0,81.0,79.0,94.0,Clear,D.L.,"High FC after shock; area held, retest within 2 hrs.",Filter backwashed.
+2026-06-25,12:30 PM,Otter Run,1.3,7.3,0.2,38.0,106.0,79.0,78.0,Rain,J.K.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,Heavy bather load.
+2026-06-26,7:00 AM,Otter Run,1.5,7.5,0.2,47.0,107.0,78.0,72.0,Clear,D.L.,,
+2026-06-26,12:30 PM,Otter Run,1.9,7.3,0.2,43.0,94.0,73.0,70.0,Clear,C.Y.,,
+2026-06-27,7:00 AM,Otter Run,2.6,7.4,0.2,31.0,83.0,78.0,81.0,Clear,A.P.,,
+2026-06-27,12:30 PM,Otter Run,2.5,7.5,0.3,46.0,103.0,76.0,66.0,Clear,D.L.,,
+2026-06-29,7:00 AM,Otter Run,2.3,7.8,0.1,35.0,83.0,82.0,88.0,Clear,C.Y.,,Heavy bather load.
+2026-06-29,12:30 PM,Otter Run,2.9,7.5,0.1,44.0,114.0,82.0,76.0,Clear,A.P.,,
+2026-06-30,7:00 AM,Otter Run,1.8,7.5,0.1,46.0,95.0,81.0,85.0,Overcast,M.D.,,Filter backwashed.
+2026-06-30,12:30 PM,Otter Run,2.3,7.3,0.1,41.0,102.0,83.0,82.0,Clear,C.Y.,,Filter backwashed.
+2026-07-01,7:00 AM,Otter Run,2.5,7.7,0.1,40.0,82.0,76.0,72.0,Rain,A.P.,,Filter backwashed.
+2026-07-01,12:30 PM,Otter Run,1.5,7.4,0.1,38.0,83.0,81.0,69.0,Clear,R.W.,,
+2026-07-02,7:00 AM,Otter Run,1.7,7.6,0.1,46.0,113.0,73.0,80.0,Overcast,A.P.,,
+2026-07-02,12:30 PM,Otter Run,1.3,7.5,0.3,44.0,101.0,74.0,94.0,Clear,R.W.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,
+2026-07-03,7:00 AM,Otter Run,3.0,7.7,0.1,41.0,97.0,73.0,81.0,Clear,D.L.,,
+2026-07-03,12:30 PM,Otter Run,2.7,7.6,0.2,49.0,88.0,73.0,73.0,Clear,J.K.,,
+2026-07-04,7:00 AM,Otter Run,1.2,7.4,0.2,47.0,81.0,80.0,72.0,Clear,M.D.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,Heavy bather load.
+2026-07-04,12:30 PM,Otter Run,3.4,7.3,0.2,48.0,119.0,76.0,77.0,Clear,C.Y.,,Heavy bather load.
+2026-07-06,7:00 AM,Otter Run,1.5,7.8,0.3,46.0,100.0,83.0,78.0,Rain,R.W.,,Filter backwashed.
+2026-07-06,12:30 PM,Otter Run,2.2,7.7,0.2,44.0,98.0,75.0,86.0,Clear,C.Y.,,Heavy bather load.
+2026-07-07,7:00 AM,Otter Run,2.8,7.6,0.1,40.0,85.0,73.0,90.0,Clear,M.D.,,Rain overnight.
+2026-07-07,12:30 PM,Otter Run,2.8,7.7,0.0,30.0,114.0,76.0,86.0,Rain,R.W.,,
+2026-07-08,7:00 AM,Otter Run,2.4,7.5,0.2,45.0,92.0,72.0,90.0,Clear,A.P.,,Filter backwasehd.
+2026-07-08,12:30 PM,Otter Run,2.7,7.4,0.2,41.0,96.0,84.0,68.0,Rain,D.L.,,Heavy bather load.
+2026-07-09,7:00 AM,Otter Run,3.2,7.7,0.1,33.0,81.0,76.0,95.0,Overcast,C.Y.,,
+2026-07-09,12:30 PM,Otter Run,2.1,7.3,0.1,44.0,81.0,81.0,78.0,Clear,D.L.,,
+2026-07-10,7:00 AM,Otter Run,1.5,7.5,0.1,48.0,118.0,76.0,88.0,Clear,R.W.,,Filter backwashed.
+2026-07-10,12:30 PM,Otter Run,2.1,7.5,0.3,46.0,104.0,72.0,95.0,Rain,A.P.,,
+2026-07-11,7:00 AM,Otter Run,3.4,7.4,0.3,38.0,105.0,75.0,83.0,Overcast,R.W.,,
+2026-07-11,12:30 PM,Otter Run,3.0,7.6,0.1,41.0,96.0,76.0,73.0,Clear,J.K.,,
+2026-07-13,7:00 AM,Otter Run,1.3,7.7,0.2,40.0,87.0,74.0,88.0,Clear,R.W.,,Heavy bather load.
+2026-07-13,12:30 PM,Otter Run,1.6,7.5,0.1,36.0,113.0,84.0,74.0,Clear,C.Y.,,Heavy bather load.
+2026-07-14,7:00 AM,Otter Run,2.0,7.4,0.2,47.0,99.0,75.0,83.0,Clear,M.D.,,Heavy bather load.
+2026-07-14,12:30 PM,Otter Run,3.3,7.5,0.2,49.0,92.0,79.0,73.0,Rain,J.K.,,
+2026-07-15,7:00 AM,Otter Run,1.5,7.7,0.2,47.0,84.0,75.0,74.0,Clear,M.D.,,
+2026-07-15,12:30 PM,Otter Run,2.2,7.7,0.3,48.0,93.0,80.0,87.0,Rain,M.D.,,Filter backwashed.
+2026-07-16,7:00 AM,Otter Run,3.2,7.7,0.2,35.0,89.0,79.0,74.0,Clear,C.Y.,,Filter backwashed.
+2026-07-16,12:30 PM,Otter Run,1.8,7.3,0.1,48.0,100.0,76.0,73.0,Clear,J.K.,,
+2026-07-17,7:00 AM,Otter Run,3.2,7.8,0.1,47.0,90.0,75.0,74.0,Clear,C.Y.,,Rain overnight.
+2026-07-17,12:30 PM,Otter Run,1.3,7.6,0.3,34.0,107.0,72.0,71.0,Clear,D.L.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,
+2026-07-18,7:00 AM,Otter Run,2.0,7.6,0.2,50.0,112.0,76.0,65.0,Rain,C.Y.,,Heavy bather load.
+2026-07-18,12:30 PM,Otter Run,2.4,7.6,0.2,47.0,111.0,81.0,78.0,Rain,C.Y.,,
+2026-07-20,7:00 AM,Otter Run,3.4,7.7,0.2,46.0,111.0,76.0,73.0,Clear,A.P.,,Heavy bather load.
+2026-07-20,12:30 PM,Otter Run,2.5,7.2,0.0,39.0,105.0,79.0,89.0,Overcast,A.P.,,
+2026-07-21,7:00 AM,Otter Run,1.2,7.7,0.2,39.0,101.0,77.0,87.0,Clear,C.Y.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,
+2026-07-21,12:30 PM,Otter Run,1.6,7.7,0.0,31.0,101.0,74.0,75.0,Clear,C.Y.,,Heavy bather load.
+2026-07-22,7:00 AM,Otter Run,2.2,7.6,0.1,38.0,90.0,75.0,69.0,Clear,A.P.,,Rain overnight.
+2026-07-22,12:30 PM,Otter Run,2.7,7.5,0.2,33.0,86.0,83.0,84.0,Clear,R.W.,,Rain overnight.
+2026-07-23,7:00 AM,Otter Run,1.4,7.5,0.3,39.0,81.0,74.0,85.0,Clear,J.K.,,
+2026-07-23,12:30 PM,Otter Run,2.3,7.5,0.3,42.0,91.0,78.0,69.0,Clear,M.D.,,Filter backwashed.
+2026-07-24,7:00 AM,Otter Run,1.3,7.4,0.2,32.0,108.0,74.0,69.0,Clear,C.Y.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,Heavy bather load.
+2026-07-24,12:30 PM,Otter Run,3.0,7.5,0.3,38.0,106.0,76.0,91.0,Clear,D.L.,,Rain overnight.
+2026-07-25,7:00 AM,Otter Run,1.7,7.6,0.1,46.0,93.0,81.0,90.0,Overcast,J.K.,,Heavy bather load.
+2026-07-25,12:30 PM,Otter Run,2.5,7.4,0.1,48.0,106.0,75.0,76.0,Clear,R.W.,,
+2026-07-27,7:00 AM,Otter Run,1.3,7.6,0.0,33.0,100.0,75.0,66.0,Overcast,A.P.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,
+2026-07-27,12:30 PM,Otter Run,2.1,7.6,0.1,35.0,117.0,75.0,69.0,Clear,D.L.,,Heavy bather load.
+2026-07-28,7:00 AM,Otter Run,2.0,7.6,0.3,40.0,106.0,80.0,65.0,Clear,J.K.,,
+2026-07-28,12:30 PM,Otter Run,2.1,7.7,0.2,40.0,106.0,80.0,92.0,Overcast,C.Y.,,Rain overnight.
+2026-07-29,7:00 AM,Otter Run,2.9,7.7,0.1,45.0,92.0,79.0,68.0,Rain,D.L.,,
+2026-07-29,12:30 PM,Otter Run,2.0,7.3,0.1,38.0,83.0,77.0,75.0,Clear,R.W.,,
+2026-07-30,7:00 AM,Otter Run,3.1,7.5,0.0,37.0,117.0,74.0,73.0,Clear,A.P.,,
+2026-07-30,12:30 PM,Otter Run,2.9,7.7,0.1,43.0,85.0,80.0,67.0,Clear,D.L.,,Rain overnight.
+2026-07-31,7:00 AM,Otter Run,1.4,7.5,0.3,31.0,113.0,79.0,74.0,Overcast,A.P.,,Heavy bather load.
+2026-07-31,12:30 PM,Otter Run,1.3,7.7,0.3,49.0,115.0,74.0,94.0,Clear,D.L.,Fed sodium hypochlorite 0.5 gal; retest 30 min.,Rain overnight.
+2026-08-01,7:00 AM,Otter Run,1.9,7.7,0.0,37.0,84.0,80.0,91.0,Overcast,M.D.,,Rain overnight.
+2026-08-01,12:30 PM,Otter Run,1.6,7.5,0.1,30.0,119.0,75.0,91.0,Overcast,M.D.,,
+2026-08-03,7:00 AM,Otter Run,2.9,7.5,0.0,30.0,88.0,75.0,92.0,Overcast,M.D.,,Heavy bather load.
+2026-08-03,12:30 PM,Otter Run,2.9,7.3,0.2,48.0,81.0,80.0,92.0,Rain,M.D.,,
+2026-08-04,7:00 AM,Otter Run,2.0,7.6,0.1,39.0,81.0,76.0,77.0,Overcast,M.D.,,Heavy bather load.
+2026-08-04,12:30 PM,Otter Run,2.7,7.6,0.2,36.0,106.0,83.0,93.0,Clear,M.D.,,Heavy bather load.
+2026-08-05,7:00 AM,Otter Run,2.3,7.8,0.0,38.0,115.0,75.0,94.0,Clear,D.L.,,
+2026-08-05,12:30 PM,Otter Run,1.9,7.7,0.2,39.0,83.0,79.0,87.0,Clear,C.Y.,,Rain overnight.
+2026-08-06,7:00 AM,Otter Run,1.7,7.7,0.2,46.0,81.0,81.0,89.0,Clear,C.Y.,,Rain overnight.
+2026-08-06,12:30 PM,Otter Run,2.6,7.4,0.3,33.0,95.0,73.0,88.0,Overcast,D.L.,,
+2026-08-07,7:00 AM,Otter Run,2.3,7.2,0.2,50.0,99.0,82.0,73.0,Clear,D.L.,,
+2026-08-07,12:30 PM,Otter Run,2.9,7.3,0.2,32.0,94.0,81.0,87.0,Clear,M.D.,,Heavy bather load.
+2026-08-08,7:00 AM,Otter Run,2.9,7.8,0.1,43.0,98.0,79.0,80.0,Clear,M.D.,,Filter backwashed.
+2026-08-08,12:30 PM,Otter Run,3.2,7.8,0.1,45.0,93.0,82.0,75.0,Clear,J.K.,,
+2026-08-10,7:00 AM,Otter Run,2.7,7.7,0.1,40.0,83.0,75.0,89.0,Overcast,D.L.,,Heavy bather load.
+2026-08-10,12:30 PM,Otter Run,2.2,7.7,0.3,31.0,96.0,81.0,82.0,Clear,D.L.,,Heavy bather load.
+2026-08-11,7:00 AM,Otter Run,2.6,7.6,0.1,34.0,88.0,72.0,87.0,Rain,C.Y.,,Filter backwashed.
+2026-08-11,12:30 PM,Otter Run,2.8,7.7,0.3,42.0,106.0,73.0,87.0,Clear,C.Y.,,
+2026-08-12,7:00 AM,Otter Run,2.5,7.2,0.0,40.0,117.0,75.0,80.0,Clear,D.L.,,Rain overnight.
+2026-08-12,12:30 PM,Otter Run,1.4,7.2,0.0,49.0,80.0,72.0,67.0,Clear,C.Y.,,
+2026-08-13,7:00 AM,Otter Run,3.5,7.6,0.0,46.0,115.0,78.0,75.0,Clear,A.P.,"High FC after shock; area held, retest within 2 hrs.",Filter backwashed.
+2026-08-13,12:30 PM,Otter Run,2.3,7.6,0.2,38.0,120.0,83.0,87.0,Rain,M.D.,,Filter backwashed.
+2026-08-14,7:00 AM,Otter Run,2.4,7.4,0.1,42.0,112.0,81.0,79.0,Clear,C.Y.,,Heavy bather load.
+2026-08-14,12:30 PM,Otter Run,2.6,7.5,0.1,37.0,120.0,82.0,67.0,Clear,A.P.,,
