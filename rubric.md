@@ -58,13 +58,13 @@ A3. Professional executive memo structure [0.25]
 A4. Absolute date references throughout [0.25]
   1.0 = All dates stated as absolute dates anchored to July 1, 2026 reporting cutoff
   0.5 = Mostly absolute dates but some relative terms used (e.g., "tomorrow", "in 14 days")
-  0.0 = Uses relative date references throughout (violates V2 prompt instruction)
+  0.0 = Uses relative date references throughout (violates V4 prompt instruction)
 
 ================================================================================
-SECTION B: STEP 1 — SITE-AUDIT (Max: 1.0)
+SECTION B: STEP 1 — DEFECT SCOPE & SITE BREAKDOWN (Max: 1.0)
 ================================================================================
 
-B1. Correct site classifications from Sweep Report with Passed vs Never Examined columns [0.50]
+B1. Correct site classifications with Passed vs Never Examined columns [0.50]
   1.0 = All 6 sites correctly classified AND summary table has dedicated Passed and Never Examined columns (Corrigwell=unauthorized&examined, Loon Hollow=cleared, 4 others=never-examined)
   0.5 = Partial correct classifications (3-4 of 6 correct) or columns present but mislabeled
   0.0 = Incorrect or missing classifications and no Passed/Never Examined separation
@@ -80,20 +80,20 @@ B3. Never-examined sites not classified as compliant or non-compliant [0.25]
   0.0 = Treats never-examined as compliant or does not mention
 
 ================================================================================
-SECTION C: STEP 2 — OPERATIONAL CROSS-REFERENCE (Max: 1.0)
+SECTION C: STEP 2 — CLEAN SCOPE ISOLATION (Max: 1.0)
 ================================================================================
 
-C1. Water quality status confirmed per Scope Isolation Memo [0.25]
+C1. Water quality status per Scope Isolation Memo [0.25]
   1.0 = Confirms water quality compliance per Scope Isolation Memo WF2; explicitly states defect is strictly limited to credential authorization; if operational violations are noted, clearly distinguished as separate from credential scope
   0.5 = States compliant but without confirming defect is credential-only
   0.0 = States non-compliant without distinguishing from credential scope or fails to reference Scope Isolation Memo
 
-C2. 1:25 ratio status confirmed per Scope Isolation Memo [0.25]
+C2. 1:25 ratio status per Scope Isolation Memo [0.25]
   1.0 = Confirms 1:25 ratio compliant per Scope Isolation Memo; explicitly states operational defect is strictly credential-limited
   0.5 = States compliant but without confirming defect scope
   0.0 = States non-compliant or missing
 
-C3. Incident/first-aid status confirmed per Scope Isolation Memo [0.25]
+C3. Incident/first-aid status per Scope Isolation Memo [0.25]
   1.0 = Confirms incident logs compliant per Scope Isolation Memo; explicitly states operational defect is strictly credential-limited
   0.5 = States compliant but without confirming defect scope
   0.0 = States non-compliant or missing
@@ -104,13 +104,13 @@ C4. Regulatory filings separated from internal working drafts [0.25]
   0.0 = No separation; mixes regulatory and internal documents interchangeably
 
 ================================================================================
-SECTION D: STEP 3 — RE-ASSESSMENT WORKLOAD (Max: 1.5)
+SECTION D: STEP 3 — RE-ASSESSMENT WORKLOAD & REMEDIATION (Max: 1.5)
 ================================================================================
 
 CRITICAL: See PENALTIES section above for heavy point deductions on errors in this section.
 
 D1. Campers requiring re-testing — Nonswimmer + Beginner [0.30]
-  1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297
+  1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297, calculated from band classification records
   0.5 = Correct reasoning but slightly wrong count (e.g., 488 or 490)
   0.0 = Any other number (568, 800, etc.) — TRIGGER FOR PENALTY 1
 
@@ -119,37 +119,37 @@ D2. Session-level band breakdown correct [0.30]
   0.5 = Partially correct session-level data
   0.0 = Incorrect session data
 
-D3. Carryover wristbands blocking 2027 [0.30]
+D3. Carryover wristbands blocking 2027 enrollment [0.30]
   1.0 = 489 wristbands: Nonswimmer=192 + Beginner=297, explicitly stated as blocking 2027 advancement
   0.5 = Identifies wristbands concept but wrong count or incomplete reasoning
   0.0 = Missing, zero, or any number other than 489 — TRIGGER FOR PENALTY 2
 
 D4. Assessment-authorized staff identified correctly [0.30]
-  1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS explicitly excluded as non-authorized; current/expiring-within-60d methodology stated; per authorization matrix
-  0.5 = Partially correct staff count (off by 1-2) or missing AQS exclusion caveat
-  0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS or missing AQS distinction — TRIGGER FOR PENALTY 3
+  1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS explicitly excluded as non-authorized; current/expiring-within-60d methodology stated per authorization matrix
+  0.5 = Partially correct staff count (off by 1-2) or missing AQS exclusion
+  0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS — TRIGGER FOR PENALTY 3
 
-D5. Unaccounted camper details noted [0.30]
-  1.0 = Notes individual camper IDs not in band counts file; notes operational logs not separately extractable; 62 retests are partial mitigation; notes that archive does not identify which campers will enroll in 2027
-  0.5 = Notes some but not all missing data
+D5. Unaccounted camper data noted [0.30]
+  1.0 = Notes individual camper IDs not in band counts file; notes operational logs not separately extractable; 62 retests are partial mitigation; notes archive does not identify which campers will enroll in 2027
+  0.5 = Notes some but not all missing/unaccounted data
   0.0 = No acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
 
 ================================================================================
-SECTION E: STEP 4 — DEADLINE FEASIBILITY (Max: 1.5)
+SECTION E: STEP 4 — JULY DEADLINE RECONCILIATION (Max: 1.5)
 ================================================================================
 
 E1. Underwriting deadline (July 2) correctly evaluated [0.40]
-  1.0 = States CANNOT be met for full re-assessment; recommends filing CAP as in-progress; recognizes operational evidence suffices for underwriting
+  1.0 = States CANNOT be met for full re-assessment; recommends filing CAP as in-progress; recognizes operational evidence suffices for underwriting; Great Pines Mutual offset calculated 30 days prior to Aug 1
   0.5 = Partially correct but misses key reasoning
   0.0 = Incorrect feasibility assessment or misses deadline
 
 E2. License renewal deadline (July 15) correctly evaluated [0.40]
-  1.0 = States CONDITIONALLY feasible; references CAP-2026-01 Action 1 due July 17; recognizes filing can describe CAP as in-progress
+  1.0 = States CONDITIONALLY feasible; references CAP-2026-01 Action 1 due July 17; recognizes filing can describe CAP as in-progress; Bureau License Renewal
   0.5 = Partially correct but misses CAP timeline reference
   0.0 = Incorrect feasibility assessment
 
 E3. CAP response deadline (July 30) correctly evaluated [0.40]
-  1.0 = States FEASIBLE; 29 days remain; references 8 corrective actions; notes WF4 sweep report will support final submission
+  1.0 = States FEASIBLE; 29 days remain; references 8 corrective actions; notes Bureau Findings Unit filing July 14 marked In-Process; WF4 sweep report will support final submission
   0.5 = Partially correct
   0.0 = Incorrect feasibility assessment
 
@@ -159,10 +159,10 @@ E4. Deadline owners and calculation methods correct [0.30]
   0.0 = Incorrect or missing deadline details
 
 ================================================================================
-SECTION F: SOURCE CITATIONS (Max: 0.5)
+SECTION F: DATA TRACEABILITY (Max: 0.5)
 ================================================================================
 
-F1. Every figure, calculation, and classification has direct file citation [0.50]
+F1. Every figure, calculation, and site classification has direct (folder/filename) citation [0.50]
   1.0 = All tables and key statements include folder/filename citations
   0.5 = Most figures cited but some missing
   0.0 = No citations or citations only at document level (not per-figure)
@@ -172,25 +172,25 @@ SECTION G: CONSTRAINT COMPLIANCE (Max: 0.5)
 ================================================================================
 
 G1. Unrelated regional files excluded [0.25]
-  1.0 = No references to NYC, Chicago, or other out-of-scope regional data
+  1.0 = No references to NYC, Chicago, or other out-of-scope regional data used as evidence
   0.5 = Mentions exclusion but includes some regional data
   0.0 = Includes or references unrelated regional files
 
 G2. 4-step pipeline executed in order [0.25]
-  1.0 = All 4 steps presented sequentially (site audit → operational cross-ref → workload → deadline feasibility)
+  1.0 = All 4 steps presented sequentially (Defect Scope → Clean Scope Isolation → Re-Assessment Workload & Remediation → July Deadline Reconciliation)
   0.5 = Steps present but out of order or merged
   0.0 = Steps missing or significantly out of order
 
 ================================================================================
 SCORING SUMMARY
-===============================================================================
+================================================================================
 
 Section A: Deliverable Format — Max 1.0
-Section B: Step 1 Site-Audit — Max 1.0
-Section C: Step 2 Operational Cross-Reference — Max 1.0
-Section D: Step 3 Re-Assessment Workload — Max 1.5
-Section E: Step 4 Deadline Feasibility — Max 1.5
-Section F: Source Citations — Max 0.5
+Section B: Step 1 — Defect Scope & Site Breakdown — Max 1.0
+Section C: Step 2 — Clean Scope Isolation — Max 1.0
+Section D: Step 3 — Re-Assessment Workload & Remediation — Max 1.5
+Section E: Step 4 — July Deadline Reconciliation — Max 1.5
+Section F: Data Traceability — Max 0.5
 Section G: Constraint Compliance — Max 0.5
 
 BASE MAX: 7.0
