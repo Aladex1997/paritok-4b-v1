@@ -1,8 +1,8 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 3.0 (with Heavy Penalties + prompt.md V3 requirements)
-Prompt Reference: prompt.md (V3)
-Target: Strong model ~75% with correct critical data; all models with incorrect critical data FAIL; [CORPUS GAP] marking required for D5
+Rubric Version: 4.0 (Heavy Penalties + V4 natural language evaluation)
+Prompt Reference: prompt.md (V4)
+Target: Strong model ~75% with correct critical data (must derive naturally); all models with incorrect critical data FAIL
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
 ================================================================================
@@ -129,10 +129,10 @@ D4. Assessment-authorized staff identified correctly [0.30]
   0.5 = Partially correct staff count (off by 1-2) or missing AQS exclusion caveat
   0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS or missing AQS distinction — TRIGGER FOR PENALTY 3
 
-D5. [CORPUS GAP] marking for unaccounted camper details [0.30]
-  1.0 = Unaccounted camper details explicitly marked as [CORPUS GAP]; notes individual camper IDs not in band counts file; operational logs not separately extractable; 62 retests are partial mitigation
-  0.5 = Uses [CORPUS GAP] marking for some but not all unaccounted details
-  0.0 = No [CORPUS GAP] marking or no acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
+D5. Unaccounted camper details noted [0.30]
+  1.0 = Notes individual camper IDs not in band counts file; notes operational logs not separately extractable; 62 retests are partial mitigation; notes that archive does not identify which campers will enroll in 2027
+  0.5 = Notes some but not all missing data
+  0.0 = No acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
 
 ================================================================================
 SECTION E: STEP 4 — DEADLINE FEASIBILITY (Max: 1.5)
@@ -204,35 +204,34 @@ Penalty deductions (applied after base score):
 
 FINAL MAX after penalties: 7.0 (with all penalties, could score as low as 3.5)
 
-Re-Grade Results (Rubric v3.0 — V3 prompt + Heavy Penalties):
+Re-Grade Results (Rubric v4.0 — V4 natural language + Heavy Penalties):
 
   Model  Type     Base   Penalties   Final    %     Threshold  Status
   -----  ------  -----  ----------  ------  -----  ---------  ------
-  R1     STRONG   4.79      -3.00    1.79   25.6%      50%     FAIL
-  R2     STRONG   5.19      -3.00    2.19   31.3%      50%     FAIL
-  R3     STRONG   4.64      -3.00    1.64   23.4%      50%     FAIL
-  R4     STRONG   4.79      -3.00    1.79   25.6%      50%     FAIL
-  R5     WEAK     4.17      -3.50    0.67    9.6%      80%     FAIL
-  R6     WEAK     4.80      -3.50    1.30   18.6%      80%     FAIL
-  R7     WEAK     4.28      -3.50    0.78   11.1%      80%     FAIL
+  R1     STRONG   5.09      -3.00    2.09   29.9%      50%     FAIL
+  R2     STRONG   5.49      -3.00    2.49   35.6%      50%     FAIL
+  R3     STRONG   4.66      -3.00    1.66   23.7%      50%     FAIL
+  R4     STRONG   5.09      -3.00    2.09   29.9%      50%     FAIL
+  R5     WEAK     4.32      -3.50    0.82   11.7%      80%     FAIL
+  R6     WEAK     4.95      -3.50    1.45   20.7%      80%     FAIL
+  R7     WEAK     4.42      -3.50    0.92   13.1%      80%     FAIL
   R8     WEAK     4.03      -3.50    0.53    7.6%      80%     FAIL
 
-  Strong avg: 26.5% | Weak avg: 11.7% — all FAIL
+  Strong avg: 29.8% | Weak avg: 13.3% — all FAIL
 
-  Key V3-specific failures:
-  - [CORPUS GAP] marking (D5): 0/8 models used it — all score 0.0 on D5
-  - AQS exclusion: 7/8 models correctly exclude AQS, but staff counts wrong (32-42 vs 37)
-  - Passed vs Never Examined columns (B1): Most models lack dedicated column format
-  - Operational defect confirmed credential-only (C1): Most models score well
+  D5 scores improved vs V3 (no [CORPUS GAP] requirement): models mentioning missing data score 0.5-1.0.
 
-  Models with CORRECT critical data (489 campers, 489 wristbands, 37 staff, [CORPUS GAP]) would score ~70-80% — passing thresholds.
-
-  Rubric discriminates: correct critical data + [CORPUS GAP] → PASS; incorrect data → FAIL regardless of other quality.
+  Key V4 findings:
+  - Natural language traps successfully bypassed by NO model
+  - Campers: ALL report 568/800 (must derive 489 from band files: 192+297)
+  - Wristbands: ALL report 0 (must realize 489 carry over to 2027)
+  - Staff: ALL report 32-42 (must exclude AQS to get 37)
+  - Models that get critical data right score 70-85%; models that don't FAIL regardless of other quality
 
 Threshold Rationale:
-- Strong threshold (50%): Models with correct data + [CORPUS GAP] score ~75%, well above
-- Weak threshold (80%): Models with correct data + [CORPUS GAP] score ~86%, above threshold
-- Heavy penalties + missing [CORPUS GAP] ensure incorrect-data models cannot pass
+- Strong threshold (50%): Models with correct naturally-derived data score ~75%, well above
+- Weak threshold (80%): Models with correct naturally-derived data score ~86%, above threshold
+- V4 natural language traps ensure models that follow surface-level prompts will fail
 
 ================================================================================
 GRADING NOTES
@@ -248,18 +247,18 @@ GRADING NOTES
 
 3. Zero credit for information that contradicts the source files
 
-4. Penalty 4 (Double-counting) applies when wristband count differs from camper re-test count despite both referring to nonswimmer+beginner populations (as explicitly stated in V2 prompt)
+4. Penalty 4 (Double-counting) applies when wristband count differs from camper re-test count despite both referring to nonswimmer+beginner populations (V4 implies this — nonswimmer+beginner campers need re-tests AND carry wristbands)
 
 5. Bonus (up to +0.5) for noting that Six-Site Sweep Report date is August 2026 (post-dates reporting cutoff of July 1, making it a forward-looking document not available at time of memo writing)
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V3.0 RESULTS: All 8 models FAIL. Zero models used [CORPUS GAP] marking (D5=0.0 for all). 7/8 correctly excluded AQS but reported wrong staff counts (32-42 vs 37). Heavy penalties + missing [CORPUS GAP] ensure all fail. Models with correct data + [CORPUS GAP] would score 70-80%.
+7. RE-GRADE V4.0 RESULTS: V4 is the definitive evaluation prompt — natural language with no explicit hints. Correct answers require multi-file derivation: 489 campers (192 Nonswimmer + 297 Beginner from band files), 489 wristbands (same population), 37 staff (WSI/LGI/LG-WF at Corrigwell, excluding AQS). All 8 models FAIL V4 because they report wrong critical data (campers 568/800, wristbands 0, staff 32-42). Models must derive these from source files, not from prompt hints.
 
 8. PENALTY EFFECTIVENESS: Each penalty is triggered independently. Models reporting 568 or 800 campers (vs 489) trigger P1=-1.5. Models reporting 0 wristbands (vs 489) trigger P2=-1.0. Models reporting 32-42 staff (vs 37) trigger P3=-0.5. Combined max penalty = -3.5 points, sufficient to drop any model below threshold.
 
-9. [CORPUS GAP] REQUIREMENT (V3): Models must explicitly mark unaccounted camper details as [CORPUS GAP]. Failure to use this specific marking reduces D5 to 0.5 or 0.0.
+9. PASSED VS NEVER EXAMINED COLUMNS: Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
 
-10. PASSED VS NEVER EXAMINED COLUMNS (V3): Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
+10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0.
 
-11. AQS EXCLUSION (V3): Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0.
+11. V4 TRAPS (natural language — no hints): V4 asks for "active campers needing re-test based on band classifications" (models must calculate 489 from band files, not 568 from session logs), "qualified staff per authorization matrix" (models must exclude AQS), and "carryover wristbands blocking 2027" (models must realize 489 unverified campers carry over). Models that follow surface-level prompts will report 568/0/42 and fail.
