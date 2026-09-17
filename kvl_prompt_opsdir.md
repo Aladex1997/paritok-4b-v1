@@ -1,28 +1,31 @@
 KVL Camps — Compliance Issue
 
-We are preparing this memo during the 2026 season, in the weeks immediately before the August 20 season close. All timelines in this memo are relative to that window.
+As of today, July 1, 2026, we are responding to an urgent compliance inquiry from the Bureau of Youth Camp Licensing regarding swim assessment sign-offs across our operations.
 
-Prepare kvl_compliance_memo.docx as our sole final deliverable for the Bureau of Youth Camp Licensing compliance issue regarding swim assessment sign-offs.
+Please prepare kvl_compliance_memo.docx as our sole final deliverable to the Board and Licensing Bureau. Incorporate all supporting data tables, site breakdowns, and timeline reconciliations directly into the body of this document. Do not produce separate calculation spreadsheets or external attachments, and maintain relative date referencing throughout.
 
-All supporting data tables, site classifications, and timeline reconciliations must be formatted directly inside this document. Do not produce separate spreadsheet files or external calculation sheets, and use relative date referencing throughout — do not write static placeholders like "today's date."
+Review our 2026 records and historical credential files to address the following operational areas:
 
-Pull data from the 2026 folder and historical credential archives, adhering strictly to these operational requirements:
+I. Defect Scope & Site Breakdown
+Audit all swim test records and sweep reports across all six camp locations. Clearly distinguish between locations that have been inspected and cleared versus locations that were deferred or never examined, keeping in mind that deferred or uninspected sites cannot be treated as compliant. Differentiate official regulatory filings from internal working drafts, relying strictly on official records.
 
-Defect Scope & Site Breakdown: Audit all swim test records and sweep reports across all six locations. For each site, determine whether it has been examined and what the findings are. Some sites will be marked examined and cleared, and others will be never-examined — be clear about which is which, since a never-examined site is not the same as a cleared one. Also distinguish between official regulatory filings and informal working papers, and do not cite the working papers as if they were official sources.
+II. Re-Assessment & Band Remediation
+Identify currently enrolled campers who require re-testing prior to our August 20, 2026 season close, carryover wristbands that block 2027 enrollment, and available staff holding valid assessment credentials per the authorization matrix (WSI, LGI, or LG-WF). If specific camper details are missing or unrecorded in the files, explicitly note them as missing data points in your summary table rather than estimating.
 
-Re-Assessment & Band Remediation: Figure out how many enrolled campers need re-testing before the August 20 season close, how many carryover bands from last summer would block 2027 enrollment, and which staff hold valid assessment credentials. Where specific camper information is not available in the files, note clearly that it cannot be determined from the documents provided.
+III. July Deadline Reconciliation Table
+Reconcile our three overlapping July deadlines along with their operational owners:
 
-July Deadline Reconciliation Table: Lay out our three overlapping July deadlines and who is responsible for each:
+Underwriting Offset: Great Pines Mutual filing (July 2 — calculated 30 days prior to August 1).
 
-Underwriting: Great Pines Mutual offset (July 2 — calculated 30 days prior to August 1).
+Licensing Renewal: Bureau License Renewal (fixed July 15 deadline requiring an active CAP).
 
-Licensing: Bureau License Renewal (fixed July 15 deadline requiring an active CAP).
+Risk & Compliance: Bureau CAP Response window (July 30 deadline, referencing our in-progress filing from July 14).
 
-Risk/Compliance: Bureau CAP Response window (July 30 deadline; note CAP filed 07/14 as in-progress).
+IV. Clean Record Isolation
+Review water quality logs, 1:25 lifeguard ratio records, and incident reports to verify whether the defect is strictly confined to credential authorization. Exclude unrelated regional records (NYC/Chicago) or general background documents.
 
-Clean Record Isolation: Look at water quality logs, 1:25 lifeguard ratios, and incident reports and assess whether the defect is strictly limited to credential authority. Ignore unrelated regional files (NYC/Chicago) and general FR document distractors.
-
-Traceability: Cite the exact folder and filename (source: folder/filename) for every data point and figure used in your tables.
+V. Source Traceability
+Include direct source references (folder/filename) for all calculations, figures, and site classifications presented in your tables.
 
 Thanks,
 
