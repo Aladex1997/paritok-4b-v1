@@ -1,8 +1,8 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 7.0 (V6 + independent operations verification + enrollment reconciliation + strengthened [CORPUS GAP] + Loon Hollow temporal qualification)
+Rubric Version: 7.0 (V6 + independent operations verification + enrollment reconciliation + strengthened [CORPUS GAP] + Loon Hollow temporal qualification + June 15 date distinction + facility vs credential distinction + working drafts excluded)
 Prompt Reference: prompt.md (V7)
-Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL
+Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥14 of 16 critical components.
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
 ================================================================================
@@ -182,7 +182,7 @@ G2. 4-step pipeline executed in order [0.25]
   0.0 = Steps missing or significantly out of order
 
 ================================================================================
-CRITICAL COMPONENTS (13 total — strong models must fail ≥50%, weak models must fail ≥80%):
+CRITICAL COMPONENTS (16 total — strong models must fail ≥50%, weak models must fail ≥14 of 16)
 1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) [PENALTY 1]
 2. D3: Wristband carryover = 489 [PENALTY 2]
 3. D4: Assessment-authorized staff = 37 [PENALTY 3]
@@ -196,6 +196,9 @@ CRITICAL COMPONENTS (13 total — strong models must fail ≥50%, weak models mu
 11. E3: July 30 framed as meetable (29 days, 8 actions, July 14 In-Process)
 12. F1: Data traceability with (folder/filename) citations
 13. D6: Enrollment-to-roster reconciliation — identify 264 enrollment vs 280 roster discrepancy
+14. G1: June 15 finding date used for CAP clock (not July 1 reporting baseline)
+15. G2: Facility inspection distinguished from credential examination (no facility pass substitutes for credential clearance)
+16. G3: Working drafts explicitly excluded from findings (no filing status or numerical conclusion relies on scratch notes)
 
 ================================================================================
 SCORING SUMMARY
@@ -291,6 +294,10 @@ GRADING NOTES
    - Strengthened [CORPUS GAP] with 4 specific categories: (a) individual camper IDs not in band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) any figure undervable from source files
    - Added Loon Hollow temporal qualification: must state whether clearance was at or before July 1 baseline or only later
    - Added Nonswimmer inclusion requirement: all campers whose classifications rest on defective sign-off require re-testing regardless of band level
+   - Added June 15 finding date distinction: CAP clock uses June 15, 2026 (finding date), July 1 is reporting baseline only (G1)
+   - Added facility inspection vs credential examination distinction: facility pass cannot substitute for credential clearance (G2)
+   - Added working drafts exclusion from findings: scratch notes excluded from all numerical and filing conclusions (G3)
+   - Total critical components: 16 (was 13); weak model target: ≥14 of 16 failures (was ≥80% of 12-13)
    - V6 base scores preserved for reference; V7 evaluation pending next model generation against updated prompt
 
 8. PENALTY EFFECTIVENESS (V6): Each penalty triggered independently. P1 (camper count): 8/8 models triggered (all report 568/800 vs 489). P2 (wristbands): 8/8 triggered (all report 0 vs 489). P3 (staff): 6/8 triggered (32-42 vs 37). P4 (double-counting): 8/8 triggered (campers≠wristbands or both wrong). Combined max penalty: -3.5 points. V6 penalties are MORE effective than V5 since no models used [CORPUS GAP] and all got critical data wrong.

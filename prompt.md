@@ -6,6 +6,14 @@ Every supporting table, site classification, and timeline reconciliation needs t
 
 An irregularity is any instance where swim assessment sign-offs were performed by staff lacking authorized credentials, or where operational safety records contradict the Scope Isolation Memo's clean determination.
 
+Three additional constraints govern this memo:
+
+1. Date distinction: The Bureau's finding is dated June 15, 2026 — this governs the CAP clock, the 45-day response window, and all deadline calculations. July 1, 2026 is the reporting baseline only. Do not use July 1 for CAP clock arithmetic.
+
+2. Facility inspection vs credential examination: A facility inspection tests operational conditions (physical safety, equipment, water chemistry). A credential examination tests signer/certification/matrix authority. An official facility pass cannot substitute for credential clearance, and a facially qualifying credential on a roster cannot clear a site without the certification file and ASC-2 verification. Do not conflate these two distinct determinations.
+
+3. Working drafts excluded from findings: Scratch notes, internal plans, underwriting call summaries, and working drafts are excluded from findings. They may explain activity or intent but do not prove filing, submission, acceptance, or completion. No filing status or numerical conclusion relies on working drafts.
+
 Here's what I need from you, pulling from our 2026 workspace folder and credential archives:
 
 First, the Site Audit. Go through every swim test record and sweep report across all our camp locations. For each site, note whether it was inspected and whether any sign-offs were unauthorized — separate your findings into sites that passed inspection and sites that were never examined. Deferred or uninspected sites can't be marked as passed. For sites that were cleared, state clearly whether clearance occurred at or before the July 1, 2026 baseline or only at a later date — a later clearance is not a July 1 pass. And keep regulatory filings separate from working drafts.
