@@ -1,26 +1,26 @@
 Team,
 
-As of July 1, 2026, the Bureau of Youth Camp Licensing flagged a compliance issue with swim assessment sign-offs across our camp locations. We need to prepare an executive memo — kvl_compliance_memo.docx — from the Operations Director, addressed to the Board and Bureau, for their review.
+As of July 1, 2026, the Bureau of Youth Camp Licensing flagged a compliance irregularity with swim assessment sign-offs. Please prepare an executive memo — kvl_compliance_memo.docx — from the Operations Director, addressed to the Board and Bureau, for their review.
 
-The memo needs every supporting table, site classification, and timeline reconciliation baked right into the document. No external calculation files attached. Use absolute dates throughout (e.g., "July 15, 2026") — skip relative references like "tomorrow" or "in two weeks."
+Every supporting table, site classification, and timeline reconciliation needs to be baked right into this memo. No external calculation files attached. Write all dates in absolute terms (e.g., "July 15, 2026") — skip relative references like "tomorrow" or "in two weeks."
 
 An irregularity is any instance where swim assessment sign-offs were performed by staff lacking authorized credentials, or where operational safety records contradict the Scope Isolation Memo's clean determination.
 
-Work through the following, pulling from our 2026 workspace folder and credential archives:
+Here's what I need from you, pulling from our 2026 workspace folder and credential archives:
 
-Start with the Site Audit. Go through every swim test record and sweep report across all our camp locations. For each site, note whether it was inspected and whether any sign-offs were unauthorized — separate your findings into sites that passed inspection and sites that were never examined. Deferred or uninspected sites can't be marked as passed. Keep regulatory filings separate from working drafts.
+First, the Site Audit. Go through every swim test record and sweep report across all our camp locations. For each site, note whether it was inspected and whether any sign-offs were unauthorized — separate your findings into sites that passed inspection and sites that were never examined. Deferred or uninspected sites can't be marked as passed. And keep regulatory filings separate from working drafts.
 
-Next, the Scope Check. In accordance with our Scope Isolation Memo, review the water quality logs, 1:25 ratio schedules, and incident records of the implicated sites to determine whether operational records are fully clean — meaning the irregularity is strictly a credential authorization issue with no operational safety component.
+Next, the Scope Check. Follow our Scope Isolation Memo and assess the water quality logs, 1:25 ratio schedules, and incident records for the implicated sites. Determine whether operational records are entirely clean — meaning this irregularity is strictly about credential authorization with no operational safety component.
 
 Then the Re-Assessment Workload. Calculate the total remediation workload before August 20, 2026:
 
-Camper Workload: Figure out how many active campers need to be re-tested before August 20, 2026 based on their band classifications. Mark missing camper records with [CORPUS GAP].
+How many active campers need to be re-tested before August 20, 2026, based on their band classification? Mark any missing camper records with [CORPUS GAP].
 
-Wristband Carryover: Figure out how many wristbands will carry over into the 2027 season if re-testing doesn't get done.
+How many wristbands will carry over into the 2027 season if re-testing doesn't happen?
 
-Authorized Staff: Figure out how many staff members are qualified to conduct swim re-assessments by cross-referencing our active staff lists against the authorization matrix. Pay close attention to which specific credential roles are authorized for swim assessments.
+How many staff members are authorized to conduct swim re-assessments? Cross-reference our active staff lists against the authorization matrix and specify exactly which credential roles are authorized for swim assessments.
 
-For the July Deadline Reconciliation, match your re-assessment completion schedule against our three overlapping July compliance deadlines. Assign each deadline to its proper operational lead and give us an honest read on whether we can hit them:
+Now, reconcile your assessment completion schedule against our three overlapping July compliance deadlines. Assign each deadline to the appropriate operational lead and give us your honest read on whether we can hit them:
 
 July 2: Great Pines Mutual underwriting offset (calculated as 30 days prior to our August 1 policy anniversary).
 
@@ -28,7 +28,7 @@ July 15: Bureau License Renewal (requires an active Corrective Action Plan).
 
 July 30: Bureau CAP Response window (referencing our July 14 filing marked In-Process).
 
-One more thing — Data Traceability: cite the source for every figure, calculation, and site classification in your memo tables, using (folder/filename) format.
+One more thing — cite the source for every figure, calculation, and site classification in your memo tables, using (folder/filename) format.
 
 Thanks,
 
