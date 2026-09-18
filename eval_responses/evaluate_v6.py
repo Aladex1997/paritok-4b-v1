@@ -1,7 +1,7 @@
 import json
 import re
 
-with open('eval_responses/response_texts.json', 'r') as f:
+with open('rep1_responses/rep1_texts.json', 'r') as f:
     responses = json.load(f)
 
 def score_response(text):
@@ -12,21 +12,16 @@ def score_response(text):
 
     # ---- SECTION A: FORMAT (1.0) ----
     a = 0.0
-    # A1: docx file (all responses are .docx) = 0.25
-    a += 0.25  # All are docx
-    # A2: no external attachments (all embedded) = 0.25
-    a += 0.25
-    # A3: professional memo structure (TO/FROM/DATE/RE)
+    a += 0.25  # docx
+    a += 0.25  # no external attachments
     has_memo_header = bool(re.search(r'(TO|FROM|DATE|RE|MEMORANDUM|memo)', text, re.IGNORECASE))
     a += 0.125 if has_memo_header else 0.0
-    # A4: absolute dates
     has_abs_dates = bool(re.search(r'(July \d+, 2026|August \d+, 2026|June \d+, 2026)', text))
     a += 0.125 if has_abs_dates else 0.0
     scores['A'] = round(min(a, 1.0), 2)
 
     # ---- SECTION B: SITE BREAKDOWN (1.0) ----
     b = 0.0
-    # B1: Correct site classifications + Passed/Never Examined columns
     has_passed = bool(re.search(r'Passed', text, re.IGNORECASE))
     has_never = bool(re.search(r'Never Examined|never-examined|never examined', text, re.IGNORECASE))
     has_corrigwell = 'Corrigwell' in text
@@ -38,12 +33,9 @@ def score_response(text):
     elif site_class >= 3:
         b1 = 0.25
     b += b1
-    # B2: Unverified sign-off scope
     has_unauthorized = bool(re.search(r'unauthorized|Unauthorized', text))
-    has_scope = has_unauthorized and has_corrigwell
-    b2 = 0.25 if has_scope else 0.0
+    b2 = 0.25 if has_unauthorized and has_corrigwell else 0.0
     b += b2
-    # B3: Never-examined not classified as compliant
     has_never_qualifier = bool(re.search(r'not.*compliant|cannot.*classified|ineligible|default.*ineligible|segregated', text, re.IGNORECASE))
     b3 = 0.25 if has_never_qualifier and has_never else 0.0
     b += b3
@@ -51,33 +43,21 @@ def score_response(text):
 
     # ---- SECTION C: SCOPE ISOLATION (1.0) ----
     c = 0.0
-    has_scope_memo = 'Scope Isolation' in text or 'scope isolation' in text.lower()
-    # C1-C3: operational compliance
     has_water = bool(re.search(r'water quality|Water Quality|chlorine', text, re.IGNORECASE))
     has_ratio = bool(re.search(r'1:25|ratio|buddy.?board', text, re.IGNORECASE))
     has_incident = bool(re.search(r'incident|first.?aid', text, re.IGNORECASE))
     c += 0.083 if has_water else 0.0
     c += 0.083 if has_ratio else 0.0
     c += 0.083 if has_incident else 0.0
-    # C4: Regulatory vs internal separation
     has_separation = bool(re.search(r'regulatory.*internal|filing.*draft|\.pdf.*\.md|separated.*draft', text, re.IGNORECASE))
     c += 0.25 if has_separation else 0.0
     scores['C'] = round(min(c, 1.0), 2)
 
     # ---- SECTION D: RE-ASSESSMENT WORKLOAD (1.5 + penalties) ----
     d = 0.0
-
-    # D1: Campers requiring re-test
-    camper_matches = re.findall(r'(\d{3})\s*(?:campers?|swimmers?|records?|rows?)', text)
-    camper_numbers = []
-    for m in re.finditer(r'(\d+)\s*(?:campers|swimmers|records|rows|active)', text):
-        camper_numbers.append(int(m.group(1)))
-    # Also check for explicit mentions
     camper_489 = bool(re.search(r'\b489\b', text))
     camper_568 = bool(re.search(r'\b568\b', text))
     camper_800 = bool(re.search(r'\b800\b', text))
-    camper_372 = bool(re.search(r'\b372\b', text))
-
     d1 = 0.0
     if camper_489:
         d1 = 0.30
@@ -88,15 +68,13 @@ def score_response(text):
     else:
         d1 = 0.0
         penalties += 1.5
-        details.append(f"P1: No clear camper count reported (P1 triggered)")
+        details.append("P1: No clear camper count reported (P1 triggered)")
     d += d1
 
-    # D2: Session-level breakdown
     has_session = bool(re.search(r'Session\s*1.*Session\s*2|Session 1.*280|280.*288', text))
     d2 = 0.15 if has_session else 0.0
     d += d2
 
-    # D3: Wristbands
     wristband_489 = bool(re.search(r'\b489\b.*wristband|wristband.*489', text, re.IGNORECASE))
     wristband_0 = bool(re.search(r'(zero|0)\s*(?:wristband|wristbands)', text, re.IGNORECASE))
     d3 = 0.0
@@ -112,7 +90,6 @@ def score_response(text):
         details.append("P2: No clear wristband count (P2 triggered)")
     d += d3
 
-    # D4: Staff count
     staff_37 = bool(re.search(r'\b37\b', text))
     staff_wsi = 'WSI' in text
     has_aqs = 'AQS' in text
@@ -122,7 +99,6 @@ def score_response(text):
     elif staff_37:
         d4 = 0.15
     elif has_aqs:
-        # Staff count includes AQS — wrong
         staff_numbers = re.findall(r'(\d+)\s*(?:staff|people|person|individuals)', text, re.IGNORECASE)
         if any(s != 37 for s in staff_numbers):
             d4 = 0.0
@@ -136,11 +112,9 @@ def score_response(text):
         details.append("P3: Staff calculation error")
     d += d4
 
-    # D5: [CORPUS GAP]
     has_copus_gap = '[CORPUS GAP]' in text
     d5 = 0.30 if has_copus_gap else 0.0
     d += d5
-
     scores['D'] = round(min(d, 1.5), 2)
 
     # ---- SECTION E: DEADLINE RECONCILIATION (1.5) ----
@@ -151,7 +125,6 @@ def score_response(text):
     has_great_pines = 'Great Pines' in text
     has_cap = bool(re.search(r'CAP|Corrective Action Plan', text, re.IGNORECASE))
     has_feasibility = bool(re.search(r'feasible|CANNOT|cannot.*completed|unlikely|mathematically', text, re.IGNORECASE))
-
     e += 0.133 if has_july2 else 0.0
     e += 0.133 if has_july15 else 0.0
     e += 0.133 if has_july30 else 0.0
@@ -188,14 +161,13 @@ def score_response(text):
         'base_total': round(base_total, 2),
     }
 
-# Score all responses
 results = {}
 for label in sorted(responses.keys()):
     text = responses[label]
     result = score_response(text)
     results[label] = result
 
-    model_type = 'STRONG' if label in ['R1', 'R2', 'R3', 'R4'] else 'WEAK'
+    model_type = 'STRONG' if label in ['M1', 'M2', 'M3', 'M4'] else 'WEAK'
     threshold = '50%' if model_type == 'STRONG' else '80%'
     status = 'PASS' if result['pct'] >= float(threshold.replace('%','')) else 'FAIL'
 
@@ -204,14 +176,13 @@ for label in sorted(responses.keys()):
     for pd in result['penalty_details']:
         print(f"  PENALTY: {pd}")
 
-# Summary
-strong_pcts = [results[r]['pct'] for r in ['R1', 'R2', 'R3', 'R4']]
-weak_pcts = [results[r]['pct'] for r in ['R5', 'R6', 'R7', 'R8']]
+strong_pcts = [results[r]['pct'] for r in ['M1', 'M2', 'M3', 'M4']]
+weak_pcts = [results[r]['pct'] for r in ['M5', 'M6', 'M7', 'M8']]
 strong_fail = sum(1 for p in strong_pcts if p < 50)
 weak_fail = sum(1 for p in weak_pcts if p < 80)
 
 print(f"\n{'='*60}")
-print(f"V6 EVALUATION SUMMARY")
+print(f"V6 EVALUATION SUMMARY — REP 1 ALL.zip")
 print(f"{'='*60}")
 print(f"Strong: avg={sum(strong_pcts)/len(strong_pcts):.1f}%, fail={strong_fail}/4 (need ≥3 for ≥60%)")
 print(f"Weak: avg={sum(weak_pcts)/len(weak_pcts):.1f}%, fail={weak_fail}/4 (need ≥4 for ≥90%)")

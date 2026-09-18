@@ -222,12 +222,29 @@ Re-Grade Results (Rubric v6.0 — [CORPUS GAP] + Heavy Penalties):
   Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
            Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
 
-Key V6 findings:
+REP 1 ALL.zip — New Model Generation (V6):
+
+  Model  Type     Base   Penalties   Final    %     Threshold  Status
+  -----  ------  -----  ----------  ------  -----  ---------  ------
+  M1     STRONG   4.20      -3.0    1.20   17.1%      50%     FAIL
+  M2     STRONG   4.45      -3.0    1.45   20.7%      50%     FAIL
+  M3     STRONG   4.45      -3.0    1.45   20.7%      50%     FAIL
+  M4     STRONG   4.45      -3.0    1.45   20.7%      50%     FAIL
+  M5     WEAK     4.20      -2.5    1.70   24.3%      80%     FAIL
+  M6     WEAK     3.80      -2.5    1.30   18.6%      80%     FAIL
+  M7     WEAK     3.80      -3.0    0.80   11.4%      80%     FAIL
+  M8     WEAK     3.80      -3.0    0.80   11.4%      80%     FAIL
+
+  Strong avg: 19.8% | Weak avg: 16.4% — all FAIL
+
+  Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
+           Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
+
+Key V6 findings (REP 1 ALL.zip):
   - All 8 models trigger P1 (incorrect camper count: report 568/800, expected 489)
   - All 8 models trigger P2 (wristbands reported as 0, expected 489)
   - 6/8 models trigger P3 (staff count includes AQS: report 32-42, expected 37)
-  - 0/8 models used [CORPUS GAP] marking (D5=0.0 for all)
-  - V6 is harder than V5: strong avg dropped from 21.1% → 18.7%, weak avg from 13.4% → 8.8%
+  - All 8 use [CORPUS GAP] but still fail due to wrong critical data
   - V6 successfully fails ≥60% strong and ≥90% weak
 
 ================================================================================
