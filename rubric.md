@@ -1,7 +1,7 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 6.0 (Heavy Penalties + [CORPUS GAP] + V6 natural language)
-Prompt Reference: prompt.md (V6)
+Rubric Version: 7.0 (V6 + independent operations verification + enrollment reconciliation + strengthened [CORPUS GAP] + Loon Hollow temporal qualification)
+Prompt Reference: prompt.md (V7)
 Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
@@ -182,6 +182,22 @@ G2. 4-step pipeline executed in order [0.25]
   0.0 = Steps missing or significantly out of order
 
 ================================================================================
+CRITICAL COMPONENTS (13 total — strong models must fail ≥50%, weak models must fail ≥80%):
+1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) [PENALTY 1]
+2. D3: Wristband carryover = 489 [PENALTY 2]
+3. D4: Assessment-authorized staff = 37 [PENALTY 3]
+4. D5: [CORPUS GAP] used correctly with specific categories
+5. C1: Water quality clean per Scope Isolation Memo — BUT independently verified against primary logs (not accepted at face value)
+6. C2: 1:25 ratio clean per Scope Isolation Memo — BUT independently verified against primary logs
+7. C3: Incident logs clean per Scope Isolation Memo — BUT independently verified against primary logs
+8. B1: Site classifications with Passed vs Never Examined columns + Loon Hollow temporal qualification
+9. E1: July 2 underwriting — cannot be met for full re-assessment (30 days before Aug 1)
+10. E2: July 15 tied to CAP Action 1 due July 17
+11. E3: July 30 framed as meetable (29 days, 8 actions, July 14 In-Process)
+12. F1: Data traceability with (folder/filename) citations
+13. D6: Enrollment-to-roster reconciliation — identify 264 enrollment vs 280 roster discrepancy
+
+================================================================================
 SCORING SUMMARY
 ================================================================================
 
@@ -192,8 +208,9 @@ Section D: Step 3 — Re-Assessment Workload & Remediation — Max 1.5
 Section E: Step 4 — July Deadline Reconciliation — Max 1.5
 Section F: Data Traceability — Max 0.5
 Section G: Constraint Compliance — Max 0.5
+Section D6: Enrollment-to-Roster Reconciliation — Max 0.5
 
-BASE MAX: 7.0
+BASE MAX: 7.5
 
 Penalty deductions (applied after base score):
   Penalty 1 (Incorrect camper count): -0.0 to -1.5
@@ -202,9 +219,9 @@ Penalty deductions (applied after base score):
   Penalty 4 (Double-counting wristbands): -0.0 to -0.5
   Max total penalty: -3.5 points
 
-FINAL MAX after penalties: 7.0 (with all penalties, could score as low as 3.5)
+FINAL MAX after penalties: 7.5 (with all penalties, could score as low as 4.0)
 
-Re-Grade Results (Rubric v6.0 — [CORPUS GAP] + Heavy Penalties):
+Re-Grade Results (Rubric v7.0 — V7 changes pending next model generation):
 
   Model  Type     Base   Penalties   Final    %     Threshold  Status
   -----  ------  -----  ----------  ------  -----  ---------  ------
@@ -217,10 +234,10 @@ Re-Grade Results (Rubric v6.0 — [CORPUS GAP] + Heavy Penalties):
   R7     WEAK     3.55      -2.5    1.05   15.0%      80%     FAIL
   R8     WEAK     3.40      -3.0    0.40    5.7%      80%     FAIL
 
-  Strong avg: 18.7% | Weak avg: 8.8% — all FAIL
+   Strong avg: 18.7% | Weak avg: 8.8% — all FAIL
 
-  Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
-           Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
+   Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
+            Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
 
 REP 1 ALL.zip — New Model Generation (V6):
 
@@ -235,10 +252,10 @@ REP 1 ALL.zip — New Model Generation (V6):
   M7     WEAK     3.80      -3.0    0.80   11.4%      80%     FAIL
   M8     WEAK     3.80      -3.0    0.80   11.4%      80%     FAIL
 
-  Strong avg: 19.8% | Weak avg: 16.4% — all FAIL
+   Strong avg: 19.8% | Weak avg: 16.4% — all FAIL
 
-  Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
-           Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
+   Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
+            Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
 
 Key V6 findings (REP 1 ALL.zip):
   - All 8 models trigger P1 (incorrect camper count: report 568/800, expected 489)
@@ -255,18 +272,8 @@ GRADING NOTES
    - Campers requiring re-testing: 489 (Nonswimmer=192 + Beginner=297)
    - Carryover wristbands: 489 (same as above — Nonswimmer + Beginner)
    - Assessment-authorized staff: 37 (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days)
-   - Any response with incorrect values for these three figures receives the corresponding penalty
-   - [CORPUS GAP] marking is REQUIRED for unaccounted camper details
-
-================================================================================
-GRADING NOTES
-================================================================================
-
-1. CRITICAL DATA POINTS (non-negotiable):
-   - Campers requiring re-testing: 489 (Nonswimmer=192 + Beginner=297)
-   - Carryover wristbands: 489 (same as above — Nonswimmer + Beginner)
-   - Assessment-authorized staff: 37 (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days)
-   - Any response with incorrect values for these three figures receives the corresponding penalty
+   - Enrollment reconciliation: identify 264 enrollment vs 280 roster discrepancy
+   - Any response with incorrect values for these figures receives the corresponding penalty
 
 2. Partial credit (0.5) requires meaningful attempt with at least 50% of expected content
 
@@ -278,7 +285,13 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V6.0 RESULTS: Strong avg 18.7% (4/4 fail at 50%), Weak avg 8.8% (4/4 fail at 80%). Exceeds both targets (≥60% strong fail, ≥90% weak fail). Key difference from V5: zero models used [CORPUS GAP] (D5=0.0 for all). All 8 models report wrong camper count (568/800 vs 489), zero wristbands (vs 489), and include AQS in staff count (32-42 vs 37). V6 is harder than V5: strong avg dropped from 21.1%→18.7%, weak avg from 13.4%→8.8%.
+7. RE-GRADE V7.0 CHANGES FROM V6:
+   - Added independent verification of Scope Isolation Memo clean-operations claim against primary logs (C1-C3 now require primary log recompute, not memo acceptance)
+   - Added enrollment-to-roster reconciliation as critical component D6 (264 enrollment vs 280 roster)
+   - Strengthened [CORPUS GAP] with 4 specific categories: (a) individual camper IDs not in band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) any figure undervable from source files
+   - Added Loon Hollow temporal qualification: must state whether clearance was at or before July 1 baseline or only later
+   - Added Nonswimmer inclusion requirement: all campers whose classifications rest on defective sign-off require re-testing regardless of band level
+   - V6 base scores preserved for reference; V7 evaluation pending next model generation against updated prompt
 
 8. PENALTY EFFECTIVENESS (V6): Each penalty triggered independently. P1 (camper count): 8/8 models triggered (all report 568/800 vs 489). P2 (wristbands): 8/8 triggered (all report 0 vs 489). P3 (staff): 6/8 triggered (32-42 vs 37). P4 (double-counting): 8/8 triggered (campers≠wristbands or both wrong). Combined max penalty: -3.5 points. V6 penalties are MORE effective than V5 since no models used [CORPUS GAP] and all got critical data wrong.
 
