@@ -8,13 +8,13 @@ An irregularity is any instance where swim assessment sign-offs were performed b
 
 Work through the following, pulling from our 2026 workspace folder and credential archives:
 
-Start with the Site Audit. Go through every swim test record and sweep report across all our camp locations. In your summary table, break site statuses into Passed and Never Examined columns — remember, deferred or uninspected sites can't be marked as passed. And keep regulatory filings separate from working drafts.
+Start with the Site Audit. Go through every swim test record and sweep report across all our camp locations. For each site, note whether it was inspected and whether any sign-offs were unauthorized — separate your findings into sites that passed inspection and sites that were never examined. Deferred or uninspected sites can't be marked as passed. Keep regulatory filings separate from working drafts.
 
 Next, the Scope Check. In accordance with our Scope Isolation Memo, review the water quality logs, 1:25 ratio schedules, and incident records of the implicated sites to determine whether operational records are fully clean — meaning the irregularity is strictly a credential authorization issue with no operational safety component.
 
-Then the Re-Assessment Workload. Calculate the total remediation workload before our August 2026 season close:
+Then the Re-Assessment Workload. Calculate the total remediation workload before August 20, 2026:
 
-Camper Workload: Figure out how many active campers need to be re-tested before season close based on their band classifications. Mark missing camper records with [CORPUS GAP].
+Camper Workload: Figure out how many active campers need to be re-tested before August 20, 2026 based on their band classifications. Mark missing camper records with [CORPUS GAP].
 
 Wristband Carryover: Figure out how many wristbands will carry over into the 2027 season if re-testing doesn't get done.
 
