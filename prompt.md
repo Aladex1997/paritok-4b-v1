@@ -12,9 +12,9 @@ Scope Check: Review the water quality logs, 1:25 ratio schedules, and incident r
 
 Re-Assessment Workload: Calculate the total remediation workload before our August 2026 season close:
 
-Camper Workload: Calculate the total number of active campers who need to be re-tested before season close based on their band classifications. Note any gaps in camper records.
+Camper Workload: Calculate the total number of active campers who need to be re-tested before season close based on their band classifications. Mark missing camper records with [CORPUS GAP].
 
-Wristband Carryover: Determine how many wristbands will carry over into the next season if re-testing is not completed.
+Wristband Carryover: Determine how many wristbands will carry over into the 2027 season if re-testing is not completed.
 
 Authorized Staff: Determine how many staff members are qualified to conduct these swim re-assessments by cross-referencing our active staff lists against the authorization matrix. Pay close attention to which specific credential roles are authorized for swim assessments.
 

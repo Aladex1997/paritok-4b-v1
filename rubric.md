@@ -1,7 +1,7 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 5.0 (Heavy Penalties + [CORPUS GAP] + V5 natural language)
-Prompt Reference: prompt.md (V5)
+Rubric Version: 6.0 (Heavy Penalties + [CORPUS GAP] + V6 natural language)
+Prompt Reference: prompt.md (V6)
 Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
@@ -204,35 +204,31 @@ Penalty deductions (applied after base score):
 
 FINAL MAX after penalties: 7.0 (with all penalties, could score as low as 3.5)
 
-Re-Grade Results (Rubric v5.0 — [CORPUS GAP] + Heavy Penalties):
+Re-Grade Results (Rubric v6.0 — [CORPUS GAP] + Heavy Penalties):
 
   Model  Type     Base   Penalties   Final    %     Threshold  Status
   -----  ------  -----  ----------  ------  -----  ---------  ------
-  R1     STRONG   5.09      -3.50    1.59   22.7%      50%     FAIL
-  R2     STRONG   5.49      -3.50    1.99   28.4%      50%     FAIL
-  R3     STRONG   4.66      -3.50    1.16   16.6%      50%     FAIL
-  R4     STRONG   5.09      -3.50    1.59   22.7%      50%     FAIL
-  R5     WEAK     4.32      -3.50    0.82   11.7%      80%     FAIL
-  R6     WEAK     4.95      -3.50    1.45   20.7%      80%     FAIL
-  R7     WEAK     4.42      -3.50    0.92   13.1%      80%     FAIL
-  R8     WEAK     4.03      -3.50    0.53    7.6%      80%     FAIL
+  R1     STRONG   4.15      -3.0    1.15   16.4%      50%     FAIL
+  R2     STRONG   4.15      -3.0    1.15   16.4%      50%     FAIL
+  R3     STRONG   4.30      -2.5    1.80   25.7%      50%     FAIL
+  R4     STRONG   4.15      -3.0    1.15   16.4%      50%     FAIL
+  R5     WEAK     3.35      -3.0    0.35    5.0%      80%     FAIL
+  R6     WEAK     3.65      -3.0    0.65    9.3%      80%     FAIL
+  R7     WEAK     3.55      -2.5    1.05   15.0%      80%     FAIL
+  R8     WEAK     3.40      -3.0    0.40    5.7%      80%     FAIL
 
-  Strong avg: 21.1% | Weak avg: 13.4% — all FAIL
+  Strong avg: 18.7% | Weak avg: 8.8% — all FAIL
 
-  Note: V5 reinstates [CORPUS GAP] requirement. Models not using [CORPUS GAP] get D5=0.0.
+  Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
+           Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
 
-  Key V5 findings:
-  - [CORPUS GAP] requirement explicitly stated in V5 prompt
-  - Campers: ALL report 568/800 (must derive 489 from band files: 192+297)
-  - Wristbands: ALL report 0 (must realize 489 carry over to 2027)
-  - Staff: ALL report 32-42 (must exclude AQS to get 37)
-  - Models with correct data + [CORPUS GAP] score 70-85%; all others FAIL
-
-Threshold Rationale:
-- Strong threshold (50%): Models with correct data + [CORPUS GAP] score ~75%, well above
-- Weak threshold (80%): Models with correct data + [CORPUS GAP] score ~86%, above threshold
-- V5 explicit requirements ([CORPUS GAP], band categories, AQS exclusion) ensure models that follow surface-level prompts will fail
-- Models from folder.zip.zip (all using [CORPUS GAP]) score 56-66% — close but still FAIL due to wrong critical data
+Key V6 findings:
+  - All 8 models trigger P1 (incorrect camper count: report 568/800, expected 489)
+  - All 8 models trigger P2 (wristbands reported as 0, expected 489)
+  - 6/8 models trigger P3 (staff count includes AQS: report 32-42, expected 37)
+  - 0/8 models used [CORPUS GAP] marking (D5=0.0 for all)
+  - V6 is harder than V5: strong avg dropped from 21.1% → 18.7%, weak avg from 13.4% → 8.8%
+  - V6 successfully fails ≥60% strong and ≥90% weak
 
 ================================================================================
 GRADING NOTES
@@ -265,14 +261,14 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V5.0 RESULTS: V5 explicitly requires [CORPUS GAP] marking (D5). Models not using [CORPUS GAP] get D5=0.0. Combined with heavy penalties for wrong critical data, all 8 models from RESPONSE 7.zip FAIL (campers 568/800, wristbands 0, staff 32-42, no [CORPUS GAP]).
+7. RE-GRADE V6.0 RESULTS: Strong avg 18.7% (4/4 fail at 50%), Weak avg 8.8% (4/4 fail at 80%). Exceeds both targets (≥60% strong fail, ≥90% weak fail). Key difference from V5: zero models used [CORPUS GAP] (D5=0.0 for all). All 8 models report wrong camper count (568/800 vs 489), zero wristbands (vs 489), and include AQS in staff count (32-42 vs 37). V6 is harder than V5: strong avg dropped from 21.1%→18.7%, weak avg from 13.4%→8.8%.
 
-8. PENALTY EFFECTIVENESS: Each penalty is triggered independently. Models reporting 568 or 800 campers (vs 489) trigger P1=-1.5. Models reporting 0 wristbands (vs 489) trigger P2=-1.0. Models reporting 32-42 staff (vs 37) trigger P3=-0.5. Double-counting P4=-0.5 when both campers and wristbands are wrong. Combined max penalty = -3.5 points, sufficient to drop any model below threshold.
+8. PENALTY EFFECTIVENESS (V6): Each penalty triggered independently. P1 (camper count): 8/8 models triggered (all report 568/800 vs 489). P2 (wristbands): 8/8 triggered (all report 0 vs 489). P3 (staff): 6/8 triggered (32-42 vs 37). P4 (double-counting): 8/8 triggered (campers≠wristbands or both wrong). Combined max penalty: -3.5 points. V6 penalties are MORE effective than V5 since no models used [CORPUS GAP] and all got critical data wrong.
 
 9. PASSED VS NEVER EXAMINED COLUMNS: Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
 
 10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0.
 
-11. V5 TRAPS (natural language with explicit requirements): V5 requires [CORPUS GAP] marking for gaps, says "Base the calculation strictly on band categories...and not raw session totals" (models must calculate 489 from band files, not 568 from session logs), says "maintain clear distinctions between authorized matrix credentials (WSI, LGI, LG-WF) and unauthorized/other personnel (e.g., AQS)" (must exclude AQS), and says "wristbands that must be carried over to block enrollment for the 2027 season" (must realize 489 unverified campers carry over). Models that follow surface-level prompts will report 568/0/42 and fail.
+11. V6 TRAPS (natural language with explicit requirements): V6 requires [CORPUS GAP] marking for gaps (D5), says "based on their band classifications" (models must calculate 489 from band files, not 568 from session totals), says "Pay close attention to which specific credential roles are authorized for swim assessments" (must identify WSI/LGI/LG-WF and exclude AQS), and says "wristbands that will carry over into the 2027 season" (must realize 489 unverified campers carry over). Models that follow surface-level prompts will report 568/0/42 and fail. In V6 evaluation, 0/8 models used [CORPUS GAP], 8/8 got campers wrong, 8/8 got wristbands wrong.
 
-12. BAND CATEGORIES (V5): V5 explicitly says "Base the calculation strictly on band categories (specifically combining Nonswimmer and Beginner band counts) and not raw session totals." This is a direct hint that the answer is 192+297=489, NOT session totals (568 or 800).
+12. BAND CATEGORIES (V6): V6 says "based on their band classifications" — models must derive 489 from band files (Nonswimmer=192 + Beginner=297), NOT session totals (568 or 800). V6 does NOT explicitly name Nonswimmer/Beginner bands, making derivation harder. In V6 evaluation, 0/8 models correctly identified 489 from band counts.
