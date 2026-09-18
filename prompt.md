@@ -1,6 +1,6 @@
 Team,
 
-As of July 1, 2026, the Bureau of Youth Camp Licensing flagged a compliance irregularity with swim assessment sign-offs. Please prepare an executive memo — kvl_compliance_memo.docx — from the Operations Director, addressed to the Board and Bureau, for their review.
+This memo reflects our position as of July 1, 2026 — the fixed date from which all findings and conclusions should be evaluated. On this date, the Bureau of Youth Camp Licensing flagged a compliance irregularity with swim assessment sign-offs. Please prepare an executive memo — kvl_compliance_memo.docx — from the Operations Director, addressed to the Board and Bureau, for their review.
 
 Every supporting table, site classification, and timeline reconciliation needs to be baked right into this memo. No external calculation files attached. Write all dates in absolute terms (e.g., "July 15, 2026") — skip relative references like "tomorrow" or "in two weeks."
 
