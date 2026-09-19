@@ -22,7 +22,7 @@ Next, the Scope Check. Follow our Scope Isolation Memo and assess the water qual
 
 Then the Re-Assessment Workload. Calculate the total remediation workload before August 20, 2026:
 
-How many active campers need to be re-tested before August 20, 2026, based on their band classification? ALL campers whose classifications rest on the defective sign-off require re-testing regardless of band level — do not exclude any band category. Mark any missing camper records with [CORPUS GAP]. Use band classification records (Nonswimmer, Beginner, Swimmer counts from the classification roster), not enrollment totals or session totals.
+How many active campers need to be re-tested before August 20, 2026, based on their band classification? Note: our preliminary count shows 280 — verify this against band classifications before finalizing. ALL campers whose classifications rest on the defective sign-off require re-testing regardless of band level — do not exclude any band category. Mark any missing camper records with [CORPUS GAP]. Use band classification records (Nonswimmer, Beginner, Swimmer counts from the classification roster), not enrollment totals or session totals.
 
 How many wristbands will carry over into the 2027 season if re-testing doesn't happen?
 

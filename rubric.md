@@ -14,7 +14,8 @@ is deducted from the total score. A response can score below 0 on any section.
 PENALTY 1: Incorrect Camper Count [Max deduction: 1.5 points from Section D]
   - If campers requiring re-testing is reported as anything OTHER than 489
     (nonswimmer 192 + beginner 297): deduct 1.5 points from Section D total
-  - Applies regardless of whether 568, 800, or any other number is reported
+  - Applies regardless of whether 568, 800, 280, or any other number is reported
+  - BIG TRAP: The prompt states "our preliminary count shows 280" — models that trust this without verifying against band files will report 280 and trigger this penalty. Models that verify and find 489 (Nonswimmer 192 + Beginner 297) avoid the penalty.
   - Rationale: The V2 prompt explicitly defines the count as nonswimmer + beginner
 
 PENALTY 2: Missing or Zero Wristband Count [Max deduction: 1.0 point from Section D]
@@ -297,6 +298,7 @@ GRADING NOTES
    - Added June 15 finding date distinction: CAP clock uses June 15, 2026 (finding date), July 1 is reporting baseline only (G1)
    - Added facility inspection vs credential examination distinction: facility pass cannot substitute for credential clearance (G2)
    - Added working drafts exclusion from findings: scratch notes excluded from all numerical and filing conclusions (G3)
+   - BIG TRAP: Prompt states "our preliminary count shows 280" in the re-test question. Models that trust this without verifying against band files will report 280 instead of 489. The "verify" instruction is the escape hatch.
    - Total critical components: 16 (was 13); weak model target: ≥14 of 16 failures (was ≥80% of 12-13)
    - V6 base scores preserved for reference; V7 evaluation pending next model generation against updated prompt
 
