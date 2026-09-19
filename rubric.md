@@ -131,9 +131,9 @@ D4. Assessment-authorized staff identified correctly [0.30]
   0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS — TRIGGER FOR PENALTY 3
 
 D5. [CORPUS GAP] marking for unaccounted camper details [0.30]
-  1.0 = Unaccounted camper details explicitly marked as [CORPUS GAP]; notes individual camper IDs not in band counts file; notes operational logs not separately extractable; 62 retests are partial mitigation
-  0.5 = Uses [CORPUS GAP] marking for some but not all unaccounted details
-  0.0 = No [CORPUS GAP] marking or no acknowledgment of missing data — TRIGGER FOR PENALTY 1 if combined with wrong camper count
+   1.0 = Unaccounted camper details explicitly marked as [CORPUS GAP] covering all 4 categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures derivable from source files; notes operational logs not separately extractable; 62 retests are partial mitigation
+   0.5 = Uses [CORPUS GAP] marking for some but not all unaccounted details
+   0.0 = No [CORPUS GAP] marking or no acknowledgment of missing data
 
 ================================================================================
 SECTION E: STEP 4 — JULY DEADLINE RECONCILIATION (Max: 1.5)
@@ -187,7 +187,7 @@ CRITICAL COMPONENTS (17 total — strong models must fail ≥50%, weak models mu
 1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) [PENALTY 1]
 2. D3: Wristband carryover = 489 [PENALTY 2]
 3. D4: Assessment-authorized staff = 37 [PENALTY 3]
-4. D5: [CORPUS GAP] used with ALL 4 specific categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures undervable from source files
+4. D5: [CORPUS GAP] used with ALL 4 specific categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures derivable from source files
 5. C1: Water quality — independently verified against primary logs with specific contradictions to Scope Isolation Memo (V8)
 6. C2: 1:25 ratio — independently verified against primary logs with specific contradictions (V8)
 7. C3: Incident logs — independently verified against primary logs with specific contradictions (V8)
@@ -301,7 +301,7 @@ GRADING NOTES
 7. RE-GRADE V7.0 CHANGES FROM V6:
    - Added independent verification of Scope Isolation Memo clean-operations claim against primary logs (C1-C3 now require primary log recompute, not memo acceptance)
    - Added enrollment-to-roster reconciliation as critical component D6 (264 enrollment vs 280 roster)
-   - Strengthened [CORPUS GAP] with 4 specific categories: (a) individual camper IDs not in band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) any figure undervable from source files
+   - Strengthened [CORPUS GAP] with 4 specific categories: (a) individual camper IDs not in band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) any figure derivable from source files
    - Added Loon Hollow temporal qualification: must state whether clearance was at or before July 1 baseline or only later (phrased as "if clearance happened after July 1, it doesn't count as a July 1 pass" in V7)
    - Added Nonswimmer inclusion requirement: all campers whose classifications rest on defective sign-off require re-testing regardless of band level (phrased as "every camper whose classification rests on a bad sign-off needs re-testing, no exceptions based on band level" in V7)
    - Added June 15 finding date distinction: CAP clock uses June 15, 2026 (finding date), July 1 is reporting baseline only (G1)
