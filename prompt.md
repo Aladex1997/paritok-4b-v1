@@ -1,6 +1,6 @@
 Team,
 
-Bureau has notified us of non-compliance with swim assessment sign-offs as of July 1, 2026, and I need a compliance memo for the Board and Bureau. It needs to be saved as kvl_compliance_memo.docx. I want it to be brief.
+Bureau has notified us of non-compliance with swim assessment sign-offs as of July 1, 2026, and I need a compliance memo for the Board and Bureau. It needs to be saved as kvl_compliance_memo.docx. I want it to be brief — about 2 to 3 pages, single-spaced.
 
 There are three ground rules I have for this memo:
 
@@ -12,13 +12,13 @@ There are three ground rules I have for this memo:
 
 What I need from you is the following:
 
-Site sweep. I need you to go through swim test records and sweep reports with records for all six camps and indicate for each if it was inspected and if the sign-offs were unauthorized. This needs to be in a table that has "Passed" and "Never Examined" as columns ("Cleared" is not "Passed") with findings on Loon Hollow specifically, indicating when it was cleared – if it was after July 1, 2026, it is not a pass as of July 1, 2026. Keep filings and working drafts separate, per the ground rules above.
+Site sweep. I need you to go through swim test records and sweep reports with records for all six camps and indicate for each if it was inspected and if the sign-offs were unauthorized. Present a site-by-site summary — for each site, show whether it passed inspection and whether its sign-offs were authorized, keeping cleared and never-examined sites separate. For Loon Hollow specifically, indicate when it was cleared – if it was after July 1, 2026, it is not a pass as of July 1, 2026. Keep filings and working drafts separate, per the ground rules above.
 
-Operations. I want to know from you if Corrigwell's water quality logs, 1:25 ratio schedules, and incident reports support the claim that operations are clean – that this is a credential issue and not a safety issue. Do not take the Scope Isolation Memo's word for it. Go through the primary logs and recompute the numbers yourself – point out any discrepancies. If the primary logs say something the Scope Isolation Memo does not acknowledge, say so with numbers and dates.
+Operations. I want to know from you if Corrigwell's water quality logs, 1:25 ratio schedules, and incident reports support the claim that operations are clean – that this is a credential issue and not a safety issue. Independently verify the Scope Isolation Memo's claims against the primary logs. Recompute the numbers yourself and report any differences you find between the primary logs and the memo. If the primary logs say something the Scope Isolation Memo does not acknowledge, say so with numbers and dates.
 
 Re-testing workload before August 20:
 
-How many campers need to be retested? Per one source, it is 280, but it needs to be verified against band classifications first – use the number you find. Every single camper whose classification depends on a bad sign-off needs to be retested, and there are no exceptions at the band levels. Use the Nonswimmer, Beginner, Swimmer counts from the classification rosters, not overall enrollment or session counts. Mark gaps in the data with [CORPUS GAP] and specify what category these are in: (a) individual campers' IDs that do not add up in band classifications, (b) enrollment records with no corresponding classification roster rows, (c) missing certification files for other camps/sessions, or (d) any other data point you cannot reconcile with any source files. Every [CORPUS GAP] you use needs to explicitly reference one or more of these categories.
+How many campers need to be retested? Per one source, it is 280, but it needs to be verified against band classifications first – use the number you find. Every single camper whose classification depends on a bad sign-off needs to be retested, and there are no exceptions at the band levels. Use the Nonswimmer, Beginner, Swimmer counts from the classification rosters, not overall enrollment or session counts. Every [CORPUS GAP] you use should note which data category it falls under: (a) individual campers' IDs that do not add up in band classifications, (b) enrollment records with no corresponding classification roster rows, (c) missing certification files for other camps/sessions, or (d) any other data point you cannot reconcile with any source files.
 
 How many wristbands carry into 2027 if retesting is not done?
 
