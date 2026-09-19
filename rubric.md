@@ -1,8 +1,8 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 7.0 (V6 + independent operations verification + enrollment reconciliation + strengthened [CORPUS GAP] + Loon Hollow temporal qualification + June 15 date distinction + facility vs credential distinction + working drafts excluded)
-Prompt Reference: prompt.md (V7)
-Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥14 of 16 critical components.
+Rubric Version: 8.0 (V7 + independent operations verification with specific contradiction requirement + Passed vs Cleared distinction + absolute date requirement + strengthened [CORPUS GAP] categories in prompt + working drafts with specific exclusion examples)
+Prompt Reference: prompt.md (V8)
+Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥14 of 17 critical components.
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
 ================================================================================
@@ -66,9 +66,9 @@ SECTION B: STEP 1 — DEFECT SCOPE & SITE BREAKDOWN (Max: 1.0)
 ================================================================================
 
 B1. Correct site classifications with Passed vs Never Examined columns [0.50]
-  1.0 = All 6 sites correctly classified AND summary table has dedicated Passed and Never Examined columns (Corrigwell=unauthorized&examined, Loon Hollow=cleared, 4 others=never-examined)
-  0.5 = Partial correct classifications (3-4 of 6 correct) or columns present but mislabeled
-  0.0 = Incorrect or missing classifications and no Passed/Never Examined separation
+   1.0 = All 6 sites correctly classified AND summary table has dedicated "Passed" column (NOT "Cleared" — "Cleared" for Loon Hollow does NOT satisfy this — Loon Hollow clearance was post-July 1 and must be noted as such) AND "Never Examined" column AND Loon Hollow temporal qualification explicitly stating clearance date (August 7, 2026) is after July 1 baseline (Corrigwell=unauthorized&examined, Loon Hollow=cleared post-July 1 not passed, 4 others=never-examined)
+   0.5 = Partial correct classifications (3-4 of 6 correct) or columns present but mislabeled or missing Loon Hollow temporal qualification
+   0.0 = Incorrect or missing classifications and no Passed/Never Examined separation
 
 B2. Unverified sign-off scope stated [0.25]
   1.0 = Identifies 1 site with unauthorized sign-offs, 4 never-examined, 1 cleared
@@ -85,19 +85,19 @@ SECTION C: STEP 2 — CLEAN SCOPE ISOLATION (Max: 1.0)
 ================================================================================
 
 C1. Water quality status per Scope Isolation Memo [0.25]
-  1.0 = Confirms water quality compliance per Scope Isolation Memo WF2; explicitly states defect is strictly limited to credential authorization; if operational violations are noted, clearly distinguished as separate from credential scope
-  0.5 = States compliant but without confirming defect is credential-only
-  0.0 = States non-compliant without distinguishing from credential scope or fails to reference Scope Isolation Memo
+   1.0 = Independently recomputed water quality from Corrigwell Water Quality Log and identified specific data points contradicting Scope Isolation Memo WF2; explicitly states defect is strictly limited to credential authorization
+   0.5 = Recomputed from primary logs but no specific contradictions identified; or confirms compliant per Scope Isolation Memo with explicit statement defect is credential-only
+   0.0 = Accepts Scope Isolation Memo conclusion at face value without independent recompute, or states non-compliant without distinguishing from credential scope
 
 C2. 1:25 ratio status per Scope Isolation Memo [0.25]
-  1.0 = Confirms 1:25 ratio compliant per Scope Isolation Memo; explicitly states operational defect is strictly credential-limited
-  0.5 = States compliant but without confirming defect scope
-  0.0 = States non-compliant or missing
+   1.0 = Independently recomputed 1:25 ratio from Corrigwell Ratio Schedule and identified specific data points contradicting Scope Isolation Memo WF2; explicitly states operational defect is strictly credential-limited
+   0.5 = Recomputed from primary logs but no specific contradictions identified; or confirms compliant per Scope Isolation Memo with explicit statement defect is credential-only
+   0.0 = Accepts Scope Isolation Memo conclusion at face value without independent recompute, or states non-compliant or missing
 
 C3. Incident/first-aid status per Scope Isolation Memo [0.25]
-  1.0 = Confirms incident logs compliant per Scope Isolation Memo; explicitly states operational defect is strictly credential-limited
-  0.5 = States compliant but without confirming defect scope
-  0.0 = States non-compliant or missing
+   1.0 = Independently recomputed incident logs from Corrigwell Incident and First Aid Log and identified specific data points contradicting Scope Isolation Memo WF2; explicitly states operational defect is strictly credential-limited
+   0.5 = Recomputed from primary logs but no specific contradictions identified; or confirms compliant per Scope Isolation Memo with explicit statement defect is credential-only
+   0.0 = Accepts Scope Isolation Memo conclusion at face value without independent recompute, or states non-compliant or missing
 
 C4. Regulatory filings separated from internal working drafts [0.25]
   1.0 = Explicitly distinguishes state/federal regulatory filings (.pdf) from internal working drafts (.md)
@@ -163,10 +163,10 @@ E4. Deadline owners and calculation methods correct [0.30]
 SECTION F: DATA TRACEABILITY (Max: 0.5)
 ================================================================================
 
-F1. Every figure, calculation, and site classification has direct (folder/filename) citation [0.50]
-  1.0 = All tables and key statements include folder/filename citations
-  0.5 = Most figures cited but some missing
-  0.0 = No citations or citations only at document level (not per-figure)
+F1. Every figure, calculation, and site classification has direct (folder/filename) citation AND all dates are absolute [0.50]
+   1.0 = All tables and key statements include folder/filename citations AND every date is stated as absolute calendar date (e.g., "July 15, 2026") with no relative expressions (no "tomorrow", "in 14 days", "next week")
+   0.5 = Most figures cited but some missing OR some relative date expressions used
+   0.0 = No citations or citations only at document level (not per-figure) OR relative dates used throughout
 
 ================================================================================
 SECTION G: CONSTRAINT COMPLIANCE (Max: 0.5)
@@ -183,23 +183,24 @@ G2. 4-step pipeline executed in order [0.25]
   0.0 = Steps missing or significantly out of order
 
 ================================================================================
-CRITICAL COMPONENTS (16 total — strong models must fail ≥50%, weak models must fail ≥14 of 16)
+CRITICAL COMPONENTS (17 total — strong models must fail ≥50%, weak models must fail ≥14 of 17)
 1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) [PENALTY 1]
 2. D3: Wristband carryover = 489 [PENALTY 2]
 3. D4: Assessment-authorized staff = 37 [PENALTY 3]
-4. D5: [CORPUS GAP] used correctly with specific categories
-5. C1: Water quality clean per Scope Isolation Memo — BUT independently verified against primary logs (not accepted at face value)
-6. C2: 1:25 ratio clean per Scope Isolation Memo — BUT independently verified against primary logs
-7. C3: Incident logs clean per Scope Isolation Memo — BUT independently verified against primary logs
-8. B1: Site classifications with Passed vs Never Examined columns + Loon Hollow temporal qualification
+4. D5: [CORPUS GAP] used with ALL 4 specific categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures undervable from source files
+5. C1: Water quality — independently verified against primary logs with specific contradictions to Scope Isolation Memo (V8)
+6. C2: 1:25 ratio — independently verified against primary logs with specific contradictions (V8)
+7. C3: Incident logs — independently verified against primary logs with specific contradictions (V8)
+8. B1: Site classifications with Passed (NOT "Cleared") vs Never Examined columns + Loon Hollow temporal qualification (August 7 clearance = post-July 1, not a July 1 pass)
 9. E1: July 2 underwriting — cannot be met for full re-assessment (30 days before Aug 1)
 10. E2: July 15 tied to CAP Action 1 due July 17
 11. E3: July 30 framed as meetable (29 days, 8 actions, July 14 In-Process)
-12. F1: Data traceability with (folder/filename) citations
+12. F1: Data traceability with (folder/filename) citations AND all dates absolute (no relative expressions)
 13. D6: Enrollment-to-roster reconciliation — identify 264 enrollment vs 280 roster discrepancy
 14. G1: June 15 finding date used for CAP clock (not July 1 reporting baseline)
 15. G2: Facility inspection distinguished from credential examination (no facility pass substitutes for credential clearance)
 16. G3: Working drafts explicitly excluded from findings (no filing status or numerical conclusion relies on scratch notes)
+17. H1: No relative date expressions anywhere in memo (any "tomorrow", "next week", "in X days" = automatic FAIL)
 
 ================================================================================
 SCORING SUMMARY
@@ -225,7 +226,15 @@ Penalty deductions (applied after base score):
 
 FINAL MAX after penalties: 7.5 (with all penalties, could score as low as 4.0)
 
-Re-Grade Results (Rubric v7.0 — V7 changes pending next model generation):
+V8 CHANGES FROM V7:
+  - C1-C3: Require independent recompute from primary logs AND specific contradictions with Scope Isolation Memo (not just memo citation)
+  - B1: Requires "Passed" column (not "Cleared") and Loon Hollow temporal qualification (August 7 = post-July 1)
+  - F1: Includes absolute date requirement (no relative expressions)
+  - D5: Requires all 4 specific [CORPUS GAP] categories as standalone critical component
+  - H1: New binary critical component — any relative date expression = automatic FAIL
+  - G3: Strengthened to require explicit exclusion statement
+
+Re-Grade Results (Rubric v8.0):
 
   Model  Type     Base   Penalties   Final    %     Threshold  Status
   -----  ------  -----  ----------  ------  -----  ---------  ------
