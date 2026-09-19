@@ -293,10 +293,10 @@ GRADING NOTES
    - Added independent verification of Scope Isolation Memo clean-operations claim against primary logs (C1-C3 now require primary log recompute, not memo acceptance)
    - Added enrollment-to-roster reconciliation as critical component D6 (264 enrollment vs 280 roster)
    - Strengthened [CORPUS GAP] with 4 specific categories: (a) individual camper IDs not in band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) any figure undervable from source files
-   - Added Loon Hollow temporal qualification: must state whether clearance was at or before July 1 baseline or only later
-   - Added Nonswimmer inclusion requirement: all campers whose classifications rest on defective sign-off require re-testing regardless of band level
+   - Added Loon Hollow temporal qualification: must state whether clearance was at or before July 1 baseline or only later (phrased as "if clearance happened after July 1, it doesn't count as a July 1 pass" in V7)
+   - Added Nonswimmer inclusion requirement: all campers whose classifications rest on defective sign-off require re-testing regardless of band level (phrased as "every camper whose classification rests on a bad sign-off needs re-testing, no exceptions based on band level" in V7)
    - Added June 15 finding date distinction: CAP clock uses June 15, 2026 (finding date), July 1 is reporting baseline only (G1)
-   - Added facility inspection vs credential examination distinction: facility pass cannot substitute for credential clearance (G2)
+   - Added facility inspection vs credential examination distinction: facility pass cannot substitute for credential clearance (G2) (phrased as "a credential that looks right on a roster doesn't clear a site without the certification file and ASC-2 in hand" in V7)
    - Added working drafts exclusion from findings: scratch notes excluded from all numerical and filing conclusions (G3)
    - BIG TRAP: Prompt states "our preliminary count shows 280" in the re-test question. Models that trust this without verifying against band files will report 280 instead of 489. The "verify" instruction is the escape hatch.
    - Total critical components: 16 (was 13); weak model target: ≥14 of 16 failures (was ≥80% of 12-13)
