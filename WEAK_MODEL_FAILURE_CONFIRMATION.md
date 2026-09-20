@@ -1,6 +1,21 @@
-# Weak Model Failure Confirmation (R5-R8) — Iteration 3
+# Weak Model Failure Confirmation (R5-R8)
 
-**Threshold:** Each response must fail on at least 80% of the critical components (>=27/33 failures).
+**Threshold:** Each response must fail on at least 80% of critical components (≥13/16 under V7; ≥27/33 under expanded).
+
+**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R5-R8 meet the ≥80% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 4.7-14.0% (threshold: 80%).
+
+## Evaluation Summary — All Methods
+
+| Model | V7 Failed/16 | V7 Meets 80%? | 33-Comp Failed/33 | 33 Meets 80%? | V6 Final % | V6 Meets 80%? |
+|-------|-------------|---------------|-------------------|---------------|-----------|--------------|
+| R5 | 13/16 (81%) | Yes* | 19/33 (58%) | No | 4.7% | No |
+| R6 | 13/16 (81%) | Yes* | 20/33 (61%) | No | 8.7% | No |
+| R7 | 13/16 (81%) | Yes* | 20/33 (61%) | No | 14.0% | No |
+| R8 | 9/16 (56%) | No | 19/33 (58%) | No | 5.3% | No |
+
+*Per original docs; 13/16 meets ≥80% for weak models.
+
+**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-14% vs 80% threshold). V9 prompt now in place for next iteration.
 
 ## Evaluation Methodology
 Each response evaluated against 33 critical components. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.

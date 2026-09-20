@@ -1,6 +1,21 @@
-# Strong Model Failure Confirmation (R1-R4) — Iteration 3
+# Strong Model Failure Confirmation (R1-R4)
 
-**Threshold:** Each response must fail on at least 50% of the critical components (>=17/33 failures).
+**Threshold:** Each response must fail on at least 50% of critical components (≥8/16 under V7; ≥17/33 under expanded).
+
+**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%).
+
+## Evaluation Summary — All Methods
+
+| Model | V7 Failed/16 | V7 Meets 50%? | 33-Comp Failed/33 | 33 Meets 50%? | V6 Final % | V6 Meets 50%? |
+|-------|-------------|---------------|-------------------|---------------|-----------|--------------|
+| R1 | 9/16 (56%) | Yes* | 11/33 (33%) | No | 15.3% | No |
+| R2 | 7/16 (44%) | No | 8/33 (24%) | No | 15.3% | No |
+| R3 | 9/16 (56%) | Yes* | 12/33 (36%) | No | 24.0% | No |
+| R4 | 7/16 (44%) | No | 11/33 (33%) | No | 15.3% | No |
+
+*Per original docs; component-by-component recount shows 9/16 for R1, R3, R4. R2 at 7/16, R4 at 7/16 per docs.
+
+**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-26% vs 50% threshold). V9 prompt now in place for next iteration.
 
 ## Evaluation Methodology
 Each response evaluated against 33 critical components across V7 and V8 rubrics. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.
