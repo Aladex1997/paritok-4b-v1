@@ -1,20 +1,17 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 12.0 (V11 + maximally open prompt: no compliance framing, no camp count, no specific source types, no topic lists, no analytical targets, generic language throughout)
-Prompt Reference: prompt.md (V12)
+Rubric Version: 13.0 (V12 + source verification mandate, July 14 strict cutoff, summary rejection rule, operational claim scrutiny)
+Prompt Reference: prompt.md (V13)
 Target: Strong model ~75% with correct critical data (must derive from analysis, not prompt guidance); all models with incorrect critical data FAIL. Strong models must fail ≥20 of 36 (56%). Weak models must fail ≥29 of 36 (81%).
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
-DIFFICULTY HARNESS: V12 prompt is maximally open. No compliance framing, no camp count, no specific source types named, no topic lists, no analytical targets, no structure. Source types described as "reports, letters, matrices, rosters, enrollment data, logs, schedules, certification files, and similar documentation" with generic modifiers ("internal", "filed with Bureau", "missing"). Key hardening from V11:
-- "compliance memo" → "document" (no compliance framing to guide structure)
-- "six camps" → removed (no site count hint)
-- "credential authorization matrices" → "matrices" (no authorization hint)
-- "swim test records" → "reports" (no swim-specific hint)
-- "staff certification files" → "certification files" (no staff hint)
-- "scope of the problem" → removed (no scope hint)
-- "remediation" → removed (no remediation hint)
-- "July deadlines" → "time pressure" (no deadline hint)
-- "compliance problem" → removed (no problem type hint)
+DIFFICULTY HARNESS: V13 introduces four new hardening layers on top of V12's open-ended format:
+1. SOURCE VERIFICATION MANDATE — "Do not repeat those characterizations without verifying them against the underlying records." Models must independently verify every claim from summaries against primary sources. Must name the document that got it wrong when discrepancies exist.
+2. JULY 14 STRICT CUTOFF — "Anything dated after that date does not exist." Applies to ALL figures, not just insurance. Every number must be sourceable to something existing on July 14.
+3. SUMMARY REJECTION RULE — "If a summary document says one thing and the underlying log says another, the underlying record wins." Models must actively reject summary claims that contradict primary sources.
+4. OPERATIONAL CLAIM SCRUTINY — "You will find documents that characterize the operational record — number of excursions, clean logs, no issues." These specific claims must be verified against logs, not repeated.
+
+Source types now named specifically (logs, schedules, rosters, workbooks, insurance schedules, certification files). Models must find the right source within each category.
 - "credential defect" → removed (no defect type hint)
 - "re-testing" → removed (no re-testing hint)
 - "wristbands" → removed (no wristband hint)
@@ -31,21 +28,21 @@ PENALTY 1: Incorrect Camper Count [Max deduction: 1.5 points from Section D]
    - If campers requiring re-testing is reported as anything OTHER than 489
      (nonswimmer 192 + beginner 297): deduct 1.5 points from Section D total
    - Applies regardless of whether 568, 800, 280, or any other number is reported
-   - V12 HARDENING: Prompt provides NO guidance on which data source to use, no distractor number to reject, and no mention of band classifications, classification rosters, or any specific data type. Models must independently determine that band-level classification data is the correct source and derive 489 from it. Reporting any number derived from session totals (568, 800) or overall enrollment (280, 568) triggers this penalty. Merely "checking band files" without correctly computing from them also triggers this penalty.
+   - V13 HARDENING: Prompt provides NO guidance on which data source to use, no distractor number to reject, and no mention of band classifications, classification rosters, or any specific data type. Models must independently determine that band-level classification data is the correct source and derive 489 from it. Reporting any number derived from session totals (568, 800) or overall enrollment (280, 568) triggers this penalty. Merely "checking band files" without correctly computing from them also triggers this penalty.
    - Rationale: Derived from classification rosters — nonswimmer + beginner band categories
 
 PENALTY 2: Missing or Zero Wristband Count [Max deduction: 1.0 point from Section D]
    - If carryover wristbands blocking 2027 enrollment is reported as 0, omitted, or any number other than 489:
      deduct 1.0 point from Section D total
    - Applies if wristband count is missing, zero, or any number other than 489
-   - V12 HARDENING: The connection between re-testing and wristbands is NOT stated in the prompt. The word "wristband" does not appear, "re-testing" does not appear, and no downstream consequence is hinted at. Models must independently infer that campers requiring re-testing require wristbands for 2027 advancement. Reporting zero without identifying the 489 wristband consequence triggers this penalty. Partial credit only if wristband count is correct AND connection to re-testing is explained.
+   - V13 HARDENING: The connection between re-testing and wristbands is NOT stated in the prompt. The word "wristband" does not appear, "re-testing" does not appear, and no downstream consequence is hinted at. Models must independently infer that campers requiring re-testing require wristbands for 2027 advancement. Reporting zero without identifying the 489 wristband consequence triggers this penalty. Partial credit only if wristband count is correct AND connection to re-testing is explained.
 
 PENALTY 3: Staff Calculation Error [Max deduction: 0.5 points from Section D]
    - If assessment-authorized staff (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days) is reported
      as anything OTHER than 37: deduct 0.5 points from Section D total
    - Applies if staff count is 32, 33, 34, 42, or any other incorrect number, OR if AQS holders are included
      without being excluded per the authorization matrix
-   - V12 HARDENING: Authorization matrix must be consulted directly and AQS holders excluded. The word "AQS" does not appear, the word "matrix" does not appear in its analytical context (it appears in a generic list of source types), and the concept of credential authorization per role is not discussed in the prompt. Models must independently discover that credential authority varies by role and verify against the source documents. Models that simply count all credential roles without exclusion trigger this penalty. Models that state exclusion without explaining matrix-based reasoning receive partial credit at most.
+   - V13 HARDENING: Authorization matrix must be consulted directly and AQS holders excluded. The word "AQS" does not appear, the word "matrix" does not appear in its analytical context (it appears in a generic list of source types), and the concept of credential authorization per role is not discussed in the prompt. Models must independently discover that credential authority varies by role and verify against the source documents. Models that simply count all credential roles without exclusion trigger this penalty. Models that state exclusion without explaining matrix-based reasoning receive partial credit at most.
 
 PENALTY 4: Double-Counting Wristbands [Max deduction: 0.5 points]
   - If wristband count differs from camper re-test count when both refer to
@@ -183,7 +180,7 @@ F1. Every figure, calculation, and site classification has direct (folder/filena
    0.5 = Most figures cited but some missing citations OR some relative date expressions used
    0.0 = No citations or citations only at document level (not per-figure) OR relative dates used throughout
 
-F2. Source reliability assessment [0.25] — NEW for V12
+F2. Source reliability assessment [0.25] — NEW for V13
    1.0 = Assessment of source reliability included; identifies documents that may be unreliable, outdated, or conflicting; no single source treated as authoritative without verification
    0.5 = Mentions uncertainty about sources but lacks specificity
    0.0 = No source reliability assessment; all sources treated equally or accepted at face value
@@ -207,9 +204,9 @@ CRITICAL COMPONENTS (36 total — strong models must fail ≥20/36 = 56%, weak m
 2. D3: Wristband carryover = 489, connection to re-testing inferred independently [PENALTY 2]
 3. D4: Assessment-authorized staff = 37, AQS excluded with matrix verification [PENALTY 3]
 4. D5: [CORPUS GAP] used with ALL 4 specific categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures derivable from source files
-5. C1: Water quality — independently recomputed from primary logs with specific numeric contradictions to Scope Isolation Memo (V8 requirement) — V12 HARDENED: must identify contradictions, not just confirm compliance
-6. C2: 1:25 ratio — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V12 HARDENED: must identify contradictions or explicitly confirm with data points
-7. C3: Incident logs — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V12 HARDENED: same as C1/C2
+5. C1: Water quality — independently recomputed from primary logs with specific numeric contradictions to Scope Isolation Memo (V8 requirement) — V13 HARDENED: must identify contradictions, not just confirm compliance
+6. C2: 1:25 ratio — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V13 HARDENED: must identify contradictions or explicitly confirm with data points
+7. C3: Incident logs — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V13 HARDENED: same as C1/C2
 8. B1: Site classifications with Passed (NOT "Cleared") vs Never Examined columns + Loon Hollow temporal qualification (August 7 clearance = post-July 1, not a July 1 pass)
 9. E1: July 2 underwriting — identified without explicit date naming; cannot be met for full re-assessment; CAP filed as in-progress; recognizes operational evidence suffices
 10. E2: July 15 license renewal — identified without explicit date naming; conditionally feasible via CAP Action 1; recognizes filing describes CAP as in-progress
@@ -265,34 +262,27 @@ Penalty deductions (applied after base score):
 FINAL MAX after penalties: 7.75
 
 ================================================================================
-V12 CHANGES FROM V11:
+V13 CHANGES FROM V12:
 ================================================================================
 
-PROMPT HARDCENING (V12) — ABSOLUTE MAXIMUM DIFFICULTY:
-  - "compliance memo" → "document" (removed compliance framing that guides structure)
-  - "six camps" → removed (no site count hint)
-  - "credential authorization matrices" → "matrices" (no authorization hint)
-  - "swim test records" → "reports" (no swim-specific hint)
-  - "session rosters" → "rosters" (generic)
-  - "water quality logs" → "logs" (generic)
-  - "ratio schedules" → "schedules" (generic)
-  - "incident logs" → "similar documentation" (generic)
-  - "staff certification files" → "certification files" (no staff hint)
-  - "scope of the problem" → removed (no scope hint)
-  - "remediation" → removed (no remediation hint)
-  - "July deadlines" → "time pressure" (no deadline hint)
-  - "compliance problem" → removed (no problem type hint)
-  - "credential defect" → removed (no defect type hint)
-  - "re-testing" → removed (no re-testing hint)
-  - "wristbands" → removed (no wristband hint)
-  - "staff" → removed as concept (no staff hint)
-  - "For each deadline" → "anything that has time pressure" (weaker deadline hint)
-  - "determine what is actually true based on primary sources" → softened (no explicit verification mandate)
-  - Source types described only as "reports, letters, matrices, rosters, enrollment data, logs, schedules, certification files, and similar documentation" with generic modifiers
+PROMPT HARDCENING (V13):
+  - SOURCE VERIFICATION MANDATE added: "Do not repeat characterizations without verifying against underlying records"
+  - Naming requirement: when summaries contradict logs, "the memo uses the log's story and names the document that got it wrong"
+  - July 14 STRICT CUTOFT strengthened globally: "Anything dated after that date does not exist" — applies to ALL figures
+  - SUMMARY REJECTION RULE: "If a summary says one thing and the underlying log says another, the underlying record wins"
+  - OPERATIONAL CLAIM SCRUTINY: explicit warning about documents characterizing operational record as clean
+  - Insurance temporal cutoff: "A number you cannot source to something that existed on July 14 does not belong in this memo"
+  - Structure now specific (4 areas, 3 tables, gap section) — verification requirements offset structure advantage
 
-SCORING HARDCENING: No scoring changes — evaluation criteria assess response quality, not prompt difficulty. V12 models must discover everything independently. Critical components unchanged at 36. Thresholds unchanged: Strong ≥20/36 (56%), Weak ≥29/36 (81%).
+SCORING HARDCENING:
+  - C1-C3: Now require naming the specific document whose summary claim was wrong
+  - All components: Every figure must be sourceable to something existing on July 14
+  - F1: Citations must prove the figure existed on/before July 14
+  - Total critical components: 36 (unchanged)
+  - Strong threshold: ≥20/36 (56%, unchanged)
+  - Weak threshold: ≥29/36 (81%, unchanged)
 
-RUBRIC ENTRY: prompt.md (V12)
+RUBRIC ENTRY: prompt.md (V13)
 
 ================================================================================
 GRADING NOTES
@@ -315,44 +305,36 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V12.0 CHANGES FROM V11:
-    - "Compliance memo" → "document" (removed compliance framing)
-    - "Six camps" removed (no site count hint)
-    - "Credential authorization matrices" → "matrices" (generic)
-    - "Swim test records" → "reports" (generic)
-    - "Staff certification files" → "certification files" (generic)
-    - "Scope of the problem", "remediation" removed
-    - "July deadlines" → "time pressure" (no deadline hint)
-    - "Compliance problem", "credential defect" removed (no problem type hints)
-    - "Re-testing", "wristbands" removed (no key concept mentions)
-    - All source types described with generic modifiers ("reports, letters, matrices, rosters, enrollment data, logs, schedules, certification files, and similar documentation")
-    - "For each deadline" → "anything that has time pressure" (weaker hint)
-    - Models face maximum ambiguity about what matters, where to find it, and how to frame it
-    - C1-C3: V12 requires identifying specific contradictions with zero framing guidance
-    - D1: No data source naming — models must find band records with no hints
-    - D3: Wristband connection has zero prompts — must infer entirely
-    - D4: AQS exclusion has zero prompts — must discover entirely
+7. RE-GRADE V13.0 CHANGES FROM V12:
+    - Source verification mandate added: "Do not repeat characterizations without verifying against underlying records"
+    - Discrepancy naming: "the memo uses the log's story and names the document that got it wrong"
+    - July 14 cutoff strengthened globally: "Anything dated after that date does not exist" — applies to ALL figures
+    - Summary rejection rule: "If a summary says one thing and the underlying log says another, the underlying record wins"
+    - Operational claim scrutiny: explicit warning about documents characterizing record as clean
+    - Insurance temporal cutoff: "A number you cannot source to something that existed on July 14 does not belong"
+    - C1-C3: Now require naming the specific document whose summary claim was wrong
+    - All components: Every figure must be sourceable to something existing on July 14
     - Total critical components: 36 (unchanged)
     - Strong threshold: ≥20/36 (56%, unchanged)
     - Weak threshold: ≥29/36 (81%, unchanged)
 
-8. PENALTY EFFECTIVENESS (V12): Each penalty triggered independently. P1 (camper count): the word "band" is never mentioned in context, "classification" is never mentioned — models must independently determine which data source yields 489. P2 (wristbands): the word "wristband" never appears, "re-testing" never appears — zero prompts exist for this inference. P3 (staff): the word "staff" never appears, "AQS" never appears, "matrix" appears only in a generic list of document types — models must discover authorization varies by role. P4 (double-counting): models must identify wristband-camper match with no conceptual link stated. V12 penalties are HARDER to avoid than V11 because V11 still used terms like "compliance memo", "credential authorization matrices", and "staff certification files" that guide the analytical path. V12 replaces ALL specific terms with generic ones. No analytical target is named. No data source is specified. No structure is prescribed. No key concept (compliance, credential, wristband, staff, deadline, re-testing, scope, remediation) appears in its analytical context. Models must discover everything.
+8. PENALTY EFFECTIVENESS (V13): Each penalty triggered independently. V13 adds source verification and July 14 cutoff penalties on top of V12's discovery penalties:
+    - P1-P4: Same as V12 (discovery-based, no framing)
+    - NEW: Summary rejection — model repeats a summary claim that contradicts primary sources → FAIL on the relevant component
+    - NEW: July 14 cutoff violation — figure not sourceable to something existing on July 14 → FAIL
+    - NEW: Naming requirement — model identifies discrepancy but doesn't name the document that got it wrong → partial credit at most
+    - V13 penalties are HARDER than V12 because V12's ambiguity is now supplemented by verification requirements. Models must not only discover facts but prove they didn't take shortcuts through summaries.
 
 9. PASSED VS NEVER EXAMINED COLUMNS: Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
 
-10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0. In V12, AQS is NEVER mentioned, "staff" is NEVER mentioned as a concept, "authorization" is NEVER used in its analytical meaning, and "matrix" appears only in a generic document list. Models must independently identify that credential authority varies by role from a document called "matrices" among "reports, letters, rosters, logs, schedules, certification files, and similar documentation." Exclusion without matrix-based reasoning receives partial credit at most.
+10. AQS EXCLUSION: In V13, AQS is NEVER mentioned, "staff" is NEVER mentioned as a concept, "authorization" is NEVER used in its analytical meaning, and "matrix" appears only in a generic document list. Models must independently identify that credential authority varies by role from a document called "matrices" among named source types. Additionally, V13 requires verifying that staff exclusion reasoning is based on the matrix, not just stated. Exclusion without matrix-based reasoning receives partial credit at most.
 
-11. V12 DIFFICULTY HARNESS: V12 is the hardest prompt version ever created for this task. It is designed so that models following surface-level reading will fail far more components than under V11, because V11 still used identifiable terms ("credential", "staff", "certification", "deadline") even while removing structure. V12 replaces ALL specific terms with generic ones while preserving the same factual requirements.
+11. V13 DIFFICULTY HARNESS: V13 is the current hardest version. It combines structure (4 areas, 3 tables, gap section) with four verification layers that offset the structure advantage:
+    - SOURCE VERIFICATION: models must verify every summary claim against primary sources
+    - SUMMARY REJECTION: models must actively reject incorrect summary claims
+    - JULY 14 CUTOFF: every figure must be sourceable to something existing on July 14
+    - DISCREPANCY NAMING: when sources conflict, models must name the specific document that is wrong
 
-V12 requires discovery at every level with zero linguistic scaffolding:
-    - WHAT the problem is: no compliance, credential, defect, or problem-type terms — must determine this from data alone
-    - WHERE to find camper counts: no mention of bands, classifications, or rosters in analytical context — must determine source independently
-    - Wristband connection: the word "wristband" and "re-testing" are absent — must infer with zero conceptual prompts
-    - Staff authorization: no "staff", "certification", or "matrix" in analytical context — must discover from generic document list
-    - WHERE deadlines are: only "time pressure" mentioned — must find specific dates buried in documents
-    - THAT gap marking is needed: no [CORPUS GAP] instruction anywhere — must decide independently
-    - THAT Passed ≠ Cleared ≠ Never Examined: no terms mentioned — must determine distinction from data
-    - THAT Scope Isolation Memo needs verification: no mention — must decide independently
-    - THAT wristbands relate to re-testing: no connection stated — must infer
+V13 is designed so that models following surface-level reading will fail on source verification, July 14 cutoff, gap analysis, and discrepancy naming. Structure alone is not enough — discovery must be verified.
 
-V12 is: generic language throughout, zero specific analytical targets, zero data source guidance, zero structure, zero key concept mentions in analytical context. A single vague narrative request. Maximum ambiguity about what matters, where to find it, and how to present it.
+V13 requires: discover what matters → verify it against primary sources → prove it existed on July 14 → name discrepancies → state gaps honestly → deliver specific tables. Six layers of analytical rigor with minimal explicit instruction to do any of them except "make sure everything in it can be defended."

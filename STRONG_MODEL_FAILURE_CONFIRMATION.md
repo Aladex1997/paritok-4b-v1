@@ -1,10 +1,10 @@
 # Strong Model Failure Confirmation (R1-R4)
 
-**Threshold:** Each response must fail on at least 50% of critical components (≥17/33 under V8/33; ≥20/36 under V12/36).
+**Threshold:** Each response must fail on at least 50% of critical components (≥17/33 under V8/33; ≥20/36 under V13/36).
 
 **Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%). 
 
-**V12 HARDENING:** The prompt is now maximally open — no compliance framing, no camp count, no source types named, no topic lists, no analytical targets, no structure. Key concept terms ("wristbands", "staff", "deadline", "re-testing", "credential", "compliance") are all absent. A model writing a thorough general assessment may still miss critical facts because the prompt provides zero guidance on what specifically to find. V12 evaluation pending next model generation against prompt.md.
+**V13 HARDENING:** The prompt now requires source verification (verify every summary claim against primary sources), July 14 cutoff enforcement (every figure must be sourceable to something existing on July 14), summary rejection (actively reject incorrect summary claims), and discrepancy naming (name the document that got it wrong). Combined with the open-ended format, models face six layers of analytical rigor with minimal explicit instruction. V13 evaluation pending next model generation against prompt.md.
 
 | Model | V7 Failed/16 | V7 Meets 50%? | 33-Comp Failed/33 | 33 Meets 50%? | V6 Final % | V6 Meets 50%? |
 |-------|-------------|---------------|-------------------|---------------|-----------|--------------|
@@ -15,7 +15,7 @@
 
 *Per original docs; component-by-component recount shows 9/16 for R1, R3, R4. R2 at 7/16, R4 at 7/16 per docs.
 
-**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-26% vs 50% threshold). Current prompt is V12 — maximally open with zero topic or structure guidance. Expected to produce near-total failure across all models. Confirmation pending V12 evaluation.
+**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-26% vs 50% threshold). Current prompt is V13 — maximally hard (source verification mandate, July 14 cutoff, summary rejection, discrepancy naming, gap analysis, structural deliverables). Expected to produce near-total failure across all models. Confirmation pending V13 evaluation.
 
 ## Evaluation Methodology
 Each response evaluated against 33 critical components across V7 and V8 rubrics. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.
