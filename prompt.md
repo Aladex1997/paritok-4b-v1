@@ -18,19 +18,19 @@ Operations. I want to know from you if Corrigwell's water quality logs, 1:25 rat
 
 Re-testing workload before August 20:
 
-How many campers need to be retested? Per one source, it is 280, but it needs to be verified against band classifications first – use the number you find. Every single camper whose classification depends on a bad sign-off needs to be retested, and there are no exceptions at the band levels. Use the Nonswimmer, Beginner, Swimmer counts from the classification rosters, not overall enrollment or session counts. Every [CORPUS GAP] you use should note which data category it falls under: (a) individual campers' IDs that do not add up in band classifications, (b) enrollment records with no corresponding classification roster rows, (c) missing certification files for other camps/sessions, or (d) any other data point you cannot reconcile with any source files.
+How many campers need to be retested? Per one source, it is 280, but it needs to be verified against band classifications first – use the number you find. Every single camper whose classification depends on a bad sign-off needs to be retested, and there are no exceptions at the band levels. Use the swimmer classification categories from the classification rosters, not overall enrollment or session counts. Every [CORPUS GAP] you use should note which data category it falls under: camper records that are inconsistent across sources, enrollment records that cannot be matched to classification data, certification files that are missing or incomplete, or any other data point you cannot reconcile with any source files.
 
-How many wristbands carry into 2027 if retesting is not done?
+How many wristbands carry into 2027 if retesting is not done? This is a critical calculation — wristbands are directly tied to the campers requiring re-testing, as each camper needs a valid band to advance. Do not report this as zero without justification.
 
 Reconciliation of enrollment count with the legal roster row count for Corrigwell Session 1. If they do not add up, explain the discrepancy and mark it as [CORPUS GAP] referencing the category.
 
-How many staff can perform swim re-assessments? Cross-referenced with the staff lists, identify the credential roles per the authorization matrix and indicate which roles are authorized and which are not – for example, AQS holders are not authorized for swim assessments, even if their credential is current.
+How many staff can perform swim re-assessments? Cross-referenced with the staff lists, identify the credential roles per the authorization matrix and indicate which roles are authorized and which are not. Note: certain credentials that appear on rosters may not actually authorize swim assessments per the matrix — you must verify each role against the matrix. AQS holders are not authorized for swim assessments.
 
 Deadlines. There are three deadlines in July, and I want you to assign an owner to each and tell me whether each is feasible, with your reasoning:
 
 July 2 – Great Pines Mutual Underwriting Offset (30 days before the August 1 anniversary). Tell me if the whole re-assessment can be done, or at least the CAP can be filed as in-progress.
 
-July 15 – Bureau License Renewal (renewal requires active CAP). Tell me if it is feasible and how many days there are from July 1.
+July 15 – Bureau License Renewal (renewal requires active CAP with a specific corrective action plan). Tell me if it is feasible and how many days there are from July 1.
 
 July 30 – Bureau CAP Response period (references our filing on the 14th marked In-Process). Tell me if it is feasible and how many days there are from July 1.
 

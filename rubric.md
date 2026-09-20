@@ -1,7 +1,7 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
 Rubric Version: 8.0 (V7 + independent operations verification with specific contradiction requirement + Passed vs Cleared distinction + absolute date requirement + strengthened [CORPUS GAP] categories in prompt + working drafts with specific exclusion examples)
-Prompt Reference: prompt.md (V8)
+Prompt Reference: prompt.md (V9)
 Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥27 of 33 critical components (80%).
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
