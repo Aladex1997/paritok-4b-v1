@@ -1,19 +1,25 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 10.0 (V9 + harder prompt: no explicit trap warnings, no direct AQS exclusion statement, no wristband-camper link stated, implicit deadline descriptions, judgment-based requirements, conflict identification required, scope limitation required)
-Prompt Reference: prompt.md (V10)
-Target: Strong model ~75% with correct critical data (must derive from band categories without explicit guidance); all models with incorrect critical data FAIL. Strong models must fail ≥20 of 36 (56%). Weak models must fail ≥29 of 36 (81%).
+Rubric Version: 12.0 (V11 + maximally open prompt: no compliance framing, no camp count, no specific source types, no topic lists, no analytical targets, generic language throughout)
+Prompt Reference: prompt.md (V12)
+Target: Strong model ~75% with correct critical data (must derive from analysis, not prompt guidance); all models with incorrect critical data FAIL. Strong models must fail ≥20 of 36 (56%). Weak models must fail ≥29 of 36 (81%).
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
-DIFFICULTY HARNESS: V10 prompt removes all explicit trap warnings. Models must independently discover critical facts through analysis, not follow explicit instructions. Key hardening changes from V6:
-- No misleading number (280) mentioned — models derive 489 purely from band records with no distractor to reject
-- AQS exclusion NOT stated — models must verify each credential against the matrix themselves
-- Wristband-camper connection NOT stated — models must infer the downstream consequence themselves
-- Deadlines described implicitly, not by calendar date
-- "Judgment" and "do not accept surface-level characterizations" require reasoning, not compliance
-- Sources may conflict; models must identify and explain contradictions
-- Scope limitation explicitly required
-- No "critical calculation" or importance signaling
+DIFFICULTY HARNESS: V12 prompt is maximally open. No compliance framing, no camp count, no specific source types named, no topic lists, no analytical targets, no structure. Source types described as "reports, letters, matrices, rosters, enrollment data, logs, schedules, certification files, and similar documentation" with generic modifiers ("internal", "filed with Bureau", "missing"). Key hardening from V11:
+- "compliance memo" → "document" (no compliance framing to guide structure)
+- "six camps" → removed (no site count hint)
+- "credential authorization matrices" → "matrices" (no authorization hint)
+- "swim test records" → "reports" (no swim-specific hint)
+- "staff certification files" → "certification files" (no staff hint)
+- "scope of the problem" → removed (no scope hint)
+- "remediation" → removed (no remediation hint)
+- "July deadlines" → "time pressure" (no deadline hint)
+- "compliance problem" → removed (no problem type hint)
+- "credential defect" → removed (no defect type hint)
+- "re-testing" → removed (no re-testing hint)
+- "wristbands" → removed (no wristband hint)
+- "staff" → removed as concept (no staff hint)
+Models must independently discover ALL analytical targets from source data alone. No prompt element names any key concept, data type, or analytical requirement.
 
 ================================================================================
 CRITICAL ERROR PENALTIES (apply after base scoring)
@@ -25,21 +31,21 @@ PENALTY 1: Incorrect Camper Count [Max deduction: 1.5 points from Section D]
    - If campers requiring re-testing is reported as anything OTHER than 489
      (nonswimmer 192 + beginner 297): deduct 1.5 points from Section D total
    - Applies regardless of whether 568, 800, 280, or any other number is reported
-   - V10 HARDENING: No misleading number is provided in the prompt. Models must derive 489 from band classification records without any distractor to reject. Reporting any number derived from session totals (568, 800) or overall enrollment (280, 568) triggers this penalty. Merely "checking band files" without correctly computing from them also triggers this penalty.
+   - V12 HARDENING: Prompt provides NO guidance on which data source to use, no distractor number to reject, and no mention of band classifications, classification rosters, or any specific data type. Models must independently determine that band-level classification data is the correct source and derive 489 from it. Reporting any number derived from session totals (568, 800) or overall enrollment (280, 568) triggers this penalty. Merely "checking band files" without correctly computing from them also triggers this penalty.
    - Rationale: Derived from classification rosters — nonswimmer + beginner band categories
 
 PENALTY 2: Missing or Zero Wristband Count [Max deduction: 1.0 point from Section D]
    - If carryover wristbands blocking 2027 enrollment is reported as 0, omitted, or any number other than 489:
      deduct 1.0 point from Section D total
    - Applies if wristband count is missing, zero, or any number other than 489
-   - V10 HARDENING: The connection between re-testing and wristbands is NOT stated in the prompt. Models must independently infer that campers requiring re-testing require wristbands for 2027 advancement. Reporting zero without identifying the 489 wristband consequence triggers this penalty. Partial credit only if wristband count is correct AND connection to re-testing is explained.
+   - V12 HARDENING: The connection between re-testing and wristbands is NOT stated in the prompt. The word "wristband" does not appear, "re-testing" does not appear, and no downstream consequence is hinted at. Models must independently infer that campers requiring re-testing require wristbands for 2027 advancement. Reporting zero without identifying the 489 wristband consequence triggers this penalty. Partial credit only if wristband count is correct AND connection to re-testing is explained.
 
 PENALTY 3: Staff Calculation Error [Max deduction: 0.5 points from Section D]
    - If assessment-authorized staff (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days) is reported
      as anything OTHER than 37: deduct 0.5 points from Section D total
    - Applies if staff count is 32, 33, 34, 42, or any other incorrect number, OR if AQS holders are included
      without being excluded per the authorization matrix
-   - V10 HARDENING: Authorization matrix must be consulted directly. AQS holders must be excluded — models that simply count all credential roles on rosters without matrix verification trigger this penalty. Models that state exclusion without explaining matrix-based reasoning receive partial credit at most.
+   - V12 HARDENING: Authorization matrix must be consulted directly and AQS holders excluded. The word "AQS" does not appear, the word "matrix" does not appear in its analytical context (it appears in a generic list of source types), and the concept of credential authorization per role is not discussed in the prompt. Models must independently discover that credential authority varies by role and verify against the source documents. Models that simply count all credential roles without exclusion trigger this penalty. Models that state exclusion without explaining matrix-based reasoning receive partial credit at most.
 
 PENALTY 4: Double-Counting Wristbands [Max deduction: 0.5 points]
   - If wristband count differs from camper re-test count when both refer to
@@ -177,7 +183,7 @@ F1. Every figure, calculation, and site classification has direct (folder/filena
    0.5 = Most figures cited but some missing citations OR some relative date expressions used
    0.0 = No citations or citations only at document level (not per-figure) OR relative dates used throughout
 
-F2. Source reliability assessment [0.25] — NEW for V10
+F2. Source reliability assessment [0.25] — NEW for V12
    1.0 = Assessment of source reliability included; identifies documents that may be unreliable, outdated, or conflicting; no single source treated as authoritative without verification
    0.5 = Mentions uncertainty about sources but lacks specificity
    0.0 = No source reliability assessment; all sources treated equally or accepted at face value
@@ -201,9 +207,9 @@ CRITICAL COMPONENTS (36 total — strong models must fail ≥20/36 = 56%, weak m
 2. D3: Wristband carryover = 489, connection to re-testing inferred independently [PENALTY 2]
 3. D4: Assessment-authorized staff = 37, AQS excluded with matrix verification [PENALTY 3]
 4. D5: [CORPUS GAP] used with ALL 4 specific categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures derivable from source files
-5. C1: Water quality — independently recomputed from primary logs with specific numeric contradictions to Scope Isolation Memo (V8 requirement) — V10 HARDENED: must identify contradictions, not just confirm compliance
-6. C2: 1:25 ratio — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V10 HARDENED: must identify contradictions or explicitly confirm with data points
-7. C3: Incident logs — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V10 HARDENED: same as C1/C2
+5. C1: Water quality — independently recomputed from primary logs with specific numeric contradictions to Scope Isolation Memo (V8 requirement) — V12 HARDENED: must identify contradictions, not just confirm compliance
+6. C2: 1:25 ratio — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V12 HARDENED: must identify contradictions or explicitly confirm with data points
+7. C3: Incident logs — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V12 HARDENED: same as C1/C2
 8. B1: Site classifications with Passed (NOT "Cleared") vs Never Examined columns + Loon Hollow temporal qualification (August 7 clearance = post-July 1, not a July 1 pass)
 9. E1: July 2 underwriting — identified without explicit date naming; cannot be met for full re-assessment; CAP filed as in-progress; recognizes operational evidence suffices
 10. E2: July 15 license renewal — identified without explicit date naming; conditionally feasible via CAP Action 1; recognizes filing describes CAP as in-progress
@@ -259,30 +265,34 @@ Penalty deductions (applied after base score):
 FINAL MAX after penalties: 7.75
 
 ================================================================================
-V10 CHANGES FROM V9:
+V12 CHANGES FROM V11:
 ================================================================================
 
-PROMPT HARDCENING (V10):
-  - Removed all explicit trap warnings (no "280 is wrong", no "AQS not authorized" direct statements)
-  - Removed explicit wristband-camper connection — models must infer independently
-  - Deadlines described implicitly (not by calendar date) — models must identify
-  - Added "judgment" and "do not accept surface-level characterizations" requirements
-  - Added "where sources conflict, say so" — models must identify contradictions
-  - Added scope limitation requirement (must state what CANNOT be determined)
-  - Removed "critical calculation" importance signaling
-  - Source reliability assessment now required (not just citation)
+PROMPT HARDCENING (V12) — ABSOLUTE MAXIMUM DIFFICULTY:
+  - "compliance memo" → "document" (removed compliance framing that guides structure)
+  - "six camps" → removed (no site count hint)
+  - "credential authorization matrices" → "matrices" (no authorization hint)
+  - "swim test records" → "reports" (no swim-specific hint)
+  - "session rosters" → "rosters" (generic)
+  - "water quality logs" → "logs" (generic)
+  - "ratio schedules" → "schedules" (generic)
+  - "incident logs" → "similar documentation" (generic)
+  - "staff certification files" → "certification files" (no staff hint)
+  - "scope of the problem" → removed (no scope hint)
+  - "remediation" → removed (no remediation hint)
+  - "July deadlines" → "time pressure" (no deadline hint)
+  - "compliance problem" → removed (no problem type hint)
+  - "credential defect" → removed (no defect type hint)
+  - "re-testing" → removed (no re-testing hint)
+  - "wristbands" → removed (no wristband hint)
+  - "staff" → removed as concept (no staff hint)
+  - "For each deadline" → "anything that has time pressure" (weaker deadline hint)
+  - "determine what is actually true based on primary sources" → softened (no explicit verification mandate)
+  - Source types described only as "reports, letters, matrices, rosters, enrollment data, logs, schedules, certification files, and similar documentation" with generic modifiers
 
-SCORING HARDCENING:
-  - C1-C3: V10 requires identifying specific contradictions, not just confirming compliance
-  - D1: No distractor number in prompt — derivation purely from band records
-  - D3: Wristband connection must be inferred, not stated as given
-  - D4: AQS exclusion requires matrix verification reasoning, not just statement
-  - F2: NEW component — source reliability assessment (0.25)
-  - Critical components: 36 (was 33)
-  - Strong threshold: ≥20/36 (56%, was ≥17/33 = 50%)
-  - Weak threshold: ≥29/36 (81%, was ≥27/33 = 80%)
+SCORING HARDCENING: No scoring changes — evaluation criteria assess response quality, not prompt difficulty. V12 models must discover everything independently. Critical components unchanged at 36. Thresholds unchanged: Strong ≥20/36 (56%), Weak ≥29/36 (81%).
 
-RUBRIC ENTRY: prompt.md (V10)
+RUBRIC ENTRY: prompt.md (V12)
 
 ================================================================================
 GRADING NOTES
@@ -305,31 +315,44 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V10.0 CHANGES FROM V9:
-    - Prompt hardened: no explicit trap warnings, no direct AQS exclusion, no wristband-camper link, implicit deadline descriptions
-    - C1-C3: V10 requires identifying specific contradictions between primary logs and Scope Isolation Memo, not just confirming compliance
-    - D1: No distractor number provided — models must derive 489 purely from band classification records
-    - D3: Wristband-camper connection must be inferred independently (not stated as given)
-    - D4: AQS exclusion requires matrix verification reasoning, not just exclusion statement
-    - F2: NEW — source reliability assessment component
-    - SRC_RELIABILITY: New critical component — models must assess source reliability and identify unreliable/conflicting sources
-    - CONFLICT_IDENT: New critical component — proactive identification of contradictions between sources
-    - SCOPE_LIMIT: New critical component — explicit scope limitation section stating what cannot be determined
-    - Total critical components: 36 (was 33)
-    - Strong threshold: ≥20/36 (56%, was ≥17/33 = 50%)
-    - Weak threshold: ≥29/36 (81%, was ≥27/33 = 80%)
+7. RE-GRADE V12.0 CHANGES FROM V11:
+    - "Compliance memo" → "document" (removed compliance framing)
+    - "Six camps" removed (no site count hint)
+    - "Credential authorization matrices" → "matrices" (generic)
+    - "Swim test records" → "reports" (generic)
+    - "Staff certification files" → "certification files" (generic)
+    - "Scope of the problem", "remediation" removed
+    - "July deadlines" → "time pressure" (no deadline hint)
+    - "Compliance problem", "credential defect" removed (no problem type hints)
+    - "Re-testing", "wristbands" removed (no key concept mentions)
+    - All source types described with generic modifiers ("reports, letters, matrices, rosters, enrollment data, logs, schedules, certification files, and similar documentation")
+    - "For each deadline" → "anything that has time pressure" (weaker hint)
+    - Models face maximum ambiguity about what matters, where to find it, and how to frame it
+    - C1-C3: V12 requires identifying specific contradictions with zero framing guidance
+    - D1: No data source naming — models must find band records with no hints
+    - D3: Wristband connection has zero prompts — must infer entirely
+    - D4: AQS exclusion has zero prompts — must discover entirely
+    - Total critical components: 36 (unchanged)
+    - Strong threshold: ≥20/36 (56%, unchanged)
+    - Weak threshold: ≥29/36 (81%, unchanged)
 
-8. PENALTY EFFECTIVENESS (V10): Each penalty triggered independently. P1 (camper count): models must derive 489 without distractor. P2 (wristbands): models must infer connection. P3 (staff): models must verify matrix. P4 (double-counting): models must identify wristband-camper match. V10 penalties are HARDER to avoid than V6 because V6 gave explicit hints (280 is wrong, AQS excluded, wristbands tied to campers). In V10, none of these are stated — they must be discovered through analysis.
+8. PENALTY EFFECTIVENESS (V12): Each penalty triggered independently. P1 (camper count): the word "band" is never mentioned in context, "classification" is never mentioned — models must independently determine which data source yields 489. P2 (wristbands): the word "wristband" never appears, "re-testing" never appears — zero prompts exist for this inference. P3 (staff): the word "staff" never appears, "AQS" never appears, "matrix" appears only in a generic list of document types — models must discover authorization varies by role. P4 (double-counting): models must identify wristband-camper match with no conceptual link stated. V12 penalties are HARDER to avoid than V11 because V11 still used terms like "compliance memo", "credential authorization matrices", and "staff certification files" that guide the analytical path. V12 replaces ALL specific terms with generic ones. No analytical target is named. No data source is specified. No structure is prescribed. No key concept (compliance, credential, wristband, staff, deadline, re-testing, scope, remediation) appears in its analytical context. Models must discover everything.
 
 9. PASSED VS NEVER EXAMINED COLUMNS: Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
 
-10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0. In V10, AQS exclusion is NOT stated in prompt — models must discover this from the authorization matrix. Exclusion without matrix-based reasoning receives partial credit at most.
+10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0. In V12, AQS is NEVER mentioned, "staff" is NEVER mentioned as a concept, "authorization" is NEVER used in its analytical meaning, and "matrix" appears only in a generic document list. Models must independently identify that credential authority varies by role from a document called "matrices" among "reports, letters, rosters, logs, schedules, certification files, and similar documentation." Exclusion without matrix-based reasoning receives partial credit at most.
 
-11. V10 DIFFICULTY HARNESS: V10 is designed so that models following surface-level instructions will fail more components than under V6, because V6 rewarded instruction-following (it explicitly stated: 280 is wrong, AQS not authorized, wristbands tied to campers). V10 requires genuine analytical reasoning:
-    - Camper count (489): Must be derived from band records with no distractor to reject — pure analysis required
-    - Wristband count (489): Connection to re-testing must be inferred — not stated
-    - Staff count (37): AQS exclusion discovered via matrix — not stated
-    - Deadlines: Identified from context clues, not named by date
-    - Source reliability: Must assess which sources are trustworthy — not prompted
-    - Conflicts: Must identify contradictions between sources — not prompted
-    - Scope limitations: Must state what cannot be determined — explicitly required
+11. V12 DIFFICULTY HARNESS: V12 is the hardest prompt version ever created for this task. It is designed so that models following surface-level reading will fail far more components than under V11, because V11 still used identifiable terms ("credential", "staff", "certification", "deadline") even while removing structure. V12 replaces ALL specific terms with generic ones while preserving the same factual requirements.
+
+V12 requires discovery at every level with zero linguistic scaffolding:
+    - WHAT the problem is: no compliance, credential, defect, or problem-type terms — must determine this from data alone
+    - WHERE to find camper counts: no mention of bands, classifications, or rosters in analytical context — must determine source independently
+    - Wristband connection: the word "wristband" and "re-testing" are absent — must infer with zero conceptual prompts
+    - Staff authorization: no "staff", "certification", or "matrix" in analytical context — must discover from generic document list
+    - WHERE deadlines are: only "time pressure" mentioned — must find specific dates buried in documents
+    - THAT gap marking is needed: no [CORPUS GAP] instruction anywhere — must decide independently
+    - THAT Passed ≠ Cleared ≠ Never Examined: no terms mentioned — must determine distinction from data
+    - THAT Scope Isolation Memo needs verification: no mention — must decide independently
+    - THAT wristbands relate to re-testing: no connection stated — must infer
+
+V12 is: generic language throughout, zero specific analytical targets, zero data source guidance, zero structure, zero key concept mentions in analytical context. A single vague narrative request. Maximum ambiguity about what matters, where to find it, and how to present it.
