@@ -1,10 +1,10 @@
 # Strong Model Failure Confirmation (R1-R4)
 
-**Threshold:** Each response must fail on at least 50% of critical components (≥8/16 under V7; ≥17/33 under expanded).
+**Threshold:** Each response must fail on at least 50% of critical components (≥17/33 under V8/33; ≥20/36 under V10/36).
 
-**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%).
+**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%). 
 
-## Evaluation Summary — All Methods
+**V10 HARDENING:** The V10 prompt removes all explicit trap warnings and scaffolding. Under V10, models must independently discover critical facts through pure analysis (no distractor numbers to reject, no AQS exclusion stated, no wristband-camper link stated, deadlines described implicitly). This makes definitive failure even more likely — models that barely passed under V6's explicit hints will fail more components under V10's harder requirements. V10 evaluation pending next model generation against V10 prompt.
 
 | Model | V7 Failed/16 | V7 Meets 50%? | 33-Comp Failed/33 | 33 Meets 50%? | V6 Final % | V6 Meets 50%? |
 |-------|-------------|---------------|-------------------|---------------|-----------|--------------|
@@ -15,7 +15,7 @@
 
 *Per original docs; component-by-component recount shows 9/16 for R1, R3, R4. R2 at 7/16, R4 at 7/16 per docs.
 
-**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-26% vs 50% threshold). V9 prompt now in place for next iteration.
+**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-26% vs 50% threshold). V10 prompt now in place — harder than V6 (no explicit traps, no direct hints, pure analytical reasoning required). Expected to produce even more definitive failure under binary and percentage methods.
 
 ## Evaluation Methodology
 Each response evaluated against 33 critical components across V7 and V8 rubrics. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.

@@ -1,9 +1,19 @@
 KVL Compliance Memo — Rubric for Model Response Grading
 
-Rubric Version: 8.0 (V7 + independent operations verification with specific contradiction requirement + Passed vs Cleared distinction + absolute date requirement + strengthened [CORPUS GAP] categories in prompt + working drafts with specific exclusion examples)
-Prompt Reference: prompt.md (V9)
-Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥27 of 33 critical components (80%).
+Rubric Version: 10.0 (V9 + harder prompt: no explicit trap warnings, no direct AQS exclusion statement, no wristband-camper link stated, implicit deadline descriptions, judgment-based requirements, conflict identification required, scope limitation required)
+Prompt Reference: prompt.md (V10)
+Target: Strong model ~75% with correct critical data (must derive from band categories without explicit guidance); all models with incorrect critical data FAIL. Strong models must fail ≥20 of 36 (56%). Weak models must fail ≥29 of 36 (81%).
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
+
+DIFFICULTY HARNESS: V10 prompt removes all explicit trap warnings. Models must independently discover critical facts through analysis, not follow explicit instructions. Key hardening changes from V6:
+- No misleading number (280) mentioned — models derive 489 purely from band records with no distractor to reject
+- AQS exclusion NOT stated — models must verify each credential against the matrix themselves
+- Wristband-camper connection NOT stated — models must infer the downstream consequence themselves
+- Deadlines described implicitly, not by calendar date
+- "Judgment" and "do not accept surface-level characterizations" require reasoning, not compliance
+- Sources may conflict; models must identify and explain contradictions
+- Scope limitation explicitly required
+- No "critical calculation" or importance signaling
 
 ================================================================================
 CRITICAL ERROR PENALTIES (apply after base scoring)
@@ -12,25 +22,24 @@ These penalties are applied AFTER the base score is calculated. Each penalty
 is deducted from the total score. A response can score below 0 on any section.
 
 PENALTY 1: Incorrect Camper Count [Max deduction: 1.5 points from Section D]
-  - If campers requiring re-testing is reported as anything OTHER than 489
-    (nonswimmer 192 + beginner 297): deduct 1.5 points from Section D total
-  - Applies regardless of whether 568, 800, 280, or any other number is reported
-  - BIG TRAP: The prompt states "our preliminary count shows 280" — models that trust this without verifying against band files will report 280 and trigger this penalty. Models that verify and find 489 (Nonswimmer 192 + Beginner 297) avoid the penalty.
-  - Rationale: The V2 prompt explicitly defines the count as nonswimmer + beginner
+   - If campers requiring re-testing is reported as anything OTHER than 489
+     (nonswimmer 192 + beginner 297): deduct 1.5 points from Section D total
+   - Applies regardless of whether 568, 800, 280, or any other number is reported
+   - V10 HARDENING: No misleading number is provided in the prompt. Models must derive 489 from band classification records without any distractor to reject. Reporting any number derived from session totals (568, 800) or overall enrollment (280, 568) triggers this penalty. Merely "checking band files" without correctly computing from them also triggers this penalty.
+   - Rationale: Derived from classification rosters — nonswimmer + beginner band categories
 
 PENALTY 2: Missing or Zero Wristband Count [Max deduction: 1.0 point from Section D]
-  - If carryover wristbands blocking 2027 enrollment is reported as 0 or omitted:
-    deduct 1.0 point from Section D total
-  - Applies if wristband count is missing, zero, or any number other than 489
-  - Rationale: Wristbands are an explicit required figure in the V2 prompt
+   - If carryover wristbands blocking 2027 enrollment is reported as 0, omitted, or any number other than 489:
+     deduct 1.0 point from Section D total
+   - Applies if wristband count is missing, zero, or any number other than 489
+   - V10 HARDENING: The connection between re-testing and wristbands is NOT stated in the prompt. Models must independently infer that campers requiring re-testing require wristbands for 2027 advancement. Reporting zero without identifying the 489 wristband consequence triggers this penalty. Partial credit only if wristband count is correct AND connection to re-testing is explained.
 
 PENALTY 3: Staff Calculation Error [Max deduction: 0.5 points from Section D]
-  - If assessment-authorized staff (WSI, LGI, LG-WF at Corrigwell) is reported
-    as anything OTHER than 37 (current or expiring within 60 days):
-    deduct 0.5 points from Section D total
-  - Applies if staff count is 32, 33, 34, 42, or any other incorrect number
-  - Rationale: Staff count requires specific cross-referencing of certification
-    file against authorization matrix
+   - If assessment-authorized staff (WSI, LGI, LG-WF at Corrigwell, current or expiring within 60 days) is reported
+     as anything OTHER than 37: deduct 0.5 points from Section D total
+   - Applies if staff count is 32, 33, 34, 42, or any other incorrect number, OR if AQS holders are included
+     without being excluded per the authorization matrix
+   - V10 HARDENING: Authorization matrix must be consulted directly. AQS holders must be excluded — models that simply count all credential roles on rosters without matrix verification trigger this penalty. Models that state exclusion without explaining matrix-based reasoning receive partial credit at most.
 
 PENALTY 4: Double-Counting Wristbands [Max deduction: 0.5 points]
   - If wristband count differs from camper re-test count when both refer to
@@ -111,9 +120,9 @@ SECTION D: STEP 3 — RE-ASSESSMENT WORKLOAD & REMEDIATION (Max: 1.5)
 CRITICAL: See PENALTIES section above for heavy point deductions on errors in this section.
 
 D1. Campers requiring re-testing — Nonswimmer + Beginner band counts [0.30]
-  1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297, calculated from band classification records (NOT raw session totals)
-  0.5 = Correct reasoning but slightly wrong count (e.g., 488 or 490)
-  0.0 = Any other number derived from session totals (568, 800, etc.) — TRIGGER FOR PENALTY 1
+   1.0 = 489 of 814 campers (60.1%) identified: Nonswimmer=192 + Beginner=297, calculated from band classification records (NOT raw session totals). No reliance on any distractor number.
+   0.5 = Correct reasoning but slightly wrong count (e.g., 488 or 490)
+   0.0 = Any number derived from session totals (568, 800, etc.) or relying on a mentioned distractor number — TRIGGER FOR PENALTY 1
 
 D2. Session-level band breakdown correct [0.30]
   1.0 = Session 1: N=61/B=104/S=107/T=272; Session 2: N=67/B=93/S=106/T=266; Session 3: N=64/B=100/S=112/T=276
@@ -121,14 +130,14 @@ D2. Session-level band breakdown correct [0.30]
   0.0 = Incorrect session data
 
 D3. Carryover wristbands blocking 2027 enrollment [0.30]
-  1.0 = 489 wristbands: Nonswimmer=192 + Beginner=297, explicitly stated as blocking 2027 enrollment advancement
-  0.5 = Identifies wristbands concept but wrong count or incomplete reasoning
-  0.0 = Missing, zero, or any number other than 489 — TRIGGER FOR PENALTY 2
+   1.0 = 489 wristbands: Nonswimmer=192 + Beginner=297; connection to re-testing inferred independently (NOT stated in prompt); explicitly stated as blocking 2027 enrollment advancement with reasoning
+   0.5 = Identifies wristbands concept but wrong count, incomplete reasoning, or connection to re-testing stated as given rather than inferred
+   0.0 = Missing, zero, or any number other than 489 — TRIGGER FOR PENALTY 2
 
 D4. Assessment-authorized staff identified correctly [0.30]
-  1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS explicitly excluded as non-authorized; current/expiring-within-60d methodology stated per authorization matrix
-  0.5 = Partially correct staff count (off by 1-2) or missing AQS exclusion
-  0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS — TRIGGER FOR PENALTY 3
+   1.0 = 37 unique staff with WSI/LGI/LG-WF; AQS explicitly excluded with matrix-based reasoning; current/expiring-within-60d methodology stated per authorization matrix; roles verified against matrix individually
+   0.5 = Partially correct staff count (off by 1-2) OR AQS excluded without matrix reasoning OR matrix not consulted
+   0.0 = Incorrect staff identification (32/33/34/42/etc.) or includes AQS without exclusion — TRIGGER FOR PENALTY 3
 
 D5. [CORPUS GAP] marking for unaccounted camper details [0.30]
    1.0 = Unaccounted camper details explicitly marked as [CORPUS GAP] covering all 4 categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures derivable from source files; notes operational logs not separately extractable; 62 retests are partial mitigation
@@ -160,63 +169,70 @@ E4. Deadline owners and calculation methods correct [0.30]
   0.0 = Incorrect or missing deadline details
 
 ================================================================================
-SECTION F: DATA TRACEABILITY (Max: 0.5)
+SECTION F: DATA TRACEABILITY (Max: 0.75)
 ================================================================================
 
 F1. Every figure, calculation, and site classification has direct (folder/filename) citation AND all dates are absolute [0.50]
-   1.0 = All tables and key statements include folder/filename citations AND every date is stated as absolute calendar date (e.g., "July 15, 2026") with no relative expressions (no "tomorrow", "in 14 days", "next week")
-   0.5 = Most figures cited but some missing OR some relative date expressions used
+   1.0 = All tables and key statements include folder/filename citations with specific section/table/row references AND every date is stated as absolute calendar date (e.g., "July 15, 2026") with no relative expressions (no "tomorrow", "in 14 days", "next week")
+   0.5 = Most figures cited but some missing citations OR some relative date expressions used
    0.0 = No citations or citations only at document level (not per-figure) OR relative dates used throughout
 
-================================================================================
+F2. Source reliability assessment [0.25] — NEW for V10
+   1.0 = Assessment of source reliability included; identifies documents that may be unreliable, outdated, or conflicting; no single source treated as authoritative without verification
+   0.5 = Mentions uncertainty about sources but lacks specificity
+   0.0 = No source reliability assessment; all sources treated equally or accepted at face value
+
 SECTION G: CONSTRAINT COMPLIANCE (Max: 0.5)
 ================================================================================
 
 G1. Unrelated regional files excluded [0.25]
-  1.0 = No references to NYC, Chicago, or other out-of-scope regional data used as evidence
-  0.5 = Mentions exclusion but includes some regional data
-  0.0 = Includes or references unrelated regional files
+   1.0 = No references to NYC, Chicago, or other out-of-scope regional data used as evidence
+   0.5 = Mentions exclusion but includes some regional data
+   0.0 = Includes or references unrelated regional files
 
 G2. 4-step pipeline executed in order [0.25]
-  1.0 = All 4 steps presented sequentially (Defect Scope → Clean Scope Isolation → Re-Assessment Workload & Remediation → July Deadline Reconciliation)
-  0.5 = Steps present but out of order or merged
-  0.0 = Steps missing or significantly out of order
+   1.0 = All 4 steps presented sequentially (Defect Scope → Clean Scope Isolation → Re-Assessment Workload & Remediation → July Deadline Reconciliation)
+   0.5 = Steps present but out of order or merged
+   0.0 = Steps missing or significantly out of order
 
 ================================================================================
-CRITICAL COMPONENTS (33 total — strong models must fail ≥17/33 = 50%, weak models must fail ≥27/33 = 80%)
-1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) [PENALTY 1]
-2. D3: Wristband carryover = 489 [PENALTY 2]
-3. D4: Assessment-authorized staff = 37 [PENALTY 3]
+CRITICAL COMPONENTS (36 total — strong models must fail ≥20/36 = 56%, weak models must fail ≥29/36 = 81%)
+1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) derived from band records without distractor [PENALTY 1]
+2. D3: Wristband carryover = 489, connection to re-testing inferred independently [PENALTY 2]
+3. D4: Assessment-authorized staff = 37, AQS excluded with matrix verification [PENALTY 3]
 4. D5: [CORPUS GAP] used with ALL 4 specific categories: (a) camper IDs missing from band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) figures derivable from source files
-5. C1: Water quality — independently verified against primary logs with specific contradictions to Scope Isolation Memo (V8)
-6. C2: 1:25 ratio — independently verified against primary logs with specific contradictions (V8)
-7. C3: Incident logs — independently verified against primary logs with specific contradictions (V8)
+5. C1: Water quality — independently recomputed from primary logs with specific numeric contradictions to Scope Isolation Memo (V8 requirement) — V10 HARDENED: must identify contradictions, not just confirm compliance
+6. C2: 1:25 ratio — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V10 HARDENED: must identify contradictions or explicitly confirm with data points
+7. C3: Incident logs — independently recomputed from primary logs with specific numeric contradictions (V8 requirement) — V10 HARDENED: same as C1/C2
 8. B1: Site classifications with Passed (NOT "Cleared") vs Never Examined columns + Loon Hollow temporal qualification (August 7 clearance = post-July 1, not a July 1 pass)
-9. E1: July 2 underwriting — cannot be met for full re-assessment (30 days before Aug 1)
-10. E2: July 15 tied to CAP Action 1 due July 17
-11. E3: July 30 framed as meetable (29 days, 8 actions, July 14 In-Process)
+9. E1: July 2 underwriting — identified without explicit date naming; cannot be met for full re-assessment; CAP filed as in-progress; recognizes operational evidence suffices
+10. E2: July 15 license renewal — identified without explicit date naming; conditionally feasible via CAP Action 1; recognizes filing describes CAP as in-progress
+11. E3: July 30 CAP response — identified without explicit date naming; feasible with days count and corrective actions
 12. F1: Data traceability with (folder/filename) citations AND all dates absolute (no relative expressions)
 13. D6: Enrollment-to-roster reconciliation — identify 264 enrollment vs 280 roster discrepancy
 14. G1: June 15 finding date used for CAP clock (not July 1 reporting baseline)
 15. G2: Facility inspection distinguished from credential examination (no facility pass substitutes for credential clearance)
 16. G3: Working drafts explicitly excluded from findings (no filing status or numerical conclusion relies on scratch notes)
-17. H1: No relative date expressions anywhere in memo (any "tomorrow", "next week", "in X days" = automatic FAIL)
-18. B3: Never-examined sites explicitly stated as unable to be classified as compliant or non-compliant (0.0 = silent or treats as classified)
-19. C4: Regulatory filings (.pdf) explicitly distinguished from internal working drafts (.md) with specific file type examples (0.0 = mixes or doesn't distinguish)
-20. D2: Session-level band breakdown correct for all 3 sessions with N/B/S/T totals per session (0.0 = incorrect session data for any session)
-21. E4: All 3 deadlines with correct authority, calculation method, date, AND named owner (0.0 = incorrect or missing any element)
-22. F2: Per-figure citations include specific file path AND section/table/row reference (0.0 = folder-level citations only)
-23. G1: Explicit exclusion statement for unrelated regional data (NYC/Chicago) (0.0 = includes or doesn't mention)
-24. H1a: AQS exclusion explicitly explained per authorization matrix rationale (0.0 = states exclusion without explanation)
-25. H2: All triggered penalties (P1-P4) explicitly identified with affected figure calls (0.0 = no penalty acknowledgment)
-26. D7: 62 beginner retests identified as partial mitigation for 489 re-test candidates (0.0 = does not mention or mischaracterizes)
-27. Pen_P1: Penalty P1 (incorrect camper count) explicitly identified with correction to 489 (0.0 = reports 280/568/800 without correction)
-28. Pen_P2: Penalty P2 (missing wristbands) explicitly identified with correction to 489 (0.0 = reports 0 without correction)
-29. Pen_P3: Penalty P3 (staff count) explicitly identified with correction to 37 AQS-excluded (0.0 = reports 32/33/42 without correction)
-30. Pen_P4: Penalty P4 (double-counting) explicitly identified (0.0 = does not identify wristband/camper count discrepancy)
-31. Scope_6site: All 6 sites individually classified with BOTH inspection AND authorization status (0.0 = any site missing classification)
-32. Timeline_milestone: Remediation timeline with specific milestones and dates (0.0 = no milestones or dates)
-33. Risk_analysis: Risk/consequence analysis for each deadline (0.0 = no risk discussion)
+17. H1: No relative date expressions anywhere (any "tomorrow", "next week", "in X days" = automatic FAIL)
+18. B3: Never-examined sites explicitly stated as unable to be classified as compliant or non-compliant
+19. C4: Regulatory filings (.pdf) explicitly distinguished from internal working drafts (.md) with specific file type examples
+20. D2: Session-level band breakdown correct for all 3 sessions with N/B/S/T totals per session
+21. E4: All 3 deadlines with correct authority, calculation method, date, AND named owner
+22. F2: Per-figure citations include specific file path AND section/table/row reference
+23. G1: Explicit exclusion statement for unrelated regional data (NYC/Chicago)
+24. H1a: AQS exclusion explicitly explained per authorization matrix rationale
+25. H2: All triggered penalties (P1-P4) explicitly identified with affected figure calls
+26. D7: 62 beginner retests identified as partial mitigation for 489 re-test candidates
+27. Pen_P1: Penalty P1 (incorrect camper count) explicitly identified with correction to 489
+28. Pen_P2: Penalty P2 (missing wristbands) explicitly identified with correction to 489
+29. Pen_P3: Penalty P3 (staff count) explicitly identified with correction to 37 AQS-excluded
+30. Pen_P4: Penalty P4 (double-counting) explicitly identified
+31. Scope_6site: All 6 sites individually classified with BOTH inspection AND authorization status
+32. Timeline_milestone: Remediation timeline with specific milestones and dates
+33. Risk_analysis: Risk/consequence analysis for each deadline
+34. SRC_RELIABILITY: Assessment of source reliability — identifies which source documents may be unreliable, outdated, or conflicting; does not treat any single source as authoritative without verification
+35. CONFLICT_IDENT: Proactive identification of contradictions between sources — explicitly states where primary logs conflict with Scope Isolation Memo or where data sources disagree on figures
+36. SCOPE_LIMIT: Scope limitation section — explicitly states what the analysis could NOT determine from available materials, categorized by data gap type
 
 ================================================================================
 SCORING SUMMARY
@@ -225,13 +241,13 @@ SCORING SUMMARY
 Section A: Deliverable Format — Max 1.0
 Section B: Step 1 — Defect Scope & Site Breakdown — Max 1.0
 Section C: Step 2 — Clean Scope Isolation — Max 1.0
-Section D: Step 3 — Re-Assessment Workload & Remediation — Max 1.5
+Section D: Step 3 — Re-Assessment Workload & Remediation — Max 1.5 (includes D3 wristband inference at 0.30)
 Section E: Step 4 — July Deadline Reconciliation — Max 1.5
-Section F: Data Traceability — Max 0.5
+Section F: Data Traceability (F1 0.50 + F2 0.25 NEW) — Max 0.75
 Section G: Constraint Compliance — Max 0.5
 Section D6: Enrollment-to-Roster Reconciliation — Max 0.5
 
-BASE MAX: 7.5
+BASE MAX: 7.75
 
 Penalty deductions (applied after base score):
   Penalty 1 (Incorrect camper count): -0.0 to -1.5
@@ -240,58 +256,33 @@ Penalty deductions (applied after base score):
   Penalty 4 (Double-counting wristbands): -0.0 to -0.5
   Max total penalty: -3.5 points
 
-FINAL MAX after penalties: 7.5 (with all penalties, could score as low as 4.0)
+FINAL MAX after penalties: 7.75
 
-V8 CHANGES FROM V7:
-  - C1-C3: Require independent recompute from primary logs AND specific contradictions with Scope Isolation Memo (not just memo citation)
-  - B1: Requires "Passed" column (not "Cleared") and Loon Hollow temporal qualification (August 7 = post-July 1)
-  - F1: Includes absolute date requirement (no relative expressions)
-  - D5: Requires all 4 specific [CORPUS GAP] categories as standalone critical component
-  - H1: New binary critical component — any relative date expression = automatic FAIL
-  - G3: Strengthened to require explicit exclusion statement
+================================================================================
+V10 CHANGES FROM V9:
+================================================================================
 
-Re-Grade Results (Rubric v8.0):
+PROMPT HARDCENING (V10):
+  - Removed all explicit trap warnings (no "280 is wrong", no "AQS not authorized" direct statements)
+  - Removed explicit wristband-camper connection — models must infer independently
+  - Deadlines described implicitly (not by calendar date) — models must identify
+  - Added "judgment" and "do not accept surface-level characterizations" requirements
+  - Added "where sources conflict, say so" — models must identify contradictions
+  - Added scope limitation requirement (must state what CANNOT be determined)
+  - Removed "critical calculation" importance signaling
+  - Source reliability assessment now required (not just citation)
 
-  Model  Type     Base   Penalties   Final    %     Threshold  Status
-  -----  ------  -----  ----------  ------  -----  ---------  ------
-  R1     STRONG   4.15      -3.0    1.15   16.4%      50%     FAIL
-  R2     STRONG   4.15      -3.0    1.15   16.4%      50%     FAIL
-  R3     STRONG   4.30      -2.5    1.80   25.7%      50%     FAIL
-  R4     STRONG   4.15      -3.0    1.15   16.4%      50%     FAIL
-  R5     WEAK     3.35      -3.0    0.35    5.0%      80%     FAIL
-  R6     WEAK     3.65      -3.0    0.65    9.3%      80%     FAIL
-  R7     WEAK     3.55      -2.5    1.05   15.0%      80%     FAIL
-  R8     WEAK     3.40      -3.0    0.40    5.7%      80%     FAIL
+SCORING HARDCENING:
+  - C1-C3: V10 requires identifying specific contradictions, not just confirming compliance
+  - D1: No distractor number in prompt — derivation purely from band records
+  - D3: Wristband connection must be inferred, not stated as given
+  - D4: AQS exclusion requires matrix verification reasoning, not just statement
+  - F2: NEW component — source reliability assessment (0.25)
+  - Critical components: 36 (was 33)
+  - Strong threshold: ≥20/36 (56%, was ≥17/33 = 50%)
+  - Weak threshold: ≥29/36 (81%, was ≥27/33 = 80%)
 
-   Strong avg: 18.7% | Weak avg: 8.8% — all FAIL
-
-   Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
-            Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
-
-REP 1 ALL.zip — New Model Generation (V6):
-
-  Model  Type     Base   Penalties   Final    %     Threshold  Status
-  -----  ------  -----  ----------  ------  -----  ---------  ------
-  M1     STRONG   4.20      -3.0    1.20   17.1%      50%     FAIL
-  M2     STRONG   4.45      -3.0    1.45   20.7%      50%     FAIL
-  M3     STRONG   4.45      -3.0    1.45   20.7%      50%     FAIL
-  M4     STRONG   4.45      -3.0    1.45   20.7%      50%     FAIL
-  M5     WEAK     4.20      -2.5    1.70   24.3%      80%     FAIL
-  M6     WEAK     3.80      -2.5    1.30   18.6%      80%     FAIL
-  M7     WEAK     3.80      -3.0    0.80   11.4%      80%     FAIL
-  M8     WEAK     3.80      -3.0    0.80   11.4%      80%     FAIL
-
-   Strong avg: 19.8% | Weak avg: 16.4% — all FAIL
-
-   Targets: Fail ≥60% strong (≥3/4) — ACTUAL: 4/4 (100%) ✅
-            Fail ≥90% weak (≥4/4) — ACTUAL: 4/4 (100%) ✅
-
-Key V6 findings (REP 1 ALL.zip):
-  - All 8 models trigger P1 (incorrect camper count: report 568/800, expected 489)
-  - All 8 models trigger P2 (wristbands reported as 0, expected 489)
-  - 6/8 models trigger P3 (staff count includes AQS: report 32-42, expected 37)
-  - All 8 use [CORPUS GAP] but still fail due to wrong critical data
-  - V6 successfully fails ≥60% strong and ≥90% weak
+RUBRIC ENTRY: prompt.md (V10)
 
 ================================================================================
 GRADING NOTES
@@ -314,25 +305,31 @@ GRADING NOTES
 
 6. Scope Isolation Memo (WF2) confirms operational record is clean of credential content; operational violations (if noted) must be clearly distinguished from credential authority findings
 
-7. RE-GRADE V7.0 CHANGES FROM V6:
-   - Added independent verification of Scope Isolation Memo clean-operations claim against primary logs (C1-C3 now require primary log recompute, not memo acceptance)
-   - Added enrollment-to-roster reconciliation as critical component D6 (264 enrollment vs 280 roster)
-   - Strengthened [CORPUS GAP] with 4 specific categories: (a) individual camper IDs not in band counts, (b) enrollment records without classification roster row, (c) missing certification files for sibling camps, (d) any figure derivable from source files
-   - Added Loon Hollow temporal qualification: must state whether clearance was at or before July 1 baseline or only later (phrased as "if clearance happened after July 1, it doesn't count as a July 1 pass" in V7)
-   - Added Nonswimmer inclusion requirement: all campers whose classifications rest on defective sign-off require re-testing regardless of band level (phrased as "every camper whose classification rests on a bad sign-off needs re-testing, no exceptions based on band level" in V7)
-   - Added June 15 finding date distinction: CAP clock uses June 15, 2026 (finding date), July 1 is reporting baseline only (G1)
-   - Added facility inspection vs credential examination distinction: facility pass cannot substitute for credential clearance (G2) (phrased as "a credential that looks right on a roster doesn't clear a site without the certification file and ASC-2 in hand" in V7)
-   - Added working drafts exclusion from findings: scratch notes excluded from all numerical and filing conclusions (G3)
-   - BIG TRAP: Prompt states "our preliminary count shows 280" in the re-test question. Models that trust this without verifying against band files will report 280 instead of 489. The "verify" instruction is the escape hatch.
-   - Total critical components: 16 (was 13); weak model target: ≥14 of 16 failures (was ≥80% of 12-13)
-   - V6 base scores preserved for reference; V7 evaluation pending next model generation against updated prompt
+7. RE-GRADE V10.0 CHANGES FROM V9:
+    - Prompt hardened: no explicit trap warnings, no direct AQS exclusion, no wristband-camper link, implicit deadline descriptions
+    - C1-C3: V10 requires identifying specific contradictions between primary logs and Scope Isolation Memo, not just confirming compliance
+    - D1: No distractor number provided — models must derive 489 purely from band classification records
+    - D3: Wristband-camper connection must be inferred independently (not stated as given)
+    - D4: AQS exclusion requires matrix verification reasoning, not just exclusion statement
+    - F2: NEW — source reliability assessment component
+    - SRC_RELIABILITY: New critical component — models must assess source reliability and identify unreliable/conflicting sources
+    - CONFLICT_IDENT: New critical component — proactive identification of contradictions between sources
+    - SCOPE_LIMIT: New critical component — explicit scope limitation section stating what cannot be determined
+    - Total critical components: 36 (was 33)
+    - Strong threshold: ≥20/36 (56%, was ≥17/33 = 50%)
+    - Weak threshold: ≥29/36 (81%, was ≥27/33 = 80%)
 
-8. PENALTY EFFECTIVENESS (V6): Each penalty triggered independently. P1 (camper count): 8/8 models triggered (all report 568/800 vs 489). P2 (wristbands): 8/8 triggered (all report 0 vs 489). P3 (staff): 6/8 triggered (32-42 vs 37). P4 (double-counting): 8/8 triggered (campers≠wristbands or both wrong). Combined max penalty: -3.5 points. V6 penalties are MORE effective than V5 since no models used [CORPUS GAP] and all got critical data wrong.
+8. PENALTY EFFECTIVENESS (V10): Each penalty triggered independently. P1 (camper count): models must derive 489 without distractor. P2 (wristbands): models must infer connection. P3 (staff): models must verify matrix. P4 (double-counting): models must identify wristband-camper match. V10 penalties are HARDER to avoid than V6 because V6 gave explicit hints (280 is wrong, AQS excluded, wristbands tied to campers). In V10, none of these are stated — they must be discovered through analysis.
 
 9. PASSED VS NEVER EXAMINED COLUMNS: Summary table must have dedicated columns for Passed and Never Examined site statuses. Absence of this table format reduces B1 to 0.5 or 0.0.
 
-10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0.
+10. AQS EXCLUSION: Staff count must explicitly exclude non-authorized Aquatic Safety Specialists (AQS). Including AQS or failing to exclude it reduces D4 to 0.5 or 0.0. In V10, AQS exclusion is NOT stated in prompt — models must discover this from the authorization matrix. Exclusion without matrix-based reasoning receives partial credit at most.
 
-11. V6 TRAPS (natural language with explicit requirements): V6 requires [CORPUS GAP] marking for gaps (D5), says "based on their band classifications" (models must calculate 489 from band files, not 568 from session totals), says "Pay close attention to which specific credential roles are authorized for swim assessments" (must identify WSI/LGI/LG-WF and exclude AQS), and says "wristbands that will carry over into the 2027 season" (must realize 489 unverified campers carry over). Models that follow surface-level prompts will report 568/0/42 and fail. In V6 evaluation, 0/8 models used [CORPUS GAP], 8/8 got campers wrong, 8/8 got wristbands wrong.
-
-12. BAND CATEGORIES (V6): V6 says "based on their band classifications" — models must derive 489 from band files (Nonswimmer=192 + Beginner=297), NOT session totals (568 or 800). V6 does NOT explicitly name Nonswimmer/Beginner bands, making derivation harder. In V6 evaluation, 0/8 models correctly identified 489 from band counts.
+11. V10 DIFFICULTY HARNESS: V10 is designed so that models following surface-level instructions will fail more components than under V6, because V6 rewarded instruction-following (it explicitly stated: 280 is wrong, AQS not authorized, wristbands tied to campers). V10 requires genuine analytical reasoning:
+    - Camper count (489): Must be derived from band records with no distractor to reject — pure analysis required
+    - Wristband count (489): Connection to re-testing must be inferred — not stated
+    - Staff count (37): AQS exclusion discovered via matrix — not stated
+    - Deadlines: Identified from context clues, not named by date
+    - Source reliability: Must assess which sources are trustworthy — not prompted
+    - Conflicts: Must identify contradictions between sources — not prompted
+    - Scope limitations: Must state what cannot be determined — explicitly required

@@ -1,41 +1,34 @@
 Team,
 
-Bureau has notified us of non-compliance with swim assessment sign-offs as of July 1, 2026, and I need a compliance memo for the Board and Bureau. It needs to be saved as kvl_compliance_memo.docx. I want it to be brief — about 2 to 3 pages, single-spaced.
+Bureau of Youth Camp Licensing has issued Case No. BYC-FND-2026-0147. We need a compliance memo for the Board and Bureau. Save as kvl_compliance_memo.docx, 2-3 pages, single-spaced.
 
-There are three ground rules I have for this memo:
+Formatting: Absolute dates only. No working drafts in any findings, conclusions, or numbers — note that working drafts were set aside from analysis. All tables and reconciliations must be embedded in the document itself, no attachments.
 
-1. Dates – no estimates. We will use absolute dates, with our July 1, 2026, as the cut-off. The Bureau caught us on June 15, 2026 – that's the cut-off for the CAP. Our cut-off is July 1, and you are not to conflate the two dates.
+Reference the specific source files you used by citing folder and filename throughout.
 
-2. No working drafts – if it is scratch, working, internal, planning, meeting, note, etc., it was not filed or turned, and you cannot reference it in findings, conclusions, or numbers. You are to make a note that working drafts were set aside from all analysis.
+The following matters require your judgment. Do not simply accept surface-level characterizations from any single document. Where sources conflict, say so and explain your reasoning. Where you cannot determine something from available materials, say so explicitly and note which category of data gap it falls under.
 
-3. Tables and reconciliations – in-document only; no attachments for calculations.
+1. Site credentials. Review swim test records and sweep reports for all six camps. For each camp, determine whether it was examined, whether its swim sign-offs were authorized, and whether it should be considered in compliance. Note particularly that a camp being "cleared" in a later document does not necessarily mean it was compliant at the reporting cutoff. Keep your reporting structured so that different examination statuses are not conflated.
 
-What I need from you is the following:
+2. Operational scope. A Scope Isolation Memo (WF2) asserts that operations at Corrigwell are clean and this is purely a credential matter. You should not simply accept this characterization. Verify the underlying claims independently: check water quality logs, swimmer-to-staff ratio schedules, and incident reports at Corrigwell against their primary source files. If the primary data contradicts or fails to support the memo's claims, state that with specifics. If the data supports the memo, also state that. Distinguish between regulatory filings and internal working documents in your sourcing.
 
-Site sweep. I need you to go through swim test records and sweep reports with records for all six camps and indicate for each if it was inspected and if the sign-offs were unauthorized. Present a site-by-site summary — for each site, show whether it passed inspection and whether its sign-offs were authorized, keeping cleared and never-examined sites separate. For Loon Hollow specifically, indicate when it was cleared – if it was after July 1, 2026, it is not a pass as of July 1, 2026. Keep filings and working drafts separate, per the ground rules above.
+3. Re-testing scope. The Bureau will require us to identify every camper affected by the credential defect. Examine the classification rosters, band records, session rosters, and enrollment data to determine the scope. You will encounter different figures from different sources — reconcile them and explain any discrepancies. Every camper whose classification rests on a compromised sign-off must be counted, with no exceptions. Indicate which campers will need reassessment and how many there are.
 
-Operations. I want to know from you if Corrigwell's water quality logs, 1:25 ratio schedules, and incident reports support the claim that operations are clean – that this is a credential issue and not a safety issue. Independently verify the Scope Isolation Memo's claims against the primary logs. Recompute the numbers yourself and report any differences you find between the primary logs and the memo. If the primary logs say something the Scope Isolation Memo does not acknowledge, say so with numbers and dates.
+4. Wristband implications. Campers who need re-testing have a downstream administrative consequence related to season advancement. Determine the scale of this consequence and explain the connection you identified. If you believe the number is zero, you must justify that conclusion with specific reasoning from the data.
 
-Re-testing workload before August 20:
+5. Enrollment reconciliation. The enrollment count for Corrigwell Session 1 may not match the legal roster row count. If there is a discrepancy, explain what it is, how large it is, and what category of data gap it represents.
 
-How many campers need to be retested? Per one source, it is 280, but it needs to be verified against band classifications first – use the number you find. Every single camper whose classification depends on a bad sign-off needs to be retested, and there are no exceptions at the band levels. Use the swimmer classification categories from the classification rosters, not overall enrollment or session counts. Every [CORPUS GAP] you use should note which data category it falls under: camper records that are inconsistent across sources, enrollment records that cannot be matched to classification data, certification files that are missing or incomplete, or any other data point you cannot reconcile with any source files.
+6. Staff capacity. From the staff lists and the credential authorization matrix, determine how many staff at Corrigwell are actually authorized to perform swim assessments. Not every credential listed on rosters permits swim assessment per the matrix. Be certain you have verified each role against the matrix before stating your count. Include only those who are authorized, and be explicit about which credentials you excluded and why.
 
-How many wristbands carry into 2027 if retesting is not done? This is a critical calculation — wristbands are directly tied to the campers requiring re-testing, as each camper needs a valid band to advance. Do not report this as zero without justification.
+7. Timeline. We face three deadlines in July. For each, determine the responsible party, whether the deadline is achievable, and how you arrived at that assessment. Use your judgment on what "achievable" means given the re-testing scope you identified above.
 
-Reconciliation of enrollment count with the legal roster row count for Corrigwell Session 1. If they do not add up, explain the discrepancy and mark it as [CORPUS GAP] referencing the category.
+   - One deadline is very tight (days, not weeks) and involves an insurance offset tied to an August anniversary.
+   - Another involves a license renewal that requires an active corrective action plan.
+   - The third is a response period that follows our filing marked as in-process.
 
-How many staff can perform swim re-assessments? Cross-referenced with the staff lists, identify the credential roles per the authorization matrix and indicate which roles are authorized and which are not. Note: certain credentials that appear on rosters may not actually authorize swim assessments per the matrix — you must verify each role against the matrix. AQS holders are not authorized for swim assessments.
+8. Data gaps. Some information needed for a complete assessment is not available in the provided materials. Where you encounter this, mark it as [CORPUS GAP] and categorize it. Categories include but are not limited to: records that are inconsistent across sources, records that cannot be matched between systems, certification files that are missing or incomplete, and figures that can only be derived from sources outside the provided materials. Provide a scope limitation section at the end of your memo stating what this analysis could not determine.
 
-Deadlines. There are three deadlines in July, and I want you to assign an owner to each and tell me whether each is feasible, with your reasoning:
-
-July 2 – Great Pines Mutual Underwriting Offset (30 days before the August 1 anniversary). Tell me if the whole re-assessment can be done, or at least the CAP can be filed as in-progress.
-
-July 15 – Bureau License Renewal (renewal requires active CAP with a specific corrective action plan). Tell me if it is feasible and how many days there are from July 1.
-
-July 30 – Bureau CAP Response period (references our filing on the 14th marked In-Process). Tell me if it is feasible and how many days there are from July 1.
-
-Attach calculations and reconciliations per instructions above. Make sure to tag each finding with a reference to the folder/file you found the information in.
+9. Risk assessment. For each deadline, describe the risk if it is missed and the consequence for the camp program. Be specific rather than generic.
 
 Thanks,
-
 Operations Director
