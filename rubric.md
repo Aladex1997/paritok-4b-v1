@@ -2,7 +2,7 @@ KVL Compliance Memo — Rubric for Model Response Grading
 
 Rubric Version: 8.0 (V7 + independent operations verification with specific contradiction requirement + Passed vs Cleared distinction + absolute date requirement + strengthened [CORPUS GAP] categories in prompt + working drafts with specific exclusion examples)
 Prompt Reference: prompt.md (V8)
-Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥14 of 17 critical components.
+Target: Strong model ~75% with correct critical data (must derive from band categories, not session totals); all models with incorrect critical data FAIL. Weak models must fail ≥27 of 33 critical components (80%).
 Grading Scale: 0 (absent) / 0.5 (partial) / 1.0 (full credit)
 
 ================================================================================
@@ -183,7 +183,7 @@ G2. 4-step pipeline executed in order [0.25]
   0.0 = Steps missing or significantly out of order
 
 ================================================================================
-CRITICAL COMPONENTS (17 total — strong models must fail ≥50%, weak models must fail ≥14 of 17)
+CRITICAL COMPONENTS (33 total — strong models must fail ≥17/33 = 50%, weak models must fail ≥27/33 = 80%)
 1. D1: Campers requiring re-testing = 489 (Nonswimmer 192 + Beginner 297) [PENALTY 1]
 2. D3: Wristband carryover = 489 [PENALTY 2]
 3. D4: Assessment-authorized staff = 37 [PENALTY 3]
@@ -201,6 +201,22 @@ CRITICAL COMPONENTS (17 total — strong models must fail ≥50%, weak models mu
 15. G2: Facility inspection distinguished from credential examination (no facility pass substitutes for credential clearance)
 16. G3: Working drafts explicitly excluded from findings (no filing status or numerical conclusion relies on scratch notes)
 17. H1: No relative date expressions anywhere in memo (any "tomorrow", "next week", "in X days" = automatic FAIL)
+18. B3: Never-examined sites explicitly stated as unable to be classified as compliant or non-compliant (0.0 = silent or treats as classified)
+19. C4: Regulatory filings (.pdf) explicitly distinguished from internal working drafts (.md) with specific file type examples (0.0 = mixes or doesn't distinguish)
+20. D2: Session-level band breakdown correct for all 3 sessions with N/B/S/T totals per session (0.0 = incorrect session data for any session)
+21. E4: All 3 deadlines with correct authority, calculation method, date, AND named owner (0.0 = incorrect or missing any element)
+22. F2: Per-figure citations include specific file path AND section/table/row reference (0.0 = folder-level citations only)
+23. G1: Explicit exclusion statement for unrelated regional data (NYC/Chicago) (0.0 = includes or doesn't mention)
+24. H1a: AQS exclusion explicitly explained per authorization matrix rationale (0.0 = states exclusion without explanation)
+25. H2: All triggered penalties (P1-P4) explicitly identified with affected figure calls (0.0 = no penalty acknowledgment)
+26. D7: 62 beginner retests identified as partial mitigation for 489 re-test candidates (0.0 = does not mention or mischaracterizes)
+27. Pen_P1: Penalty P1 (incorrect camper count) explicitly identified with correction to 489 (0.0 = reports 280/568/800 without correction)
+28. Pen_P2: Penalty P2 (missing wristbands) explicitly identified with correction to 489 (0.0 = reports 0 without correction)
+29. Pen_P3: Penalty P3 (staff count) explicitly identified with correction to 37 AQS-excluded (0.0 = reports 32/33/42 without correction)
+30. Pen_P4: Penalty P4 (double-counting) explicitly identified (0.0 = does not identify wristband/camper count discrepancy)
+31. Scope_6site: All 6 sites individually classified with BOTH inspection AND authorization status (0.0 = any site missing classification)
+32. Timeline_milestone: Remediation timeline with specific milestones and dates (0.0 = no milestones or dates)
+33. Risk_analysis: Risk/consequence analysis for each deadline (0.0 = no risk discussion)
 
 ================================================================================
 SCORING SUMMARY

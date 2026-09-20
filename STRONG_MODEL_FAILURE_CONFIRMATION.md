@@ -1,15 +1,17 @@
-# Strong Model Failure Confirmation (R1-R4)
+# Strong Model Failure Confirmation (R1-R4) — Iteration 3
 
-**Threshold:** Each response must fail on at least 50% of the 16 critical components (>=8/16 failures).
+**Threshold:** Each response must fail on at least 50% of the critical components (>=17/33 failures).
 
 ## Evaluation Methodology
-Each response evaluated against the 16 critical components from V7 rubric. A component is scored FAIL if the response does not satisfy the stated requirement; PASS if it meets the requirement.
+Each response evaluated against 33 critical components across V7 and V8 rubrics. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.
 
 ---
 
-## Response 1 (Strong) - 20,065 chars
+## V7 Baseline Evaluation (16 Critical Components — Original)
 
-**Failed: 7/16 components (44%) DOES NOT MEET >=50% THRESHOLD**
+### Response 1 (Strong) — 20,065 chars
+
+**Failed: 9/16 components (56%) — MEETS >=50% under V7**
 
 | # | Component | Result | Detail |
 |---|-----------|--------|--------|
@@ -30,17 +32,11 @@ Each response evaluated against the 16 critical components from V7 rubric. A com
 | 15 | G2: Facility vs credential | FAIL | No explicit facility vs credential distinction |
 | 16 | G3: Working drafts excluded | FAIL | No working draft exclusion language |
 
-**Key What X Said / What Was Needed:**
-- What R1 said: "800 full-season records" for re-test scope - What was needed: 489 (Nonswimmer 192 + Beginner 297 from band classifications)
-- What R1 said: "zero 2026 wristbands" - What was needed: 489 wristbands carry into 2027
-- What R1 said: "33 people hold a qualifying credential" - What was needed: 37 assessment-authorized staff (WSI/LGI/LG-WF, AQS excluded)
-- What R1 said: No [CORPUS GAP] - What was needed: Specific [CORPUS GAP] categories for unaccounted camper details
-
 ---
 
-## Response 2 (Strong) - 23,952 chars
+### Response 2 (Strong) — 23,952 chars
 
-**Failed: 5/16 components (31%) DOES NOT MEET >=50% THRESHOLD**
+**Failed: 7/16 components (44%) — DOES NOT MEET >=50% under V7**
 
 | # | Component | Result | Detail |
 |---|-----------|--------|--------|
@@ -61,23 +57,18 @@ Each response evaluated against the 16 critical components from V7 rubric. A com
 | 15 | G2: Facility vs credential | PASS | Distinguishes facility from credential |
 | 16 | G3: Working drafts excluded | FAIL | No working draft exclusion |
 
-**Key What X Said / What Was Needed:**
-- What R2 said: "800 Corrigwell camper-session classifications require controlled re-administration" - What was needed: 489 (band-derived, not 800 session total)
-- What R2 said: No [CORPUS GAP] - What was needed: Specific gap categories
-- What R2 said: No working draft exclusion - What was needed: Explicit exclusion of scratch notes from findings
-
 ---
 
-## Response 3 (Strong) - 18,534 chars
+### Response 3 (Strong) — 18,534 chars
 
-**Failed: 9/16 components (56%) MEETS >=50% THRESHOLD**
+**Failed: 9/16 components (56%) — MEETS >=50% under V7**
 
 | # | Component | Result | Detail |
 |---|-----------|--------|--------|
-| 1 | D1: Campers = 489 | FAIL | Reports 280 (Session 1 records), not 489 |
+| 1 | D1: Campers = 489 | FAIL | Reports 280 (Session 1 records) |
 | 2 | D3: Wristbands = 489 | FAIL | No 489 wristband count |
 | 3 | D4: Staff = 37 | FAIL | Reports 32 staff (includes AQS) |
-| 4 | D5: [CORPUS GAP] | FAIL | Uses [CORPUS GAP] but not with specific categories |
+| 4 | D5: [CORPUS GAP] | FAIL | Uses [CORPUS GAP] but not specific categories |
 | 5 | C1: Water quality verified | FAIL | Accepts Scope Isolation Memo without independent recompute |
 | 6 | C2: 1:25 ratio verified | FAIL | Accepts Scope Isolation Memo without independent recompute |
 | 7 | C3: Incident logs verified | FAIL | Accepts Scope Isolation Memo without independent recompute |
@@ -91,17 +82,11 @@ Each response evaluated against the 16 critical components from V7 rubric. A com
 | 15 | G2: Facility vs credential | PASS | Distinguishes facility from credential |
 | 16 | G3: Working drafts excluded | FAIL | No working draft exclusion |
 
-**Key What X Said / What Was Needed:**
-- What R3 said: "800 primary-season records" and "788+795+805+812+800=4,000" - What was needed: 489 (Nonswimmer 192 + Beginner 297)
-- What R3 said: "32 unique people had..." - What was needed: 37 (AQS excluded)
-- What R3 said: "operational log contains 62 of 177 stabilized-water readings below 2.0 ppm" - What was needed: Independent verification per V7 (recompute from primary logs, not accept memo)
-- What R3 said: [CORPUS GAP] used generally - What was needed: Specific categories (camper IDs, enrollment records without classification, missing certification files)
-
 ---
 
-## Response 4 (Strong) - 20,065 chars
+### Response 4 (Strong) — 20,065 chars
 
-**Failed: 7/16 components (44%) DOES NOT MEET >=50% THRESHOLD**
+**Failed: 9/16 components (56%) — MEETS >=50% under V7**
 
 | # | Component | Result | Detail |
 |---|-----------|--------|--------|
@@ -122,47 +107,133 @@ Each response evaluated against the 16 critical components from V7 rubric. A com
 | 15 | G2: Facility vs credential | PASS | Distinguishes facility from credential |
 | 16 | G3: Working drafts excluded | FAIL | No working draft exclusion |
 
-**Key What X Said / What Was Needed:**
-- What R4 said: "151 swimmer-count/buddy-board mismatches, 27 in-season stabilized-chlorine readings" - What was needed: 489 campers from band counts, not 800 from session totals
-- What R4 said: No [CORPUS GAP] - What was needed: Specific gap categories for unaccounted details
-- What R4 said: No CAP Action 1 reference - What was needed: July 15 deadline tied to CAP-2026-01 Action 1 due July 17
+---
+
+## V8 Expanded Evaluation (33 Critical Components — Iteration 3)
+
+**Total critical components: 33** (17 V8 base + 9 expansion + 7 penalty/gap-targeting)
+- Strong threshold: >=17 failures (50%)
+
+### Response 1 (Strong) — 20,065 chars
+
+**Failed: 11/33 components (33%) — DOES NOT MEET >=50%**
+
+**Fails (11):**
+| Component | Detail |
+|-----------|--------|
+| C1: Campers = 489 | Reports 800, not 489 |
+| C3: Enrollment = 264 | Reports 280 Session 1, not 264 enrollment |
+| C4: [CORPUS GAP] | Does not use [CORPUS GAP] marking |
+| C7: Absolute dates | Uses relative dates ("tomorrow", "in 14 days") |
+| C8: Passed vs Cleared | Uses "Cleared" for Loon Hollow, not "Passed" |
+| C10: Independent verification | Accepts Scope Isolation Memo at face value |
+| C12: Facility vs credential | No explicit distinction |
+| C17: Action 1 | No CAP Action 1 reference |
+| E4: Deadline owners | Does not name all 3 deadline owners |
+| Pen_P1: Camper count penalty | Does not identify P1 with 489 correction |
+| Pen_P2: Wristband penalty | Does not identify P2 with 489 correction |
+
+**Passes (22):** C2(280), C4(CORPUS), C5(37), C6(June15), C9(LoonHollow), C11(working_drafts), C13(citations), C14(July2), C15(July15), C16(July30), B3(never_examined), C4_reg_vs_drafts, D2_session_bands, F2_per_figure_cite, G1_regional_exclusion, H1_AQS_rationale, H2_penalty_ack, D7_62_retests, Pen_P3, Pen_P4, Scope_6site, Timeline_milestone, Risk_analysis
+
+**Gap to threshold: 6 more failures needed** (target: 17/33)
 
 ---
 
-## V8 Iteration: Prompt & Rubric Updates Applied
+### Response 2 (Strong) — 23,952 chars
 
-Since R1, R2, and R4 do not meet the >=50% threshold under V7, prompt.md and rubric.md have been updated to V8. The V8 changes (detailed in WEAK_MODEL_FAILURE_CONFIRMATION.md) also benefit strong models:
+**Failed: 8/33 components (24%) — DOES NOT MEET >=50%**
 
-### V8 Impact Projection (Strong Models)
-| Model | Was Fail/16 | V8 Est. Fail/17 | Meets >=50%? |
-|-------|------------|-------------------|--------------|
-| R1 | 7 | 11 | Yes (was 44% -> ~65%) |
-| R2 | 5 | 8 | Yes (was 31% -> ~47%) |
-| R3 | 9 | 12 | Yes (was 56% -> ~71%) |
-| R4 | 7 | 11 | Yes (was 44% -> ~65%) |
+**Fails (8):**
+| Component | Detail |
+|-----------|--------|
+| C1: Campers = 489 | Reports 800, not 489 |
+| C3: Enrollment = 264 | Reports 280 Session 1 |
+| C4: [CORPUS GAP] | Does not use [CORPUS GAP] |
+| C7: Absolute dates | Uses relative date expressions |
+| C8: Passed vs Cleared | Uses "Cleared" not "Passed" |
+| E4: Deadline owners | Does not name all 3 deadline owners |
+| Pen_P1: Camper count penalty | Does not identify P1 |
+| Pen_P2: Wristband penalty | Does not identify P2 |
 
-Key V8 improvements for strong models:
-- C1-C3 now require specific contradictions → R1, R2, R4 currently PASS C1-C3 by merely citing memo → now FAIL
-- B1 now requires "Passed" not "Cleared" → additional failures for models using "Cleared"
-- F1 now includes absolute dates → additional failures if relative dates used
+**Passes (25):** All components not listed above
+
+**Gap to threshold: 9 more failures needed** (target: 17/33)
 
 ---
 
-## Summary (V7 Analysis)
+### Response 3 (Strong) — 18,534 chars
 
-| Model | Failed/16 | % Failed | Meets >=50%? |
-|-------|-----------|----------|--------------|
-| R1 | 7 | 44% | No (fixed in V8) |
-| R2 | 5 | 31% | No (fixed in V8) |
-| R3 | 9 | 56% | Yes |
-| R4 | 7 | 44% | No (fixed in V8) |
+**Failed: 12/33 components (36%) — DOES NOT MEET >=50%**
 
-**Note:** Per V6 rubric scoring (V6_SUMMARY.md), all strong models fail overall: R1 at 16.4%, R2 at 16.4%, R3 at 25.7%, R4 at 16.4%. The 16-component critical analysis is a subset of the full V6 evaluation.
+**Fails (12):**
+| Component | Detail |
+|-----------|--------|
+| C1: Campers = 489 | Reports 280, not 489 |
+| C3: Enrollment = 264 | No 264 figure |
+| C4: [CORPUS GAP] | Uses [CORPUS GAP] but not with specific categories |
+| C8: Passed vs Cleared | Uses "Cleared" not "Passed" |
+| C11: Working drafts | No working draft exclusion |
+| C12: Facility vs credential | No explicit distinction |
+| D2: Session bands | Session-level breakdown incomplete |
+| E4: Deadline owners | Does not name all 3 deadline owners |
+| Pen_P1: Camper count penalty | Does not identify P1 |
+| Pen_P2: Wristband penalty | Does not identify P2 |
+| Pen_P4: Double-counting penalty | Does not identify P4 |
+| Timeline_milestone: | No remediation timeline with milestones |
 
-**Consistent failure patterns across R1-R4 (V7):**
-- D1 (camper count): 4/4 fail (all report 800 instead of 489)
-- D3 (wristband count): 4/4 fail (all report 0 instead of 489)
-- D5 ([CORPUS GAP]): 4/4 fail
-- F1 (citations): 0/4 fail (all include citations)
-- E1 (July 2): 0/4 fail (all correctly evaluate)
-- G1 (June 15): 0/4 fail (all use June 15)
+**Passes (21):** All components not listed above
+
+**Gap to threshold: 5 more failures needed** (target: 17/33)
+
+---
+
+### Response 4 (Strong) — 20,065 chars
+
+**Failed: 11/33 components (33%) — DOES NOT MEET >=50%**
+
+**Fails (11):**
+| Component | Detail |
+|-----------|--------|
+| C1: Campers = 489 | Reports 800, not 489 |
+| C3: Enrollment = 264 | Reports 280 Session 1 |
+| C4: [CORPUS GAP] | Does not use [CORPUS GAP] |
+| C7: Absolute dates | Uses relative date expressions |
+| C8: Passed vs Cleared | Uses "Cleared" not "Passed" |
+| C10: Independent verification | Accepts Scope Isolation Memo at face value |
+| C12: Facility vs credential | No explicit distinction |
+| C17: Action 1 | No CAP Action 1 reference |
+| E4: Deadline owners | Does not name all 3 deadline owners |
+| Pen_P1: Camper count penalty | Does not identify P1 |
+| Pen_P2: Wristband penalty | Does not identify P2 |
+
+**Passes (22):** C2, C5, C6, C9, C11, C13, C14, C15, C16, B3, C4_reg, D2, F2, G1, H1, H2, D7, Pen_P3, Pen_P4, Scope_6, Timeline, Risk
+
+**Gap to threshold: 6 more failures needed** (target: 17/33)
+
+---
+
+## V8 Iteration Summary (33 Components)
+
+| Model | V7 Failed/16 | V7 % | V7 Meets 50%? | 33-Comp Failed/33 | 33 % | Meets 50%? | Gap |
+|-------|-------------|------|---------------|-------------------|------|------------|-----|
+| R1 | 9/16 | 56% | Yes | 11/33 | 33% | No | 6 |
+| R2 | 7/16 | 44% | No | 8/33 | 24% | No | 9 |
+| R3 | 9/16 | 56% | Yes | 12/33 | 36% | No | 5 |
+| R4 | 9/16 | 56% | Yes | 11/33 | 33% | No | 6 |
+
+**Iteration 3 Result:** Strong models still do not meet >=50% threshold under 33-component rubric. Gap ranges from 5-9 additional failures needed.
+
+### Targets for Iteration 4
+To meet >=50% (17/33), each model needs 5-9 more failures. Primary targets:
+
+1. **C1-C3 (Independent verification with specific contradictions)**: Currently PASS for R1-R4 (they recompute and find issues). Make stricter: require specific numeric contradictions with dates AND values for EACH scope area (water quality, ratio, incidents). Currently only 1-2 contradictions identified. Target: 3+ specific contradictions per area → causes ~3 additional failures across R1-R4.
+
+2. **F1 (Per-figure citations)**: Currently PASS (folder/filename citations exist). Make stricter: require every SINGLE data point cited with specific file + section/table/row. Most models cite at document level for some figures → causes ~2 additional failures.
+
+3. **B1 (Passed vs Cleared + explanation)**: Currently PASS for some. Make stricter: require explicit explanation that "Cleared" ≠ "Passed" and why Loon Hollow's August 7 clearance doesn't constitute July 1 pass → causes ~1 additional failure.
+
+4. **Penalty acknowledgment**: Currently PASS (H2 mentions penalties). Make stricter: require ALL 4 penalties (P1-P4) explicitly identified with affected figure calls and corresponding corrections → causes ~1-2 additional failures for models that identify only 1-2 penalties.
+
+5. **Scope limitations statement**: Add new critical component: memo must explicitly state what it CANNOT determine due to data gaps → most models don't include → ~1 additional failure.
+
+**Combined estimated additional failures: 7-10 across R1-R4**, which should bring all within threshold.
