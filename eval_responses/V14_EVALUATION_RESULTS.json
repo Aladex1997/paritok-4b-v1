@@ -1,0 +1,1030 @@
+{
+  "R1": {
+    "failed": 16,
+    "total": 36,
+    "pct": 44.4,
+    "passed_components": [
+      "C2: 1:25 ratio cross-referenced",
+      "C3: Incident logs cross-referenced",
+      "E1: July 2 underwriting infeasible",
+      "E2: July 15 license conditionally feasible",
+      "E3: July 30 CAP feasible",
+      "G1: June 15 CAP clock date",
+      "G2: Facility vs credential distinction",
+      "G3: Working drafts excluded",
+      "B3: Never-examined unclassifiable",
+      "C4: Regulatory(.pdf) vs working(.md)",
+      "F2: Per-figure path+section refs",
+      "G1b: NYC/Chicago exclusion",
+      "H1a: AQS exclusion matrix rationale",
+      "D7: 62 beginner retests partial mitigation",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SRC_RELIABILITY: Source reliability assessment",
+      "CONFLICT_IDENT: Contradictions between sources",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        5,
+        "C1: Water quality cross-referenced",
+        "Water + Scope Isolation but contradictions not verified"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Missing Passed/Never Examined distinction"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "Citations + absolute dates but also relative"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        17,
+        "H1: No relative dates",
+        "Contains relative date expressions"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ]
+    ]
+  },
+  "R2": {
+    "failed": 16,
+    "total": 36,
+    "pct": 44.4,
+    "passed_components": [
+      "C1: Water quality cross-referenced",
+      "C2: 1:25 ratio cross-referenced",
+      "C3: Incident logs cross-referenced",
+      "E1: July 2 underwriting infeasible",
+      "E2: July 15 license conditionally feasible",
+      "E3: July 30 CAP feasible",
+      "G1: June 15 CAP clock date",
+      "G2: Facility vs credential distinction",
+      "G3: Working drafts excluded",
+      "B3: Never-examined unclassifiable",
+      "C4: Regulatory(.pdf) vs working(.md)",
+      "F2: Per-figure path+section refs",
+      "G1b: NYC/Chicago exclusion",
+      "H1a: AQS exclusion matrix rationale",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SRC_RELIABILITY: Source reliability assessment",
+      "CONFLICT_IDENT: Contradictions between sources",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Uses 'Cleared' instead of 'Passed'"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "Citations + absolute dates but also relative"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        17,
+        "H1: No relative dates",
+        "Contains relative date expressions"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        26,
+        "D7: 62 beginner retests partial mitigation",
+        "62 beginner retests / mitigation not identified"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ]
+    ]
+  },
+  "R3": {
+    "failed": 15,
+    "total": 36,
+    "pct": 41.7,
+    "passed_components": [
+      "C1: Water quality cross-referenced",
+      "C2: 1:25 ratio cross-referenced",
+      "C3: Incident logs cross-referenced",
+      "E1: July 2 underwriting infeasible",
+      "E2: July 15 license conditionally feasible",
+      "E3: July 30 CAP feasible",
+      "F1: Citations + absolute dates",
+      "G1: June 15 CAP clock date",
+      "G2: Facility vs credential distinction",
+      "H1: No relative dates",
+      "B3: Never-examined unclassifiable",
+      "C4: Regulatory(.pdf) vs working(.md)",
+      "F2: Per-figure path+section refs",
+      "H1a: AQS exclusion matrix rationale",
+      "Pen_P4: P4 double-counting identified",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SRC_RELIABILITY: Source reliability assessment",
+      "CONFLICT_IDENT: Contradictions between sources",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Uses 'Cleared' instead of 'Passed'"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        16,
+        "G3: Working drafts excluded",
+        "Working drafts not addressed"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        23,
+        "G1b: NYC/Chicago exclusion",
+        "Exclusion mentioned but no NYC/Chicago"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        26,
+        "D7: 62 beginner retests partial mitigation",
+        "62 beginner retests / mitigation not identified"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ]
+    ]
+  },
+  "R4": {
+    "failed": 16,
+    "total": 36,
+    "pct": 44.4,
+    "passed_components": [
+      "C2: 1:25 ratio cross-referenced",
+      "C3: Incident logs cross-referenced",
+      "E1: July 2 underwriting infeasible",
+      "E2: July 15 license conditionally feasible",
+      "E3: July 30 CAP feasible",
+      "G1: June 15 CAP clock date",
+      "G2: Facility vs credential distinction",
+      "G3: Working drafts excluded",
+      "B3: Never-examined unclassifiable",
+      "C4: Regulatory(.pdf) vs working(.md)",
+      "F2: Per-figure path+section refs",
+      "G1b: NYC/Chicago exclusion",
+      "H1a: AQS exclusion matrix rationale",
+      "D7: 62 beginner retests partial mitigation",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SRC_RELIABILITY: Source reliability assessment",
+      "CONFLICT_IDENT: Contradictions between sources",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        5,
+        "C1: Water quality cross-referenced",
+        "Water + Scope Isolation but contradictions not verified"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Missing Passed/Never Examined distinction"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "Citations + absolute dates but also relative"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        17,
+        "H1: No relative dates",
+        "Contains relative date expressions"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ]
+    ]
+  },
+  "R5": {
+    "failed": 24,
+    "total": 36,
+    "pct": 66.7,
+    "passed_components": [
+      "C2: 1:25 ratio cross-referenced",
+      "E1: July 2 underwriting infeasible",
+      "G2: Facility vs credential distinction",
+      "G3: Working drafts excluded",
+      "H1: No relative dates",
+      "F2: Per-figure path+section refs",
+      "G1b: NYC/Chicago exclusion",
+      "H1a: AQS exclusion matrix rationale",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        5,
+        "C1: Water quality cross-referenced",
+        "Water contradictions found but no recompute from logs"
+      ],
+      [
+        7,
+        "C3: Incident logs cross-referenced",
+        "Incidents mentioned but no cross-reference"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Missing Passed/Never Examined distinction"
+      ],
+      [
+        10,
+        "E2: July 15 license conditionally feasible",
+        "July 15 license not addressed"
+      ],
+      [
+        11,
+        "E3: July 30 CAP feasible",
+        "July 30 feasible but no day count"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "No per-figure citations"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment reconciliation missing"
+      ],
+      [
+        14,
+        "G1: June 15 CAP clock date",
+        "June 15 not identified"
+      ],
+      [
+        18,
+        "B3: Never-examined unclassifiable",
+        "Never-examined not addressed"
+      ],
+      [
+        19,
+        "C4: Regulatory(.pdf) vs working(.md)",
+        "File type distinction missing"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        26,
+        "D7: 62 beginner retests partial mitigation",
+        "62 beginner retests / mitigation not identified"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ],
+      [
+        34,
+        "SRC_RELIABILITY: Source reliability assessment",
+        "No source reliability assessment"
+      ],
+      [
+        35,
+        "CONFLICT_IDENT: Contradictions between sources",
+        "No conflict identification"
+      ]
+    ]
+  },
+  "R6": {
+    "failed": 25,
+    "total": 36,
+    "pct": 69.4,
+    "passed_components": [
+      "C2: 1:25 ratio cross-referenced",
+      "E1: July 2 underwriting infeasible",
+      "E3: July 30 CAP feasible",
+      "G3: Working drafts excluded",
+      "B3: Never-examined unclassifiable",
+      "F2: Per-figure path+section refs",
+      "H1a: AQS exclusion matrix rationale",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        5,
+        "C1: Water quality cross-referenced",
+        "Water quality not verified"
+      ],
+      [
+        7,
+        "C3: Incident logs cross-referenced",
+        "Incidents mentioned but no cross-reference"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Uses 'Cleared' instead of 'Passed'"
+      ],
+      [
+        10,
+        "E2: July 15 license conditionally feasible",
+        "July 15 license not addressed"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "No per-figure citations"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        14,
+        "G1: June 15 CAP clock date",
+        "June 15 not identified"
+      ],
+      [
+        15,
+        "G2: Facility vs credential distinction",
+        "Both mentioned but not distinguished"
+      ],
+      [
+        17,
+        "H1: No relative dates",
+        "Contains relative date expressions"
+      ],
+      [
+        19,
+        "C4: Regulatory(.pdf) vs working(.md)",
+        "File type distinction missing"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        23,
+        "G1b: NYC/Chicago exclusion",
+        "Exclusion mentioned but no NYC/Chicago"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        26,
+        "D7: 62 beginner retests partial mitigation",
+        "62 beginner retests / mitigation not identified"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ],
+      [
+        34,
+        "SRC_RELIABILITY: Source reliability assessment",
+        "No source reliability assessment"
+      ],
+      [
+        35,
+        "CONFLICT_IDENT: Contradictions between sources",
+        "No conflict identification"
+      ]
+    ]
+  },
+  "R7": {
+    "failed": 29,
+    "total": 36,
+    "pct": 80.6,
+    "passed_components": [
+      "E1: July 2 underwriting infeasible",
+      "E3: July 30 CAP feasible",
+      "H1: No relative dates",
+      "H1a: AQS exclusion matrix rationale",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Risk_analysis: Risk per deadline",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        5,
+        "C1: Water quality cross-referenced",
+        "Water quality not verified"
+      ],
+      [
+        6,
+        "C2: 1:25 ratio cross-referenced",
+        "1:25 ratio mentioned but no contradictions identified"
+      ],
+      [
+        7,
+        "C3: Incident logs cross-referenced",
+        "Incidents mentioned but no cross-reference"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Uses 'Cleared' instead of 'Passed'"
+      ],
+      [
+        10,
+        "E2: July 15 license conditionally feasible",
+        "July 15 license not addressed"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "No per-figure citations"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        14,
+        "G1: June 15 CAP clock date",
+        "June 15 not identified"
+      ],
+      [
+        15,
+        "G2: Facility vs credential distinction",
+        "Facility/credential distinction missing"
+      ],
+      [
+        16,
+        "G3: Working drafts excluded",
+        "Working drafts not addressed"
+      ],
+      [
+        18,
+        "B3: Never-examined unclassifiable",
+        "Never-examined not addressed"
+      ],
+      [
+        19,
+        "C4: Regulatory(.pdf) vs working(.md)",
+        "File type distinction missing"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        22,
+        "F2: Per-figure path+section refs",
+        "File refs but no section/row detail"
+      ],
+      [
+        23,
+        "G1b: NYC/Chicago exclusion",
+        "Exclusion mentioned but no NYC/Chicago"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P3, P4"
+      ],
+      [
+        26,
+        "D7: 62 beginner retests partial mitigation",
+        "62 beginner retests / mitigation not identified"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ],
+      [
+        32,
+        "Timeline_milestone: Milestones+dates",
+        "Missing: remediation"
+      ],
+      [
+        34,
+        "SRC_RELIABILITY: Source reliability assessment",
+        "No source reliability assessment"
+      ],
+      [
+        35,
+        "CONFLICT_IDENT: Contradictions between sources",
+        "No conflict identification"
+      ]
+    ]
+  },
+  "R8": {
+    "failed": 26,
+    "total": 36,
+    "pct": 72.2,
+    "passed_components": [
+      "C1: Water quality cross-referenced",
+      "C2: 1:25 ratio cross-referenced",
+      "E3: July 30 CAP feasible",
+      "B3: Never-examined unclassifiable",
+      "F2: Per-figure path+section refs",
+      "H1a: AQS exclusion matrix rationale",
+      "Scope_6site: All 6 sites inspection+auth",
+      "Timeline_milestone: Milestones+dates",
+      "Risk_analysis: Risk per deadline",
+      "SCOPE_LIMIT: What analysis cannot conclude"
+    ],
+    "failed_components": [
+      [
+        1,
+        "D1: Re-testing=489 from band records",
+        "Reports 568/800 instead of 489"
+      ],
+      [
+        2,
+        "D3: Wristband=489 inferred",
+        "Missing 489 wristband"
+      ],
+      [
+        3,
+        "D4: Staff=37, AQS excluded",
+        "Staff count wrong or AQS not excluded"
+      ],
+      [
+        4,
+        "D5: CORPUS GAP all 4 categories",
+        "No CORPUS GAP marking"
+      ],
+      [
+        7,
+        "C3: Incident logs cross-referenced",
+        "Incidents mentioned but no cross-reference"
+      ],
+      [
+        8,
+        "B1: Site Passed/Never Examined",
+        "Missing Passed/Never Examined distinction"
+      ],
+      [
+        9,
+        "E1: July 2 underwriting infeasible",
+        "July 2 infeasible but no CAP filing"
+      ],
+      [
+        10,
+        "E2: July 15 license conditionally feasible",
+        "July 15 license not addressed"
+      ],
+      [
+        12,
+        "F1: Citations + absolute dates",
+        "No per-figure citations"
+      ],
+      [
+        13,
+        "D6: Enrollment vs 280 roster gap=264",
+        "Enrollment/roster mentioned but no 264 gap"
+      ],
+      [
+        14,
+        "G1: June 15 CAP clock date",
+        "June 15 not identified"
+      ],
+      [
+        15,
+        "G2: Facility vs credential distinction",
+        "Facility/credential distinction missing"
+      ],
+      [
+        16,
+        "G3: Working drafts excluded",
+        "Working drafts not addressed"
+      ],
+      [
+        17,
+        "H1: No relative dates",
+        "Contains relative date expressions"
+      ],
+      [
+        19,
+        "C4: Regulatory(.pdf) vs working(.md)",
+        "File type distinction missing"
+      ],
+      [
+        20,
+        "D2: Session band breakdown N/B/S/T",
+        "Session band breakdown incomplete"
+      ],
+      [
+        21,
+        "E4: Deadline owners+methods+dates",
+        "Missing: owners"
+      ],
+      [
+        23,
+        "G1b: NYC/Chicago exclusion",
+        "Exclusion mentioned but no NYC/Chicago"
+      ],
+      [
+        25,
+        "H2: Penalties P1-P4 identified",
+        "Missing: P1, P2, P3, P4"
+      ],
+      [
+        26,
+        "D7: 62 beginner retests partial mitigation",
+        "62 beginner retests / mitigation not identified"
+      ],
+      [
+        27,
+        "Pen_P1: P1 identified+corrected to 489",
+        "P1 not identified or 489 correction missing"
+      ],
+      [
+        28,
+        "Pen_P2: P2 identified+corrected to 489",
+        "P2 not identified or 489 correction missing"
+      ],
+      [
+        29,
+        "Pen_P3: P3 identified+corrected to 37",
+        "P3 not identified or 37 correction missing"
+      ],
+      [
+        30,
+        "Pen_P4: P4 double-counting identified",
+        "P4 not identified"
+      ],
+      [
+        34,
+        "SRC_RELIABILITY: Source reliability assessment",
+        "No source reliability assessment"
+      ],
+      [
+        35,
+        "CONFLICT_IDENT: Contradictions between sources",
+        "No conflict identification"
+      ]
+    ]
+  }
+}

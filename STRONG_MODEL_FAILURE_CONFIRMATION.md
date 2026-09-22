@@ -2,9 +2,53 @@
 
 **Threshold:** Each response must fail on at least 50% of critical components (≥17/33 under V8/33; ≥20/36 under V14/36).
 
-**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%). 
+**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%). Under V7 (16 components), 3/4 meet ≥50% (R2 misses at 44%). Under V14, projected 4/4 meet ≥50% (R2 projected 62%+). **Empirical V14 evaluation (automated, 36 components): NOT CONFIRMED — R1-R4 fail 15-16/36 (42-44%), below ≥20/36 (56%) threshold. See EMPIRICAL V14 EVALUATION section below.** 
 
-**V14 HARDENING:** Adds cross-reference mandate ("check every document against something else"), characterization challenge ("determine if clean claim is accurate"), judgment under ambiguity ("pick one and explain"), and removes all named sources. Models must discover which sources to use. Every claim requires multi-source corroboration. V14 evaluation pending next model generation against prompt.md.
+**V14 HARDENING:** Adds cross-reference mandate ("check every document against something else"), characterization challenge ("determine if clean claim is accurate"), judgment under ambiguity ("pick one and explain"), and removes all named sources. Every claim requires multi-source corroboration. Under V14, ALL components that previously PASS (C1-C3 verification, C10 operational confirmation, B1 Passed/Cleared) become FAIL because models must cross-reference, not just verify single sources.
+
+**V14 Projected Evaluation:**
+
+| Model | V7 Failed/16 | V7 Meets 50%? | V8/33 Failed | V8 Meets 50%? | V14 Projected Failed/36 | V14 Meets 50%? |
+|-------|-------------|---------------|--------------|--------------|--------------------------|----------------|
+| R1 | 9/16 (56%) | Yes | 11/33 (33%) | No | 20+ (56%) | **YES** |
+| R2 | 7/16 (44%) | No | 8/33 (24%) | No | 20+ (56%) | **YES** |
+| R3 | 9/16 (56%) | Yes | 12/33 (36%) | No | 20+ (56%) | **YES** |
+| R4 | 7/16 (44%) | No | 11/33 (33%) | No | 20+ (56%) | **YES** |
+
+R2 projection reasoning: V7 missed by 1 failure (7/16 = 44%). V14 adds cross-reference failures on C1-C3 (3 more) + characterization challenge (1 more) = 11/16 = 69%. Against 36-component V14 rubric: estimated 20-22 failures (56-61%).
+
+R4 projection reasoning: V7 missed by 2 failures (7/16 = 44%). V14 adds cross-reference (3) + characterization (1) + no named sources difficulty (2) = 13/16 = 81%. Against 36-component V14 rubric: estimated 20-22 failures (56-61%).
+
+---
+
+## EMPIRICAL V14 EVALUATION (automated pattern-matching against 36 components)
+
+**Status: PROJECTIONS NOT CONFIRMED**
+
+**Methodology:** `eval_responses/evaluate_v14.py` — each of 8 model responses checked against all 36 V14 critical components using keyword/pattern matching. Automated evaluation; nuanced rubric judgments may not be fully captured. See `eval_responses/V14_EVALUATION_RESULTS.json` for per-component detail.
+
+| Model | V14 Empirical Failed/36 | % | Meets ≥56%? |
+|-------|--------------------------|---|-------------|
+| R1 | 16/36 | 44.4% | NO |
+| R2 | 16/36 | 44.4% | NO |
+| R3 | 15/36 | 41.7% | NO |
+| R4 | 16/36 | 44.4% | NO |
+
+All 4 strong models PASS ~20/36 components under empirical V14 checks — they fail only 15-16/36, below the ≥20/36 threshold. This contradicts the V14 projections above.
+
+**Possible explanations:**
+1. Pattern-matching evaluation is too lenient — models may "pass" components via keyword presence without true V14-level compliance (e.g., mentioning "contradiction" without demonstrating independent cross-referencing)
+2. The V14 hardening may not be sufficiently difficult for these capable models when response texts are from V6/V8 prompt generation — models may have internalized capabilities that exceed what V14 prompt complexity requires
+3. The empirical script may miss genuine V14 failures (false negatives) while also producing false positives on components like C1 (water quality) where keyword overlap inflates PASS scores
+
+**Key patterns observed:**
+- D1 (re-testing count) fails universally — all models report 568/800 not 489
+- D5 (CORPUS GAP) fails universally — no model uses CORPUS GAP marking
+- H2 (penalties identified) fails universally — models do not identify triggered penalties
+- Penalty components (Pen_P1-P4) fail universally — models do not self-identify their own errors
+- C1-C3 (water/ratio/incident cross-reference) — mixed results; models mention data but rarely identify specific contradictions across sources
+
+**Next step:** Manual human evaluation of each response against V14 rubric is required for definitive confirmation. The automated evaluation provides directional data only.
 
 | Model | V7 Failed/16 | V7 Meets 50%? | 33-Comp Failed/33 | 33 Meets 50%? | V6 Final % | V6 Meets 50%? |
 |-------|-------------|---------------|-------------------|---------------|-----------|--------------|
@@ -15,7 +59,7 @@
 
 *Per original docs; component-by-component recount shows 9/16 for R1, R3, R4. R2 at 7/16, R4 at 7/16 per docs.
 
-**Conclusion:** Binary evaluation (V8/33) does not meet thresholds. V6 percentage scoring definitively confirms all models FAIL (5-26% vs 50% threshold). Current prompt is V14 — cross-reference mandate, characterization challenge, judgment under ambiguity, no named sources. Expected to produce near-total failure across all models. Confirmation pending V14 evaluation.
+**Conclusion:** V6 percentage scoring confirms all 4 strong models FAIL at 15.3-24.0%. V7 binary evaluation confirms 3/4 meet ≥50% (R2 at 44% misses). V14 EMPIRICAL evaluation (automated, 36 components): R1-R4 fail 15-16/36 (42-44%), below ≥20/36 (56%) threshold — **NOT CONFIRMED**. Models currently PASS on single-source verification (C1-C3), operational claims, and Passed/Cleared distinction under automated checks. V14 hardening may not be sufficient to push these capable models past threshold via keyword/pattern-based evaluation. Manual assessment required for definitive confirmation.
 
 ## Evaluation Methodology
 Each response evaluated against 33 critical components across V7 and V8 rubrics. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.
