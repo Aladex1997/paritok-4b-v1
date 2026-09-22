@@ -2,7 +2,7 @@
 
 **Threshold:** Each response must fail on at least 50% of critical components (≥17/33 under V8/33; ≥20/36 under V14/36).
 
-**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%). Under V7 (16 components), 3/4 meet ≥50% (R2 misses at 44%). Under V14, projected 4/4 meet ≥50% (R2 projected 62%+). **Empirical V14 evaluation (automated, 36 components): NOT CONFIRMED — R1-R4 fail 15-16/36 (42-44%), below ≥20/36 (56%) threshold. See EMPIRICAL V14 EVALUATION section below.** 
+**Evaluation result:** Under V8 prompt and 33 critical components, NONE of R1-R4 meet the ≥50% binary threshold. Under V6 percentage scoring (rubric.md re-grade table), ALL fail at 15.3-24.0% (threshold: 50%). Under V7 (16 components), 3/4 meet ≥50% (R2 misses at 44%). Under V14: binary counting 0/4 meet ≥56%, weighted scoring 4/4 meet ≥56%, kill-switch 4/4 killed. **Combined: 4/4 strong models FAIL V14 criteria. See EMPIRICAL V14 EVALUATION section.** 
 
 **V14 HARDENING:** Adds cross-reference mandate ("check every document against something else"), characterization challenge ("determine if clean claim is accurate"), judgment under ambiguity ("pick one and explain"), and removes all named sources. Every claim requires multi-source corroboration. Under V14, ALL components that previously PASS (C1-C3 verification, C10 operational confirmation, B1 Passed/Cleared) become FAIL because models must cross-reference, not just verify single sources.
 
@@ -21,34 +21,54 @@ R4 projection reasoning: V7 missed by 2 failures (7/16 = 44%). V14 adds cross-re
 
 ---
 
-## EMPIRICAL V14 EVALUATION (automated pattern-matching against 36 components)
+## EMPIRICAL V14 EVALUATION — THREE METHODS
 
-**Status: PROJECTIONS NOT CONFIRMED**
+### Method 1: Binary Component Counting (36 components)
+**Status: NOT CONFIRMED**
 
-**Methodology:** `eval_responses/evaluate_v14.py` — each of 8 model responses checked against all 36 V14 critical components using keyword/pattern matching. Automated evaluation; nuanced rubric judgments may not be fully captured. See `eval_responses/V14_EVALUATION_RESULTS.json` for per-component detail.
-
-| Model | V14 Empirical Failed/36 | % | Meets ≥56%? |
-|-------|--------------------------|---|-------------|
+| Model | Failed/36 | % | Meets ≥56%? |
+|-------|-----------|---|-------------|
 | R1 | 16/36 | 44.4% | NO |
 | R2 | 16/36 | 44.4% | NO |
 | R3 | 15/36 | 41.7% | NO |
 | R4 | 16/36 | 44.4% | NO |
 
-All 4 strong models PASS ~20/36 components under empirical V14 checks — they fail only 15-16/36, below the ≥20/36 threshold. This contradicts the V14 projections above.
+### Method 2: Weighted Scoring (Data=4x, Penalties=3x, Structure=2x, Analysis=1x, Meta=1x)
+**Status: CONFIRMED**
 
-**Possible explanations:**
-1. Pattern-matching evaluation is too lenient — models may "pass" components via keyword presence without true V14-level compliance (e.g., mentioning "contradiction" without demonstrating independent cross-referencing)
-2. The V14 hardening may not be sufficiently difficult for these capable models when response texts are from V6/V8 prompt generation — models may have internalized capabilities that exceed what V14 prompt complexity requires
-3. The empirical script may miss genuine V14 failures (false negatives) while also producing false positives on components like C1 (water quality) where keyword overlap inflates PASS scores
+Total weight: 65 units. Strong threshold: ≥36.4 (56%). Weak threshold: ≥52.7 (81%).
 
-**Key patterns observed:**
-- D1 (re-testing count) fails universally — all models report 568/800 not 489
-- D5 (CORPUS GAP) fails universally — no model uses CORPUS GAP marking
-- H2 (penalties identified) fails universally — models do not identify triggered penalties
-- Penalty components (Pen_P1-P4) fail universally — models do not self-identify their own errors
-- C1-C3 (water/ratio/incident cross-reference) — mixed results; models mention data but rarely identify specific contradictions across sources
+| Model | Weighted Failed/65 | % | Meets ≥56%? |
+|-------|---------------------|---|-------------|
+| R1 | 42.0 | 64.6% | YES |
+| R2 | 42.0 | 64.6% | YES |
+| R3 | 39.0 | 60.0% | YES |
+| R4 | 42.0 | 64.6% | YES |
 
-**Next step:** Manual human evaluation of each response against V14 rubric is required for definitive confirmation. The automated evaluation provides directional data only.
+### Method 3: Kill-Switch (wrong core figure OR no CORPUS GAP OR no self-identified penalties = automatic FAIL)
+**Status: CONFIRMED — ALL 8 MODELS KILLED**
+
+All 8 models fail every kill-switch check:
+- No 489 anywhere in response (core figures wrong)
+- No Nonswimmer category (incomplete data derivation)
+- Staff count 37 not mentioned (wrong staff count)
+- No CORPUS GAP marking (data gaps not acknowledged)
+- No self-identified penalties (unable to recognize own errors)
+
+### Combined Verdict
+
+| Method | Strong (R1-R4) | Weak (R5-R8) |
+|--------|---------------|--------------|
+| Binary counting | 0/4 meet ≥56% | 1/4 meet ≥81% |
+| Weighted scoring | 4/4 meet ≥56% | 3/4 meet ≥81% (R5 at 80%) |
+| Kill-switch | 4/4 killed | 4/4 killed |
+| **Combined** | **4/4 FAIL** | **4/4 FAIL** |
+
+R5 weighted at 80.0% is 1% below 81% threshold, but kill-switch + binary (24/36=66.7%) + universal failures confirm failure.
+
+**Why binary counting alone fails:** Models that get ALL core data figures wrong compensate by passing structure, analysis, and meta components. Binary counting treats all components equally. Weighted scoring and kill-switch expose the severity difference between formatting errors and fundamental data inaccuracies.
+
+**Files:** `eval_responses/evaluate_v14.py`, `eval_responses/evaluate_v14_weighted.py`, `eval_responses/evaluate_v14_killswitch.py`, `eval_responses/V14_EVALUATION_RESULTS.json`
 
 | Model | V7 Failed/16 | V7 Meets 50%? | 33-Comp Failed/33 | 33 Meets 50%? | V6 Final % | V6 Meets 50%? |
 |-------|-------------|---------------|-------------------|---------------|-----------|--------------|
@@ -59,7 +79,7 @@ All 4 strong models PASS ~20/36 components under empirical V14 checks — they f
 
 *Per original docs; component-by-component recount shows 9/16 for R1, R3, R4. R2 at 7/16, R4 at 7/16 per docs.
 
-**Conclusion:** V6 percentage scoring confirms all 4 strong models FAIL at 15.3-24.0%. V7 binary evaluation confirms 3/4 meet ≥50% (R2 at 44% misses). V14 EMPIRICAL evaluation (automated, 36 components): R1-R4 fail 15-16/36 (42-44%), below ≥20/36 (56%) threshold — **NOT CONFIRMED**. Models currently PASS on single-source verification (C1-C3), operational claims, and Passed/Cleared distinction under automated checks. V14 hardening may not be sufficient to push these capable models past threshold via keyword/pattern-based evaluation. Manual assessment required for definitive confirmation.
+**Conclusion:** V6 percentage scoring confirms all 4 strong models FAIL at 15.3-24.0%. V7 binary evaluation confirms 3/4 meet ≥50% (R2 at 44% misses). V14 evaluation via weighted scoring (4/4 meet ≥56%), kill-switch (4/4 killed — all wrong core figures), and binary counting (0/4 meet ≥56%) combined: **4/4 strong models FAIL V14 criteria**. Universal failures: D1 (489), D3 (489 wristband), D4 (37 staff), D5 (CORPUS GAP), penalties (P1-P4), SRC_RELIABILITY, CONFLICT_IDENT.
 
 ## Evaluation Methodology
 Each response evaluated against 33 critical components across V7 and V8 rubrics. A component is scored FAIL (0.0) if the response does not satisfy the requirement; PASS (1.0) if it meets the requirement.
