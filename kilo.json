@@ -1,0 +1,32 @@
+{
+  "skills": {
+    "autopilot": {
+      "enabled": true,
+      "maxSteps": 20,
+      "requireApproval": ["git push", "npm publish", "rm -rf"],
+      "autoTest": true,
+      "autoLint": true
+    },
+    "humanizing": {
+      "defaultMode": "friendly",
+      "preserveMeaning": true,
+      "avoidPatterns": ["furthermore", "moreover", "in conclusion", "delve", "tapestry"]
+    },
+    "email": {
+      "provider": "smtp",
+      "smtp": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "secure": true,
+        "auth": {
+          "user": "${EMAIL_USER}",
+          "pass": "${EMAIL_PASSWORD}"
+        }
+      },
+      "defaults": {
+        "from": "${EMAIL_USER}",
+        "replyTo": "${EMAIL_USER}"
+      }
+    }
+  }
+}
